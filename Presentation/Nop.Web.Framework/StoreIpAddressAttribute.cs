@@ -3,7 +3,6 @@ using System.Web.Mvc;
 using Nop.Core;
 using Nop.Core.Data;
 using Nop.Core.Infrastructure;
-using Nop.Services.Customers;
 
 namespace Nop.Web.Framework
 {
@@ -33,12 +32,12 @@ namespace Nop.Web.Framework
             {
                 var workContext = EngineContext.Current.Resolve<IWorkContext>();
                 var customer = workContext.CurrentCustomer;
-                if (!currentIpAddress.Equals(customer.LastIpAddress, StringComparison.InvariantCultureIgnoreCase))
-                {
-                    var customerService = EngineContext.Current.Resolve<ICustomerService>();
-                    customer.LastIpAddress = currentIpAddress;
-                    customerService.UpdateCustomer(customer);
-                }
+                //if (!currentIpAddress.Equals(customer.LastIpAddress, StringComparison.InvariantCultureIgnoreCase))
+                //{
+                //    var customerService = EngineContext.Current.Resolve<ICustomerService>();
+                //    customer.LastIpAddress = currentIpAddress;
+                //    customerService.UpdateCustomer(customer);
+                //}
             }
         }
     }

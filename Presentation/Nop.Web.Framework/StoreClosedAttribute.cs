@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Nop.Core;
@@ -7,7 +6,6 @@ using Nop.Core.Data;
 using Nop.Core.Domain;
 using Nop.Core.Infrastructure;
 using Nop.Services.Security;
-using Nop.Services.Topics;
 
 namespace Nop.Web.Framework
 {
@@ -64,14 +62,14 @@ namespace Nop.Web.Framework
             if (controllerName.Equals("Nop.Web.Controllers.TopicController", StringComparison.InvariantCultureIgnoreCase) &&
                 actionName.Equals("TopicDetails", StringComparison.InvariantCultureIgnoreCase))
             {
-                var topicService = EngineContext.Current.Resolve<ITopicService>();
+                //    var topicService = EngineContext.Current.Resolve<ITopicService>();
                 var storeContext = EngineContext.Current.Resolve<IStoreContext>();
-                var allowedTopicIds = topicService.GetAllTopics(storeContext.CurrentStore.Id)
-                    .Where(t => t.AccessibleWhenStoreClosed)
-                    .Select(t => t.Id)
-                    .ToList();
-                var requestedTopicId = filterContext.RouteData.Values["topicId"] as int?;
-                if (requestedTopicId.HasValue && allowedTopicIds.Contains(requestedTopicId.Value))
+                //var allowedTopicIds = topicService.GetAllTopics(storeContext.CurrentStore.Id)
+                //    .Where(t => t.AccessibleWhenStoreClosed)
+                //    .Select(t => t.Id)
+                //    .ToList();
+                //var requestedTopicId = filterContext.RouteData.Values["topicId"] as int?;
+                //if (requestedTopicId.HasValue && allowedTopicIds.Contains(requestedTopicId.Value))
                     return;
             }
 

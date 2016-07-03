@@ -11,8 +11,6 @@ using Nop.Core.Domain.Common;
 using Nop.Core.Domain.Forums;
 using Nop.Core.Domain.News;
 using Nop.Core.Domain.Security;
-using Nop.Services.Catalog;
-using Nop.Services.Topics;
 
 namespace Nop.Services.Seo
 {
@@ -24,10 +22,6 @@ namespace Nop.Services.Seo
         #region Fields
 
         private readonly IStoreContext _storeContext;
-        private readonly ICategoryService _categoryService;
-        private readonly IProductService _productService;
-        private readonly IManufacturerService _manufacturerService;
-        private readonly ITopicService _topicService;
         private readonly CommonSettings _commonSettings;
         private readonly BlogSettings _blogSettings;
         private readonly NewsSettings _newsSettings;
@@ -42,10 +36,6 @@ namespace Nop.Services.Seo
         #region Ctor
 
         public SitemapGenerator(IStoreContext storeContext,
-            ICategoryService categoryService,
-            IProductService productService,
-            IManufacturerService manufacturerService,
-            ITopicService topicService,
             CommonSettings commonSettings,
             BlogSettings blogSettings,
             NewsSettings newsSettings,
@@ -53,10 +43,6 @@ namespace Nop.Services.Seo
             SecuritySettings securitySettings)
         {
             this._storeContext = storeContext;
-            this._categoryService = categoryService;
-            this._productService = productService;
-            this._manufacturerService = manufacturerService;
-            this._topicService = topicService;
             this._commonSettings = commonSettings;
             this._blogSettings = blogSettings;
             this._newsSettings = newsSettings;
@@ -131,63 +117,63 @@ namespace Nop.Services.Seo
             //manufacturers
             if (_commonSettings.SitemapIncludeManufacturers)
             {
-                WriteManufacturers(urlHelper);
+               // WriteManufacturers(urlHelper);
             }
             //products
             if (_commonSettings.SitemapIncludeProducts)
             {
-                WriteProducts(urlHelper);
+               // WriteProducts(urlHelper);
             }
             //topics
-            WriteTopics(urlHelper);
+           // WriteTopics(urlHelper);
         }
 
         protected virtual void WriteCategories(UrlHelper urlHelper, int parentCategoryId)
         {
-            var categories = _categoryService.GetAllCategoriesByParentCategoryId(parentCategoryId);
-            foreach (var category in categories)
-            {
-                var url = urlHelper.RouteUrl("Category", new { SeName = category.GetSeName() }, GetHttpProtocol());
-                WriteUrlLocation(url, UpdateFrequency.Weekly, category.UpdatedOnUtc);
+            //var categories = _categoryService.GetAllCategoriesByParentCategoryId(parentCategoryId);
+            //foreach (var category in categories)
+            //{
+            //    var url = urlHelper.RouteUrl("Category", new { SeName = category.GetSeName() }, GetHttpProtocol());
+            //    WriteUrlLocation(url, UpdateFrequency.Weekly, category.UpdatedOnUtc);
 
-                WriteCategories(urlHelper, category.Id);
-            }
+            //    WriteCategories(urlHelper, category.Id);
+            //}
         }
 
-        protected virtual void WriteManufacturers(UrlHelper urlHelper)
-        {
-            var manufacturers = _manufacturerService.GetAllManufacturers();
-            foreach (var manufacturer in manufacturers)
-            {
-                var url = urlHelper.RouteUrl("Manufacturer", new { SeName = manufacturer.GetSeName() }, GetHttpProtocol());
-                WriteUrlLocation(url, UpdateFrequency.Weekly, manufacturer.UpdatedOnUtc);
-            }
-        }
+        //protected virtual void WriteManufacturers(UrlHelper urlHelper)
+        //{
+        //    var manufacturers = _manufacturerService.GetAllManufacturers();
+        //    foreach (var manufacturer in manufacturers)
+        //    {
+        //        var url = urlHelper.RouteUrl("Manufacturer", new { SeName = manufacturer.GetSeName() }, GetHttpProtocol());
+        //        WriteUrlLocation(url, UpdateFrequency.Weekly, manufacturer.UpdatedOnUtc);
+        //    }
+        //}
 
-        protected virtual void WriteProducts(UrlHelper urlHelper)
-        {
-            var products = _productService.SearchProducts(
-                storeId: _storeContext.CurrentStore.Id,
-                visibleIndividuallyOnly: true,
-                orderBy: ProductSortingEnum.CreatedOn);
-            foreach (var product in products)
-            {
-                var url = urlHelper.RouteUrl("Product", new { SeName = product.GetSeName() }, GetHttpProtocol());
-                WriteUrlLocation(url, UpdateFrequency.Weekly, product.UpdatedOnUtc);
-            }
-        }
+        //protected virtual void WriteProducts(UrlHelper urlHelper)
+        //{
+        //    var products = _productService.SearchProducts(
+        //        storeId: _storeContext.CurrentStore.Id,
+        //        visibleIndividuallyOnly: true,
+        //        orderBy: ProductSortingEnum.CreatedOn);
+        //    foreach (var product in products)
+        //    {
+        //        var url = urlHelper.RouteUrl("Product", new { SeName = product.GetSeName() }, GetHttpProtocol());
+        //        WriteUrlLocation(url, UpdateFrequency.Weekly, product.UpdatedOnUtc);
+        //    }
+        //}
 
-        protected virtual void WriteTopics(UrlHelper urlHelper)
-        {
-            var topics = _topicService.GetAllTopics(_storeContext.CurrentStore.Id)
-                .Where(t => t.IncludeInSitemap)
-                .ToList();
-            foreach (var topic in topics)
-            {
-                var url = urlHelper.RouteUrl("Topic", new { SeName = topic.GetSeName() }, GetHttpProtocol());
-                WriteUrlLocation(url, UpdateFrequency.Weekly, DateTime.UtcNow);
-            }
-        }
+        //protected virtual void WriteTopics(UrlHelper urlHelper)
+        //{
+        //    var topics = _topicService.GetAllTopics(_storeContext.CurrentStore.Id)
+        //        .Where(t => t.IncludeInSitemap)
+        //        .ToList();
+        //    foreach (var topic in topics)
+        //    {
+        //        var url = urlHelper.RouteUrl("Topic", new { SeName = topic.GetSeName() }, GetHttpProtocol());
+        //        WriteUrlLocation(url, UpdateFrequency.Weekly, DateTime.UtcNow);
+        //    }
+        //}
 
         #endregion
 

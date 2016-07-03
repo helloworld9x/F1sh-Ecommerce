@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Web;
 using System.Web.Mvc;
-using Nop.Core;
 using Nop.Core.Domain.Affiliates;
-using Nop.Core.Infrastructure;
-using Nop.Services.Affiliates;
-using Nop.Services.Customers;
 
 namespace Nop.Web.Framework
 {
@@ -37,8 +33,8 @@ namespace Nop.Web.Framework
                     var affiliateId = Convert.ToInt32(request.QueryString[AFFILIATE_ID_QUERY_PARAMETER_NAME]);
                     if (affiliateId > 0)
                     {
-                        var affiliateService = EngineContext.Current.Resolve<IAffiliateService>();
-                        affiliate = affiliateService.GetAffiliateById(affiliateId);
+                        //var affiliateService = EngineContext.Current.Resolve<IAffiliateService>();
+                        //affiliate = affiliateService.GetAffiliateById(affiliateId);
                     }
                 }
                 //try to find by friendly name ("affiliate" parameter)
@@ -47,23 +43,23 @@ namespace Nop.Web.Framework
                     var friendlyUrlName = request.QueryString[AFFILIATE_FRIENDLYURLNAME_QUERY_PARAMETER_NAME];
                     if (!String.IsNullOrEmpty(friendlyUrlName))
                     {
-                        var affiliateService = EngineContext.Current.Resolve<IAffiliateService>();
-                        affiliate = affiliateService.GetAffiliateByFriendlyUrlName(friendlyUrlName);
+                        //var affiliateService = EngineContext.Current.Resolve<IAffiliateService>();
+                        //affiliate = affiliateService.GetAffiliateByFriendlyUrlName(friendlyUrlName);
                     }
                 }
             }
 
 
-            if (affiliate != null && !affiliate.Deleted && affiliate.Active)
-            {
-                var workContext = EngineContext.Current.Resolve<IWorkContext>();
-                if (workContext.CurrentCustomer.AffiliateId != affiliate.Id)
-                {
-                    workContext.CurrentCustomer.AffiliateId = affiliate.Id;
-                    var customerService = EngineContext.Current.Resolve<ICustomerService>();
-                    customerService.UpdateCustomer(workContext.CurrentCustomer);
-                }
-            }
+            //if (affiliate != null && !affiliate.Deleted && affiliate.Active)
+            //{
+            //    var workContext = EngineContext.Current.Resolve<IWorkContext>();
+            //    if (workContext.CurrentCustomer.AffiliateId != affiliate.Id)
+            //    {
+            //        workContext.CurrentCustomer.AffiliateId = affiliate.Id;
+            //        var customerService = EngineContext.Current.Resolve<ICustomerService>();
+            //        customerService.UpdateCustomer(workContext.CurrentCustomer);
+            //    }
+            //}
         }
     }
 }

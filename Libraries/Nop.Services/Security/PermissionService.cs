@@ -6,7 +6,6 @@ using Nop.Core.Caching;
 using Nop.Core.Data;
 using Nop.Core.Domain.Customers;
 using Nop.Core.Domain.Security;
-using Nop.Services.Customers;
 using Nop.Services.Localization;
 
 namespace Nop.Services.Security
@@ -34,7 +33,7 @@ namespace Nop.Services.Security
         #region Fields
 
         private readonly IRepository<PermissionRecord> _permissionRecordRepository;
-        private readonly ICustomerService _customerService;
+        //private readonly ICustomerService _customerService;
         private readonly IWorkContext _workContext;
         private readonly ILocalizationService _localizationService;
         private readonly ILanguageService _languageService;
@@ -54,15 +53,13 @@ namespace Nop.Services.Security
         /// <param name="languageService">Language service</param>
         /// <param name="cacheManager">Cache manager</param>
         public PermissionService(IRepository<PermissionRecord> permissionRecordRepository,
-            ICustomerService customerService,
             IWorkContext workContext,
              ILocalizationService localizationService,
             ILanguageService languageService,
             ICacheManager cacheManager)
         {
             this._permissionRecordRepository = permissionRecordRepository;
-            this._customerService = customerService;
-            this._workContext = workContext;
+            this._workContext = workContext; 
             this._localizationService = localizationService;
             this._languageService = languageService;
             this._cacheManager = cacheManager;
@@ -209,33 +206,33 @@ namespace Nop.Services.Security
 
                     //default customer role mappings
                     var defaultPermissions = permissionProvider.GetDefaultPermissions();
-                    foreach (var defaultPermission in defaultPermissions)
-                    {
-                        var customerRole = _customerService.GetCustomerRoleBySystemName(defaultPermission.CustomerRoleSystemName);
-                        if (customerRole == null)
-                        {
-                            //new role (save it)
-                            customerRole = new CustomerRole
-                            {
-                                Name = defaultPermission.CustomerRoleSystemName,
-                                Active = true,
-                                SystemName = defaultPermission.CustomerRoleSystemName
-                            };
-                            _customerService.InsertCustomerRole(customerRole);
-                        }
+                    //foreach (var defaultPermission in defaultPermissions)
+                    //{
+                    //    var customerRole = _customerService.GetCustomerRoleBySystemName(defaultPermission.CustomerRoleSystemName);
+                    //    if (customerRole == null)
+                    //    {
+                    //        //new role (save it)
+                    //        customerRole = new CustomerRole
+                    //        {
+                    //            Name = defaultPermission.CustomerRoleSystemName,
+                    //            Active = true,
+                    //            SystemName = defaultPermission.CustomerRoleSystemName
+                    //        };
+                    //        _customerService.InsertCustomerRole(customerRole);
+                    //    }
 
 
-                        var defaultMappingProvided = (from p in defaultPermission.PermissionRecords
-                                                      where p.SystemName == permission1.SystemName
-                                                      select p).Any();
-                        var mappingExists = (from p in customerRole.PermissionRecords
-                                             where p.SystemName == permission1.SystemName
-                                             select p).Any();
-                        if (defaultMappingProvided && !mappingExists)
-                        {
-                            permission1.CustomerRoles.Add(customerRole);
-                        }
-                    }
+                    //    var defaultMappingProvided = (from p in defaultPermission.PermissionRecords
+                    //                                  where p.SystemName == permission1.SystemName
+                    //                                  select p).Any();
+                    //    var mappingExists = (from p in customerRole.PermissionRecords
+                    //                         where p.SystemName == permission1.SystemName
+                    //                         select p).Any();
+                    //    if (defaultMappingProvided && !mappingExists)
+                    //    {
+                    //        permission1.CustomerRoles.Add(customerRole);
+                    //    }
+                    //}
 
                     //save new permission
                     InsertPermissionRecord(permission1);

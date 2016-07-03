@@ -10,7 +10,7 @@ using Nop.Core.Domain.Localization;
 using Nop.Core.Domain.Stores;
 using Nop.Core.Infrastructure;
 using Nop.Data;
-using Nop.Services.Customers;
+//using Nop.Services.Customers;
 using Nop.Services.Localization;
 
 namespace Nop.Services.Installation
@@ -72,9 +72,9 @@ namespace Nop.Services.Installation
             adminUser.Username = defaultUserEmail;
             _customerRepository.Update(adminUser);
 
-            var customerRegistrationService = EngineContext.Current.Resolve<ICustomerRegistrationService>();
-            customerRegistrationService.ChangePassword(new ChangePasswordRequest(defaultUserEmail, false,
-                 PasswordFormat.Hashed, defaultUserPassword));
+            //var customerRegistrationService = EngineContext.Current.Resolve<ICustomerRegistrationService>();
+            //customerRegistrationService.ChangePassword(new ChangePasswordRequest(defaultUserEmail, false,
+            //     PasswordFormat.Hashed, defaultUserPassword));
         }
 
         protected virtual void UpdateDefaultStoreUrl()

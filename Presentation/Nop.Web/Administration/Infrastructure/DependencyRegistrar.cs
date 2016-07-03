@@ -1,6 +1,5 @@
 using Autofac;
 using Autofac.Core;
-using Nop.Admin.Controllers;
 using Nop.Core.Caching;
 using Nop.Core.Configuration;
 using Nop.Core.Infrastructure;
@@ -21,11 +20,11 @@ namespace Nop.Admin.Infrastructure
         /// <param name="config">Config</param>
         public virtual void Register(ContainerBuilder builder, ITypeFinder typeFinder, NopConfig config)
         {
-            //we cache presentation models between requests
-            builder.RegisterType<HomeController>()
-                .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("nop_cache_static"));
-            builder.RegisterType<ProductController>()
-                .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("nop_cache_static"));
+            ////we cache presentation models between requests
+            //builder.RegisterType<HomeController>()
+            //    .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("nop_cache_static"));
+            //builder.RegisterType<ProductController>()
+            //    .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("nop_cache_static"));
         }
 
         /// <summary>

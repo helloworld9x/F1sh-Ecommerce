@@ -6,7 +6,6 @@ using System.Linq;
 using Nop.Core.Data;
 using Nop.Core.Domain.Customers;
 using Nop.Core.Plugins;
-using Nop.Services.Customers;
 
 namespace Nop.Services.Authentication.External
 {
@@ -15,20 +14,21 @@ namespace Nop.Services.Authentication.External
     /// </summary>
     public partial class OpenAuthenticationService : IOpenAuthenticationService
     {
-        private readonly ICustomerService _customerService;
+        //private readonly ICustomerService _customerService;
         private readonly IPluginFinder _pluginFinder;
         private readonly ExternalAuthenticationSettings _externalAuthenticationSettings;
         private readonly IRepository<ExternalAuthenticationRecord> _externalAuthenticationRecordRepository;
 
         public OpenAuthenticationService(IRepository<ExternalAuthenticationRecord> externalAuthenticationRecordRepository,
             IPluginFinder pluginFinder,
-            ExternalAuthenticationSettings externalAuthenticationSettings,
-            ICustomerService customerService)
+            ExternalAuthenticationSettings externalAuthenticationSettings
+            //ICustomerService customerService
+            )
         {
             this._externalAuthenticationRecordRepository = externalAuthenticationRecordRepository;
             this._pluginFinder = pluginFinder;
             this._externalAuthenticationSettings = externalAuthenticationSettings;
-            this._customerService = customerService;
+            //this._customerService = customerService;
         }
 
         /// <summary>
@@ -113,8 +113,8 @@ namespace Nop.Services.Authentication.External
                 .FirstOrDefault(o => o.ExternalIdentifier == parameters.ExternalIdentifier && 
                     o.ProviderSystemName == parameters.ProviderSystemName);
 
-            if (record != null)
-                return _customerService.GetCustomerById(record.CustomerId);
+            //if (record != null)
+            //    return _customerService.GetCustomerById(record.CustomerId);
 
             return null;
         }

@@ -597,16 +597,16 @@ namespace Nop.Web.Controllers
             
 
             //template
-            var templateCacheKey = string.Format(ModelCacheEventConsumer.CATEGORY_TEMPLATE_MODEL_KEY, category.CategoryTemplateId);
-            var templateViewPath = _cacheManager.Get(templateCacheKey, () =>
-                {
-                    var template = _categoryTemplateService.GetCategoryTemplateById(category.CategoryTemplateId);
-                    if (template == null)
-                        template = _categoryTemplateService.GetAllCategoryTemplates().FirstOrDefault();
-                    if (template == null)
-                        throw new Exception("No default template could be loaded");
-                    return template.ViewPath;
-                });
+            //var templateCacheKey = string.Format(ModelCacheEventConsumer.CATEGORY_TEMPLATE_MODEL_KEY, category.CategoryTemplateId);
+            //var templateViewPath = _cacheManager.Get(templateCacheKey, () =>
+            //    {
+            //        var template = _categoryTemplateService.GetCategoryTemplateById(category.CategoryTemplateId);
+            //        if (template == null)
+            //            template = _categoryTemplateService.GetAllCategoryTemplates().FirstOrDefault();
+            //        if (template == null)
+            //            throw new Exception("No default template could be loaded");
+            //        return template.ViewPath;
+            //    });
 
             //activity log
             _customerActivityService.InsertActivity("PublicStore.ViewCategory", _localizationService.GetResource("ActivityLog.PublicStore.ViewCategory"), category.Name);

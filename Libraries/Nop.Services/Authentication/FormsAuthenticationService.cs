@@ -2,7 +2,6 @@ using System;
 using System.Web;
 using System.Web.Security;
 using Nop.Core.Domain.Customers;
-using Nop.Services.Customers;
 
 namespace Nop.Services.Authentication
 {
@@ -14,7 +13,6 @@ namespace Nop.Services.Authentication
         #region Fields
 
         private readonly HttpContextBase _httpContext;
-        private readonly ICustomerService _customerService;
         private readonly CustomerSettings _customerSettings;
         private readonly TimeSpan _expirationTimeSpan;
 
@@ -24,44 +22,44 @@ namespace Nop.Services.Authentication
 
         #region Ctor
 
-        /// <summary>
-        /// Ctor
-        /// </summary>
-        /// <param name="httpContext">HTTP context</param>
-        /// <param name="customerService">Customer service</param>
-        /// <param name="customerSettings">Customer settings</param>
-        public FormsAuthenticationService(HttpContextBase httpContext,
-            ICustomerService customerService, CustomerSettings customerSettings)
-        {
-            this._httpContext = httpContext;
-            this._customerService = customerService;
-            this._customerSettings = customerSettings;
-            this._expirationTimeSpan = FormsAuthentication.Timeout;
-        }
+        ///// <summary>
+        ///// Ctor
+        ///// </summary>
+        ///// <param name="httpContext">HTTP context</param>
+        ///// <param name="customerService">Customer service</param>
+        ///// <param name="customerSettings">Customer settings</param>
+        //public FormsAuthenticationService(HttpContextBase httpContext,
+        //    ICustomerService customerService, CustomerSettings customerSettings)
+        //{
+        //    this._httpContext = httpContext;
+        //    this._customerService = customerService;
+        //    this._customerSettings = customerSettings;
+        //    this._expirationTimeSpan = FormsAuthentication.Timeout;
+        //}
 
         #endregion
 
         #region Utilities
 
-        /// <summary>
-        /// Get authenticated customer
-        /// </summary>
-        /// <param name="ticket">Ticket</param>
-        /// <returns>Customer</returns>
-        protected virtual Customer GetAuthenticatedCustomerFromTicket(FormsAuthenticationTicket ticket)
-        {
-            if (ticket == null)
-                throw new ArgumentNullException("ticket");
+        ///// <summary>
+        ///// Get authenticated customer
+        ///// </summary>
+        ///// <param name="ticket">Ticket</param>
+        ///// <returns>Customer</returns>
+        //protected virtual Customer GetAuthenticatedCustomerFromTicket(FormsAuthenticationTicket ticket)
+        //{
+        //    if (ticket == null)
+        //        throw new ArgumentNullException("ticket");
 
-            var usernameOrEmail = ticket.UserData;
+        //    var usernameOrEmail = ticket.UserData;
 
-            if (String.IsNullOrWhiteSpace(usernameOrEmail))
-                return null;
-            var customer = _customerSettings.UsernamesEnabled
-                ? _customerService.GetCustomerByUsername(usernameOrEmail)
-                : _customerService.GetCustomerByEmail(usernameOrEmail);
-            return customer;
-        }
+        //    if (String.IsNullOrWhiteSpace(usernameOrEmail))
+        //        return null;
+        //    var customer = _customerSettings.UsernamesEnabled
+        //        //? _customerService.GetCustomerByUsername(usernameOrEmail)
+        //        //: _customerService.GetCustomerByEmail(usernameOrEmail);
+        //    return customer;
+        //}
 
         #endregion
 
@@ -131,9 +129,9 @@ namespace Nop.Services.Authentication
             }
 
             var formsIdentity = (FormsIdentity)_httpContext.User.Identity;
-            var customer = GetAuthenticatedCustomerFromTicket(formsIdentity.Ticket);
-            if (customer != null && customer.Active && !customer.Deleted && customer.IsRegistered())
-                _cachedCustomer = customer;
+            //var customer = GetAuthenticatedCustomerFromTicket(formsIdentity.Ticket);
+            //if (customer != null && customer.Active && !customer.Deleted && customer.IsRegistered())
+            //    _cachedCustomer = customer;
             return _cachedCustomer;
         }
 

@@ -150,7 +150,6 @@
     <Compile Include="Domain\Blogs\BlogExtensions.cs" />
     <Compile Include="Domain\Catalog\ProductExtensions.cs" />
     <Compile Include="Domain\Catalog\ManufacturerTemplate.cs" />
-    <Compile Include="Domain\Catalog\CategoryTemplate.cs" />
     <Compile Include="Domain\Catalog\ProductTemplate.cs" />
     <Compile Include="Domain\Common\AdminAreaSettings.cs" />
     <Compile Include="Domain\Seo\SeoSettings.cs" />

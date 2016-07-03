@@ -119,9 +119,9 @@ namespace Nop.Web.Infrastructure.Cache
         IConsumer<EntityUpdated<ReturnRequestReason>>,
         IConsumer<EntityDeleted<ReturnRequestReason>>,
         //templates
-        IConsumer<EntityInserted<CategoryTemplate>>,
-        IConsumer<EntityUpdated<CategoryTemplate>>,
-        IConsumer<EntityDeleted<CategoryTemplate>>,
+        //IConsumer<EntityInserted<CategoryTemplate>>,
+        //IConsumer<EntityUpdated<CategoryTemplate>>,
+        //IConsumer<EntityDeleted<CategoryTemplate>>,
         IConsumer<EntityInserted<ManufacturerTemplate>>,
         IConsumer<EntityUpdated<ManufacturerTemplate>>,
         IConsumer<EntityDeleted<ManufacturerTemplate>>,
@@ -1190,18 +1190,18 @@ namespace Nop.Web.Infrastructure.Cache
         }
 
         //templates
-        public void HandleEvent(EntityInserted<CategoryTemplate> eventMessage)
-        {
-            _cacheManager.RemoveByPattern(CATEGORY_TEMPLATE_PATTERN_KEY);
-        }
-        public void HandleEvent(EntityUpdated<CategoryTemplate> eventMessage)
-        {
-            _cacheManager.RemoveByPattern(CATEGORY_TEMPLATE_PATTERN_KEY);
-        }
-        public void HandleEvent(EntityDeleted<CategoryTemplate> eventMessage)
-        {
-            _cacheManager.RemoveByPattern(CATEGORY_TEMPLATE_PATTERN_KEY);
-        }
+        //public void HandleEvent(EntityInserted<CategoryTemplate> eventMessage)
+        //{
+        //    _cacheManager.RemoveByPattern(CATEGORY_TEMPLATE_PATTERN_KEY);
+        //}
+        //public void HandleEvent(EntityUpdated<CategoryTemplate> eventMessage)
+        //{
+        //    _cacheManager.RemoveByPattern(CATEGORY_TEMPLATE_PATTERN_KEY);
+        //}
+        //public void HandleEvent(EntityDeleted<CategoryTemplate> eventMessage)
+        //{
+        //    _cacheManager.RemoveByPattern(CATEGORY_TEMPLATE_PATTERN_KEY);
+        //}
         public void HandleEvent(EntityInserted<ManufacturerTemplate> eventMessage)
         {
             _cacheManager.RemoveByPattern(MANUFACTURER_TEMPLATE_PATTERN_KEY);
