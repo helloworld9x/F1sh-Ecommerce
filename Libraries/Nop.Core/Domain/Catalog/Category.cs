@@ -11,7 +11,7 @@ namespace Nop.Core.Domain.Catalog
     /// <summary>
     /// Represents a category
     /// </summary>
-    public partial class Category : BaseEntity, ILocalizedEntity, ISlugSupported, IAclSupported, IStoreMappingSupported
+    public class Category : BaseEntity, ILocalizedEntity, ISlugSupported, IAclSupported, IStoreMappingSupported
     {
         private ICollection<Discount> _appliedDiscounts;
 
@@ -76,11 +76,6 @@ namespace Nop.Core.Domain.Catalog
         public bool ShowOnHomePage { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether to include this category in the top menu
-        /// </summary>
-        public bool IncludeInTopMenu { get; set; }
-        
-        /// <summary>
         /// Gets or sets a value indicating whether the entity is subject to ACL
         /// </summary>
         public bool SubjectToAcl { get; set; }
@@ -122,6 +117,20 @@ namespace Nop.Core.Domain.Catalog
         {
             get { return _appliedDiscounts ?? (_appliedDiscounts = new List<Discount>()); }
             protected set { _appliedDiscounts = value; }
+        }
+    }
+
+    public class CategoryMap : GoqEntityTypeConfiguration<Category>
+    {
+        public CategoryMap()
+        {
+            ToTable("Category");
+            HasKey(c => c.Id);
+            Property(c => c.Name).IsRequired().HasMaxLength(400);
+            Property(c => c.MetaKeywords).HasMaxLength(400);
+            Property(c => c.MetaTitle).HasMaxLength(400);
+            Property(c => c.PriceRanges).HasMaxLength(400);
+            Property(c => c.PageSizeOptions).HasMaxLength(200);
         }
     }
 }

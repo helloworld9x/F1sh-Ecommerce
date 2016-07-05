@@ -81,8 +81,6 @@
     <Compile Include="EfDataProviderManager.cs" />
     <Compile Include="Mapping\Catalog\ProductWarehouseInventoryMap.cs" />
     <Compile Include="Mapping\Catalog\BackInStockSubscriptionMap.cs" />
-    <Compile Include="Mapping\Catalog\ManufacturerTemplateMap.cs" />
-    <Compile Include="Mapping\Catalog\CategoryTemplateMap.cs" />
     <Compile Include="Mapping\Catalog\ProductTemplateMap.cs" />
     <Compile Include="Mapping\Common\SearchTermMap.cs" />
     <Compile Include="Mapping\Common\GenericAttributeMap.cs" />
@@ -107,8 +105,6 @@
     <Compile Include="Mapping\Catalog\ProductTagMap.cs" />
     <Compile Include="Mapping\Catalog\ProductReviewHelpfulnessMap.cs" />
     <Compile Include="Mapping\Common\AddressMap.cs" />
-    <Compile Include="Mapping\Blogs\BlogPostMap.cs" />
-    <Compile Include="Mapping\Blogs\BlogCommentMap.cs" />
     <Compile Include="Mapping\News\NewsCommentMap.cs" />
     <Compile Include="Mapping\News\NewsItemMap.cs" />
     <Compile Include="Mapping\Customers\CustomerRoleMap.cs" />
@@ -117,15 +113,7 @@
     <Compile Include="Mapping\Directory\MeasureDimensionMap.cs" />
     <Compile Include="Mapping\Directory\CurrencyMap.cs" />
     <Compile Include="Mapping\Directory\CountryMap.cs" />
-    <Compile Include="Mapping\Discounts\DiscountUsageHistoryMap.cs" />
     <Compile Include="Mapping\Discounts\DiscountMap.cs" />
-    <Compile Include="Mapping\Discounts\DiscountRequirementMap.cs" />
-    <Compile Include="Mapping\Forums\ForumGroupMap.cs" />
-    <Compile Include="Mapping\Forums\ForumMap.cs" />
-    <Compile Include="Mapping\Forums\ForumPostMap.cs" />
-    <Compile Include="Mapping\Forums\ForumSubscriptionMap.cs" />
-    <Compile Include="Mapping\Forums\ForumTopicMap.cs" />
-    <Compile Include="Mapping\Forums\PrivateMessageMap.cs" />
     <Compile Include="Mapping\Logging\ActivityLogMap.cs" />
     <Compile Include="Mapping\Logging\ActivityLogTypeMap.cs" />
     <Compile Include="Mapping\Media\DownloadMap.cs" />
@@ -145,9 +133,6 @@
     <Compile Include="Mapping\Orders\GiftCardUsageHistoryMap.cs" />
     <Compile Include="Mapping\Orders\ShoppingCartItemMap.cs" />
     <Compile Include="Mapping\Orders\OrderMap.cs" />
-    <Compile Include="Mapping\Polls\PollMap.cs" />
-    <Compile Include="Mapping\Polls\PollVotingRecordMap.cs" />
-    <Compile Include="Mapping\Polls\PollAnswerMap.cs" />
     <Compile Include="Mapping\Security\PermissionRecordMap.cs" />
     <Compile Include="Mapping\Directory\StateProvinceMap.cs" />
     <Compile Include="Mapping\Catalog\ProductReviewMap.cs" />
@@ -164,7 +149,6 @@
     <Compile Include="Mapping\Catalog\ProductAttributeMappingMap.cs" />
     <Compile Include="Mapping\Media\PictureMap.cs" />
     <Compile Include="Mapping\Catalog\ProductPictureMap.cs" />
-    <Compile Include="Mapping\Catalog\ManufacturerMap.cs" />
     <Compile Include="Mapping\Catalog\ProductManufacturerMap.cs" />
     <Compile Include="Mapping\Catalog\ProductCategoryMap.cs" />
     <Compile Include="Mapping\Catalog\CategoryMap.cs" />

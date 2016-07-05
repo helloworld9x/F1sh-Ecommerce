@@ -1,14 +1,10 @@
 using System;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Web.Mvc;
 using System.Xml;
 using Nop.Core;
-using Nop.Core.Domain.Blogs;
-using Nop.Core.Domain.Catalog;
 using Nop.Core.Domain.Common;
-using Nop.Core.Domain.Forums;
 using Nop.Core.Domain.News;
 using Nop.Core.Domain.Security;
 
@@ -23,9 +19,7 @@ namespace Nop.Services.Seo
 
         private readonly IStoreContext _storeContext;
         private readonly CommonSettings _commonSettings;
-        private readonly BlogSettings _blogSettings;
         private readonly NewsSettings _newsSettings;
-        private readonly ForumSettings _forumSettings;
         private readonly SecuritySettings _securitySettings;
 
         private const string DateFormat = @"yyyy-MM-dd";
@@ -37,16 +31,12 @@ namespace Nop.Services.Seo
 
         public SitemapGenerator(IStoreContext storeContext,
             CommonSettings commonSettings,
-            BlogSettings blogSettings,
             NewsSettings newsSettings,
-            ForumSettings forumSettings,
             SecuritySettings securitySettings)
         {
             this._storeContext = storeContext;
             this._commonSettings = commonSettings;
-            this._blogSettings = blogSettings;
             this._newsSettings = newsSettings;
-            this._forumSettings = forumSettings;
             this._securitySettings = securitySettings;
         }
 
@@ -97,18 +87,7 @@ namespace Nop.Services.Seo
                 var url = urlHelper.RouteUrl("NewsArchive", null, GetHttpProtocol());
                 WriteUrlLocation(url, UpdateFrequency.Weekly, DateTime.UtcNow);
             }
-            //blog
-            if (_blogSettings.Enabled)
-            {
-                var url = urlHelper.RouteUrl("Blog", null, GetHttpProtocol());
-                WriteUrlLocation(url, UpdateFrequency.Weekly, DateTime.UtcNow);
-            }
-            //blog
-            if (_forumSettings.ForumsEnabled)
-            {
-                var url = urlHelper.RouteUrl("Boards", null, GetHttpProtocol());
-                WriteUrlLocation(url, UpdateFrequency.Weekly, DateTime.UtcNow);
-            }
+         
             //categories
             if (_commonSettings.SitemapIncludeCategories)
             {

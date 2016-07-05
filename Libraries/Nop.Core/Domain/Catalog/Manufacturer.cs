@@ -11,10 +11,8 @@ namespace Nop.Core.Domain.Catalog
     /// <summary>
     /// Represents a manufacturer
     /// </summary>
-    public partial class Manufacturer : BaseEntity, ILocalizedEntity, ISlugSupported, IAclSupported, IStoreMappingSupported
+    public class Manufacturer : BaseEntity, ILocalizedEntity, ISlugSupported, IAclSupported, IStoreMappingSupported
     {
-        private ICollection<Discount> _appliedDiscounts;
-
         /// <summary>
         /// Gets or sets the name
         /// </summary>
@@ -24,26 +22,6 @@ namespace Nop.Core.Domain.Catalog
         /// Gets or sets the description
         /// </summary>
         public string Description { get; set; }
-
-        /// <summary>
-        /// Gets or sets a value of used manufacturer template identifier
-        /// </summary>
-        public int ManufacturerTemplateId { get; set; }
-
-        /// <summary>
-        /// Gets or sets the meta keywords
-        /// </summary>
-        public string MetaKeywords { get; set; }
-
-        /// <summary>
-        /// Gets or sets the meta description
-        /// </summary>
-        public string MetaDescription { get; set; }
-
-        /// <summary>
-        /// Gets or sets the meta title
-        /// </summary>
-        public string MetaTitle { get; set; }
 
         /// <summary>
         /// Gets or sets the parent picture identifier
@@ -64,12 +42,6 @@ namespace Nop.Core.Domain.Catalog
         /// Gets or sets the available customer selectable page size options
         /// </summary>
         public string PageSizeOptions { get; set; }
-
-        /// <summary>
-        /// Gets or sets the available price ranges
-        /// </summary>
-        public string PriceRanges { get; set; }
-        
 
         /// <summary>
         /// Gets or sets a value indicating whether the entity is subject to ACL
@@ -105,14 +77,16 @@ namespace Nop.Core.Domain.Catalog
         /// Gets or sets the date and time of instance update
         /// </summary>
         public DateTime UpdatedOnUtc { get; set; }
-
-        /// <summary>
-        /// Gets or sets the collection of applied discounts
-        /// </summary>
-        public virtual ICollection<Discount> AppliedDiscounts
+    
+    }
+    public class ManufacturerMap : GoqEntityTypeConfiguration<Manufacturer>
+    {
+        public ManufacturerMap()
         {
-            get { return _appliedDiscounts ?? (_appliedDiscounts = new List<Discount>()); }
-            protected set { _appliedDiscounts = value; }
+            ToTable("Manufacturer");
+            HasKey(m => m.Id);
+            Property(m => m.Name).IsRequired().HasMaxLength(400);
+            Property(m => m.PageSizeOptions).HasMaxLength(200);
         }
     }
 }

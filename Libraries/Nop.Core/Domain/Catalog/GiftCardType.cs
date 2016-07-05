@@ -12,6 +12,6 @@ namespace Nop.Core.Domain.Catalog
         /// <summary>
         /// Physical
         /// </summary>
-        Physical = 1,
+        Physical = 1
     }
 }

@@ -5,7 +5,7 @@ namespace Nop.Core.Domain.Catalog
     /// <summary>
     /// Represents a tier price
     /// </summary>
-    public partial class TierPrice : BaseEntity
+    public class TierPrice : BaseEntity
     {
         /// <summary>
         /// Gets or sets the product identifier

@@ -9,7 +9,7 @@ namespace Nop.Core.Domain.Blogs
     /// <summary>
     /// Represents a blog post
     /// </summary>
-    public partial class BlogPost : BaseEntity, ISlugSupported, IStoreMappingSupported
+    public class BlogPost : BaseEntity, ISlugSupported, IStoreMappingSupported
     {
         private ICollection<BlogComment> _blogComments;
 

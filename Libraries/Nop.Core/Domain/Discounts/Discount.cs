@@ -7,11 +7,9 @@ namespace Nop.Core.Domain.Discounts
     /// <summary>
     /// Represents a discount
     /// </summary>
-    public partial class Discount : BaseEntity
+    public class Discount : BaseEntity
     {
-        private ICollection<DiscountRequirement> _discountRequirements;
         private ICollection<Category> _appliedToCategories;
-        private ICollection<Manufacturer> _appliedToManufacturers;
         private ICollection<Product> _appliedToProducts;
 
         /// <summary>
@@ -93,11 +91,11 @@ namespace Nop.Core.Domain.Discounts
         {
             get
             {
-                return (DiscountType)this.DiscountTypeId;
+                return (DiscountType)DiscountTypeId;
             }
             set
             {
-                this.DiscountTypeId = (int)value;
+                DiscountTypeId = (int)value;
             }
         }
 
@@ -108,21 +106,12 @@ namespace Nop.Core.Domain.Discounts
         {
             get
             {
-                return (DiscountLimitationType)this.DiscountLimitationId;
+                return (DiscountLimitationType)DiscountLimitationId;
             }
             set
             {
-                this.DiscountLimitationId = (int)value;
+                DiscountLimitationId = (int)value;
             }
-        }
-
-        /// <summary>
-        /// Gets or sets the discount requirement
-        /// </summary>
-        public virtual ICollection<DiscountRequirement> DiscountRequirements
-        {
-            get { return _discountRequirements ?? (_discountRequirements = new List<DiscountRequirement>()); }
-            protected set { _discountRequirements = value; }
         }
 
         /// <summary>
@@ -133,15 +122,7 @@ namespace Nop.Core.Domain.Discounts
             get { return _appliedToCategories ?? (_appliedToCategories = new List<Category>()); }
             protected set { _appliedToCategories = value; }
         }
-
-        /// <summary>
-        /// Gets or sets the categories
-        /// </summary>
-        public virtual ICollection<Manufacturer> AppliedToManufacturers
-        {
-            get { return _appliedToManufacturers ?? (_appliedToManufacturers = new List<Manufacturer>()); }
-            protected set { _appliedToManufacturers = value; }
-        }
+        
         /// <summary>
         /// Gets or sets the products 
         /// </summary>
@@ -149,6 +130,31 @@ namespace Nop.Core.Domain.Discounts
         {
             get { return _appliedToProducts ?? (_appliedToProducts = new List<Product>()); }
             protected set { _appliedToProducts = value; }
+        }
+    }
+
+    public class DiscountMap : GoqEntityTypeConfiguration<Discount>
+    {
+        public DiscountMap()
+        {
+            ToTable("Discount");
+            HasKey(d => d.Id);
+            Property(d => d.Name).IsRequired().HasMaxLength(200);
+            Property(d => d.CouponCode).HasMaxLength(100);
+            Property(d => d.DiscountPercentage).HasPrecision(18, 4);
+            Property(d => d.DiscountAmount).HasPrecision(18, 4);
+            Property(d => d.MaximumDiscountAmount).HasPrecision(18, 4);
+
+            Ignore(d => d.DiscountType);
+            Ignore(d => d.DiscountLimitation);
+
+            HasMany(dr => dr.AppliedToCategories)
+                .WithMany(c => c.AppliedDiscounts)
+                .Map(m => m.ToTable("Discount_AppliedToCategories"));
+
+            HasMany(dr => dr.AppliedToProducts)
+                .WithMany(p => p.AppliedDiscounts)
+                .Map(m => m.ToTable("Discount_AppliedToProducts"));
         }
     }
 }

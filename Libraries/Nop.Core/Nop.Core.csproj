@@ -42,6 +42,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Autofac.Mvc5.3.3.4\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -55,6 +63,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Caching" />
@@ -108,6 +117,7 @@
     <Compile Include="Domain\Customers\CustomerLoginResults.cs" />
     <Compile Include="Domain\Customers\Events.cs" />
     <Compile Include="Domain\Messages\QueuedEmailPriority.cs" />
+    <Compile Include="Domain\GoqEntityTypeConfiguration.cs" />
     <Compile Include="Domain\Orders\OrderByCountryReportLine.cs" />
     <Compile Include="Domain\Orders\ReturnRequestReason.cs" />
     <Compile Include="Domain\Orders\ReturnRequestAction.cs" />
@@ -147,18 +157,13 @@
     <Compile Include="Data\DataSettings.cs" />
     <Compile Include="Data\DataSettingsHelper.cs" />
     <Compile Include="Data\DataSettingsManager.cs" />
-    <Compile Include="Domain\Blogs\BlogExtensions.cs" />
     <Compile Include="Domain\Catalog\ProductExtensions.cs" />
-    <Compile Include="Domain\Catalog\ManufacturerTemplate.cs" />
     <Compile Include="Domain\Catalog\ProductTemplate.cs" />
     <Compile Include="Domain\Common\AdminAreaSettings.cs" />
     <Compile Include="Domain\Seo\SeoSettings.cs" />
     <Compile Include="Domain\Customers\ExternalAuthenticationSettings.cs" />
     <Compile Include="Domain\Customers\ExternalAuthenticationRecord.cs" />
     <Compile Include="Domain\Customers\SystemCustomerNames.cs" />
-    <Compile Include="Domain\Polls\PollVotingRecord.cs" />
-    <Compile Include="Domain\Polls\PollAnswer.cs" />
-    <Compile Include="Domain\Polls\Poll.cs" />
     <Compile Include="Domain\Orders\BestsellersReportLine.cs" />
     <Compile Include="Events\EntityDeleted.cs" />
     <Compile Include="Events\EntityInserted.cs" />
@@ -180,10 +185,6 @@
     <Compile Include="Configuration\ISettings.cs" />
     <Compile Include="Configuration\NopConfig.cs" />
     <Compile Include="Domain\Affiliates\Affiliate.cs" />
-    <Compile Include="Domain\Blogs\BlogSettings.cs" />
-    <Compile Include="Domain\Blogs\BlogPost.cs" />
-    <Compile Include="Domain\Blogs\BlogComment.cs" />
-    <Compile Include="Domain\Blogs\BlogPostTag.cs" />
     <Compile Include="Domain\Catalog\CatalogSettings.cs" />
     <Compile Include="Domain\Catalog\ProductTag.cs" />
     <Compile Include="Domain\Catalog\ProductReviewHelpfulness.cs" />
@@ -207,16 +208,6 @@
     <Compile Include="Domain\Customers\CustomerNameFormat.cs" />
     <Compile Include="Domain\Customers\SystemCustomerAttributeNames.cs" />
     <Compile Include="Domain\Directory\ExchangeRate.cs" />
-    <Compile Include="Domain\Forums\EditorType.cs" />
-    <Compile Include="Domain\Forums\Forum.cs" />
-    <Compile Include="Domain\Forums\ForumGroup.cs" />
-    <Compile Include="Domain\Forums\ForumPost.cs" />
-    <Compile Include="Domain\Forums\ForumSearchType.cs" />
-    <Compile Include="Domain\Forums\ForumSettings.cs" />
-    <Compile Include="Domain\Forums\ForumSubscription.cs" />
-    <Compile Include="Domain\Forums\ForumTopic.cs" />
-    <Compile Include="Domain\Forums\ForumTopicType.cs" />
-    <Compile Include="Domain\Forums\PrivateMessage.cs" />
     <Compile Include="Domain\Localization\LocalizationSettings.cs" />
     <Compile Include="Domain\Media\Download.cs" />
     <Compile Include="Domain\Media\PictureType.cs" />
@@ -264,7 +255,6 @@
     <Compile Include="Domain\Directory\MeasureWeight.cs" />
     <Compile Include="Domain\Catalog\ProductReview.cs" />
     <Compile Include="Domain\Discounts\DiscountUsageHistory.cs" />
-    <Compile Include="Domain\Discounts\DiscountRequirement.cs" />
     <Compile Include="Domain\Discounts\Discount.cs" />
     <Compile Include="Domain\Discounts\DiscountLimitationType.cs" />
     <Compile Include="Domain\Discounts\DiscountType.cs" />
@@ -359,7 +349,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XmlHelper.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Domain\Blogs\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />

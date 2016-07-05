@@ -11,7 +11,7 @@ namespace Nop.Core.Domain.Catalog
     /// <summary>
     /// Represents a product
     /// </summary>
-    public partial class Product : BaseEntity, ILocalizedEntity, ISlugSupported, IAclSupported, IStoreMappingSupported
+    public class Product : BaseEntity, ILocalizedEntity, ISlugSupported, IAclSupported, IStoreMappingSupported
     {
         private ICollection<ProductCategory> _productCategories;
         private ICollection<ProductManufacturer> _productManufacturers;
@@ -494,11 +494,11 @@ namespace Nop.Core.Domain.Catalog
         {
             get
             {
-                return (ProductType)this.ProductTypeId;
+                return (ProductType)ProductTypeId;
             }
             set
             {
-                this.ProductTypeId = (int)value;
+                ProductTypeId = (int)value;
             }
         }
 
@@ -509,11 +509,11 @@ namespace Nop.Core.Domain.Catalog
         {
             get
             {
-                return (BackorderMode)this.BackorderModeId;
+                return (BackorderMode)BackorderModeId;
             }
             set
             {
-                this.BackorderModeId = (int)value;
+                BackorderModeId = (int)value;
             }
         }
 
@@ -524,11 +524,11 @@ namespace Nop.Core.Domain.Catalog
         {
             get
             {
-                return (DownloadActivationType)this.DownloadActivationTypeId;
+                return (DownloadActivationType)DownloadActivationTypeId;
             }
             set
             {
-                this.DownloadActivationTypeId = (int)value;
+                DownloadActivationTypeId = (int)value;
             }
         }
 
@@ -539,11 +539,11 @@ namespace Nop.Core.Domain.Catalog
         {
             get
             {
-                return (GiftCardType)this.GiftCardTypeId;
+                return (GiftCardType)GiftCardTypeId;
             }
             set
             {
-                this.GiftCardTypeId = (int)value;
+                GiftCardTypeId = (int)value;
             }
         }
 
@@ -554,11 +554,11 @@ namespace Nop.Core.Domain.Catalog
         {
             get
             {
-                return (LowStockActivity)this.LowStockActivityId;
+                return (LowStockActivity)LowStockActivityId;
             }
             set
             {
-                this.LowStockActivityId = (int)value;
+                LowStockActivityId = (int)value;
             }
         }
 
@@ -569,11 +569,11 @@ namespace Nop.Core.Domain.Catalog
         {
             get
             {
-                return (ManageInventoryMethod)this.ManageInventoryMethodId;
+                return (ManageInventoryMethod)ManageInventoryMethodId;
             }
             set
             {
-                this.ManageInventoryMethodId = (int)value;
+                ManageInventoryMethodId = (int)value;
             }
         }
 
@@ -584,11 +584,11 @@ namespace Nop.Core.Domain.Catalog
         {
             get
             {
-                return (RecurringProductCyclePeriod)this.RecurringCyclePeriodId;
+                return (RecurringProductCyclePeriod)RecurringCyclePeriodId;
             }
             set
             {
-                this.RecurringCyclePeriodId = (int)value;
+                RecurringCyclePeriodId = (int)value;
             }
         }
 
@@ -599,11 +599,11 @@ namespace Nop.Core.Domain.Catalog
         {
             get
             {
-                return (RentalPricePeriod)this.RentalPricePeriodId;
+                return (RentalPricePeriod)RentalPricePeriodId;
             }
             set
             {
-                this.RentalPricePeriodId = (int)value;
+                RentalPricePeriodId = (int)value;
             }
         }
 

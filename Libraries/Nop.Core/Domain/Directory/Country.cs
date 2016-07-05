@@ -8,7 +8,7 @@ namespace Nop.Core.Domain.Directory
     /// <summary>
     /// Represents a country
     /// </summary>
-    public partial class Country : BaseEntity, ILocalizedEntity, IStoreMappingSupported
+    public class Country : BaseEntity, ILocalizedEntity, IStoreMappingSupported
     {
         private ICollection<StateProvince> _stateProvinces;
         private ICollection<ShippingMethod> _restrictedShippingMethods;

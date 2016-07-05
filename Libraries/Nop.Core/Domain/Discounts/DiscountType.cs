@@ -18,10 +18,6 @@ namespace Nop.Core.Domain.Discounts
         /// </summary>
         AssignedToCategories = 5,
         /// <summary>
-        /// Assigned to manufacturers (all products of a manufacturer)
-        /// </summary>
-        AssignedToManufacturers = 6,
-        /// <summary>
         /// Assigned to shipping
         /// </summary>
         AssignedToShipping = 10,
