@@ -119,13 +119,18 @@ namespace Nop.Services.Authentication.External
             return null;
         }
 
-        public virtual IList<ExternalAuthenticationRecord> GetExternalIdentifiersFor(Customer customer)
+        public IList<ExternalAuthenticationRecord> GetExternalIdentifiersFor(Customer customer)
         {
-            if (customer == null)
-                throw new ArgumentNullException("customer");
-
-            return customer.ExternalAuthenticationRecords.ToList();
+            throw new NotImplementedException();
         }
+
+        //public virtual IList<ExternalAuthenticationRecord> GetExternalIdentifiersFor(Customer customer)
+        //{
+        //    if (customer == null)
+        //        throw new ArgumentNullException("customer");
+
+        //    return customer.ExternalAuthenticationRecords.ToList();
+        //}
 
         public virtual void DeletExternalAuthenticationRecord(ExternalAuthenticationRecord externalAuthenticationRecord)
         {
