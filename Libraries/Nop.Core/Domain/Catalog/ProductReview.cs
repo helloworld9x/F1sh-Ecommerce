@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Nop.Core.Domain.Customers;
 
 namespace Nop.Core.Domain.Catalog
@@ -9,8 +8,6 @@ namespace Nop.Core.Domain.Catalog
     /// </summary>
     public class ProductReview : BaseEntity
     {
-        private ICollection<ProductReviewHelpfulness> _productReviewHelpfulnessEntries;
-
         /// <summary>
         /// Gets or sets the customer identifier
         /// </summary>
@@ -66,13 +63,22 @@ namespace Nop.Core.Domain.Catalog
         /// </summary>
         public virtual Product Product { get; set; }
 
-        /// <summary>
-        /// Gets the entries of product review helpfulness
-        /// </summary>
-        public virtual ICollection<ProductReviewHelpfulness> ProductReviewHelpfulnessEntries
+    }
+
+    public class ProductReviewMap : GoqEntityTypeConfiguration<ProductReview>
+    {
+        public ProductReviewMap()
         {
-            get { return _productReviewHelpfulnessEntries ?? (_productReviewHelpfulnessEntries = new List<ProductReviewHelpfulness>()); }
-            protected set { _productReviewHelpfulnessEntries = value; }
+            ToTable("ProductReview");
+            HasKey(pr => pr.Id);
+
+            HasRequired(pr => pr.Product)
+                .WithMany(p => p.ProductReviews)
+                .HasForeignKey(pr => pr.ProductId);
+
+            HasRequired(pr => pr.Customer)
+                .WithMany()
+                .HasForeignKey(pr => pr.CustomerId);
         }
     }
 }

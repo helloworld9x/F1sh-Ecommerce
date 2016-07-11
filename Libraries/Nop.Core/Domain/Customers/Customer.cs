@@ -8,9 +8,8 @@ namespace Nop.Core.Domain.Customers
     /// <summary>
     /// Represents a customer
     /// </summary>
-    public partial class Customer : BaseEntity
+    public class Customer : BaseEntity
     {
-        private ICollection<ExternalAuthenticationRecord> _externalAuthenticationRecords;
         private ICollection<CustomerRole> _customerRoles;
         private ICollection<ShoppingCartItem> _shoppingCartItems;
         private ICollection<ReturnRequest> _returnRequests;
@@ -21,8 +20,8 @@ namespace Nop.Core.Domain.Customers
         /// </summary>
         public Customer()
         {
-            this.CustomerGuid = Guid.NewGuid();
-            this.PasswordFormat = PasswordFormat.Clear;
+            CustomerGuid = Guid.NewGuid();
+            PasswordFormat = PasswordFormat.Clear;
         }
 
         /// <summary>
@@ -53,7 +52,7 @@ namespace Nop.Core.Domain.Customers
         public PasswordFormat PasswordFormat
         {
             get { return (PasswordFormat)PasswordFormatId; }
-            set { this.PasswordFormatId = (int)value; }
+            set { PasswordFormatId = (int)value; }
         }
         /// <summary>
         /// Gets or sets the password salt
@@ -131,15 +130,6 @@ namespace Nop.Core.Domain.Customers
         public DateTime LastActivityDateUtc { get; set; }
         
         #region Navigation properties
-
-        /// <summary>
-        /// Gets or sets customer generated content
-        /// </summary>
-        public virtual ICollection<ExternalAuthenticationRecord> ExternalAuthenticationRecords
-        {
-            get { return _externalAuthenticationRecords ?? (_externalAuthenticationRecords = new List<ExternalAuthenticationRecord>()); }
-            protected set { _externalAuthenticationRecords = value; }
-        }
 
         /// <summary>
         /// Gets or sets the customer roles

@@ -21,4 +21,12 @@ namespace Nop.Core.Domain.Catalog
         public int DisplayOrder { get; set; }
     }
 
+    public  class RelatedProductMap : GoqEntityTypeConfiguration<RelatedProduct>
+    {
+        public RelatedProductMap()
+        {
+            ToTable("RelatedProduct");
+            HasKey(c => c.Id);
+        }
+    }
 }

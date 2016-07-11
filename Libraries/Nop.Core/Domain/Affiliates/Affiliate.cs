@@ -37,4 +37,15 @@ namespace Nop.Core.Domain.Affiliates
         /// </summary>
         public virtual Address Address { get; set; }
     }
+
+    public class AffiliateMap : GoqEntityTypeConfiguration<Affiliate>
+    {
+        public AffiliateMap()
+        {
+            ToTable("Affiliate");
+            HasKey(a => a.Id);
+
+            HasRequired(a => a.Address).WithMany().HasForeignKey(x => x.AddressId).WillCascadeOnDelete(false);
+        }
+    }
 }

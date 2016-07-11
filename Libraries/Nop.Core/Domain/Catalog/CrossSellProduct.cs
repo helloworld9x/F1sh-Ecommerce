@@ -16,4 +16,13 @@ namespace Nop.Core.Domain.Catalog
         public int ProductId2 { get; set; }
     }
 
+    public class CrossSellProductMap : GoqEntityTypeConfiguration<CrossSellProduct>
+    {
+        public CrossSellProductMap()
+        {
+            ToTable("CrossSellProduct");
+            HasKey(c => c.Id);
+        }
+    }
+
 }

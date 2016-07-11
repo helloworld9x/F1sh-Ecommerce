@@ -24,4 +24,13 @@ namespace Nop.Core.Domain.Catalog
             protected set { _products = value; }
         }
     }
+    public class ProductTagMap : GoqEntityTypeConfiguration<ProductTag>
+    {
+        public ProductTagMap()
+        {
+            ToTable("ProductTag");
+            HasKey(pt => pt.Id);
+            Property(pt => pt.Name).IsRequired().HasMaxLength(400);
+        }
+    }
 }
