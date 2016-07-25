@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data.Entity;
 
-namespace Nop.Data.Initializers
+namespace F1sh.Data.Initializers
 {
     /// <summary>
     /// An implementation of IDatabaseInitializer that will always recreate and optionally re-seed the

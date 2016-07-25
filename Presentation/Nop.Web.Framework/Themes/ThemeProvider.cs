@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml;
-using Nop.Core;
+using F1sh.Core;
 
-namespace Nop.Web.Framework.Themes
+namespace F1sh.Web.Framework.Themes
 {
     public partial class ThemeProvider : IThemeProvider
     {

@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using System.Xml;
 
-namespace Nop.Web.Framework
+namespace F1sh.Web.Framework
 {
     public class RssActionResult : ActionResult
     {

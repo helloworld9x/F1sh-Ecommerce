@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Directory;
+using F1sh.Core.Domain.Directory;
 
-namespace Nop.Data.Mapping.Directory
+namespace F1sh.Data.Mapping.Directory
 {
-    public partial class CurrencyMap : NopEntityTypeConfiguration<Currency>
+    public partial class CurrencyMap : F1shEntityTypeConfiguration<Currency>
     {
         public CurrencyMap()
         {

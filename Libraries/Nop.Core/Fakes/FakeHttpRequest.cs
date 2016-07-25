@@ -3,7 +3,7 @@ using System.Collections.Specialized;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Nop.Core.Fakes
+namespace F1sh.Core.Fakes
 {
     public class FakeHttpRequest : HttpRequestBase
     {

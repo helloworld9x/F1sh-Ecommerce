@@ -9,14 +9,14 @@ using System.Threading;
 using System.Web;
 using System.Web.Compilation;
 using System.Web.Hosting;
-using Nop.Core.ComponentModel;
-using Nop.Core.Plugins;
+using F1sh.Core.ComponentModel;
+using F1sh.Core.Plugins;
 
 //Contributor: Umbraco (http://www.umbraco.com). Thanks a lot! 
 //SEE THIS POST for full details of what this does - http://shazwazza.com/post/Developing-a-plugin-framework-in-ASPNET-with-medium-trust.aspx
 
 [assembly: PreApplicationStartMethod(typeof(PluginManager), "Initialize")]
-namespace Nop.Core.Plugins
+namespace F1sh.Core.Plugins
 {
     /// <summary>
     /// Sets the application up for the plugin referencing
@@ -104,7 +104,7 @@ namespace Nop.Core.Plugins
                         var pluginDescriptor = dfd.Value;
 
                         //ensure that version of plugin is valid
-                        if (!pluginDescriptor.SupportedVersions.Contains(NopVersion.CurrentVersion, StringComparer.InvariantCultureIgnoreCase))
+                        if (!pluginDescriptor.SupportedVersions.Contains(F1shVersion.CurrentVersion, StringComparer.InvariantCultureIgnoreCase))
                         {
                             incompatiblePlugins.Add(pluginDescriptor.SystemName);
                             continue;
@@ -284,7 +284,7 @@ namespace Nop.Core.Plugins
             }
 
             //sort list by display order. NOTE: Lowest DisplayOrder will be first i.e 0 , 1, 1, 1, 5, 10
-            //it's required: http://www.nopcommerce.com/boards/t/17455/load-plugins-based-on-their-displayorder-on-startup.aspx
+            //it's required: http://www.F1shcommerce.com/boards/t/17455/load-plugins-based-on-their-displayorder-on-startup.aspx
             result.Sort((firstPair, nextPair) => firstPair.Value.DisplayOrder.CompareTo(nextPair.Value.DisplayOrder));
             return result;
         }
@@ -334,7 +334,7 @@ namespace Nop.Core.Plugins
         {
             if (plug.Directory.Parent == null)
                 throw new InvalidOperationException("The plugin directory for the " + plug.Name +
-                                                    " file exists in a folder outside of the allowed nopCommerce folder heirarchy");
+                                                    " file exists in a folder outside of the allowed F1shCommerce folder heirarchy");
 
             FileInfo shadowCopiedPlug;
 
@@ -425,7 +425,7 @@ namespace Nop.Core.Plugins
                 {
                     //delete an existing file
 
-                    //More info: http://www.nopcommerce.com/boards/t/11511/access-error-nopplugindiscountrulesbillingcountrydll.aspx?p=4#60838
+                    //More info: http://www.F1shcommerce.com/boards/t/11511/access-error-F1shplugindiscountrulesbillingcountrydll.aspx?p=4#60838
                     Debug.WriteLine("New plugin found; Deleting the old file: '{0}'", shadowCopiedPlug.Name);
                     File.Delete(shadowCopiedPlug.FullName);
                 }

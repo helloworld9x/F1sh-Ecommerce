@@ -1,5 +1,5 @@
 ﻿
-namespace Nop.Services.Security 
+namespace F1sh.Services.Security 
 {
     public interface IEncryptionService 
     {

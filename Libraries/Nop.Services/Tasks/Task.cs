@@ -1,12 +1,12 @@
 ﻿using System;
 using Autofac;
-using Nop.Core.Configuration;
-using Nop.Core.Domain.Tasks;
-using Nop.Core.Infrastructure;
-using Nop.Services.Infrastructure;
-using Nop.Services.Logging;
+using F1sh.Core.Configuration;
+using F1sh.Core.Domain.Tasks;
+using F1sh.Core.Infrastructure;
+using F1sh.Services.Infrastructure;
+using F1sh.Services.Logging;
 
-namespace Nop.Services.Tasks
+namespace F1sh.Services.Tasks
 {
     /// <summary>
     /// Task
@@ -85,8 +85,8 @@ namespace Nop.Services.Tasks
                 if (ensureRunOnOneWebFarmInstance)
                 {
                     //is web farm enabled (multiple instances)?
-                    var nopConfig = EngineContext.Current.ContainerManager.Resolve<NopConfig>("", scope);
-                    if (nopConfig.MultipleInstancesEnabled)
+                    var F1shConfig = EngineContext.Current.ContainerManager.Resolve<F1shConfig>("", scope);
+                    if (F1shConfig.MultipleInstancesEnabled)
                     {
                         var machineNameProvider = EngineContext.Current.ContainerManager.Resolve<IMachineNameProvider>("", scope);
                         var machineName = machineNameProvider.GetMachineName();

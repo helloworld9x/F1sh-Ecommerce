@@ -1,8 +1,8 @@
-﻿using Nop.Core.Caching;
-using Nop.Core.Infrastructure;
-using Nop.Services.Tasks;
+﻿using F1sh.Core.Caching;
+using F1sh.Core.Infrastructure;
+using F1sh.Services.Tasks;
 
-namespace Nop.Services.Caching
+namespace F1sh.Services.Caching
 {
     /// <summary>
     /// Clear cache schedueled task implementation
@@ -14,7 +14,7 @@ namespace Nop.Services.Caching
         /// </summary>
         public void Execute()
         {
-            var cacheManager = EngineContext.Current.ContainerManager.Resolve<ICacheManager>("nop_cache_static");
+            var cacheManager = EngineContext.Current.ContainerManager.Resolve<ICacheManager>("F1sh_cache_static");
             cacheManager.Clear();
         }
     }

@@ -1,7 +1,7 @@
 ﻿
-using Nop.Core.Configuration;
+using F1sh.Core.Configuration;
 
-namespace Nop.Core.Domain.Customers
+namespace F1sh.Core.Domain.Customers
 {
     public class CustomerSettings : ISettings
     {

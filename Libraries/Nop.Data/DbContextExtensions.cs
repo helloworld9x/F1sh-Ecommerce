@@ -3,9 +3,9 @@ using System.Data.Entity;
 using System.Data.Entity.Core.Metadata.Edm;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
-using Nop.Core;
+using F1sh.Core;
 
-namespace Nop.Data 
+namespace F1sh.Data 
 {
     public static class DbContextExtensions
     {

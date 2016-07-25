@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Web.Mvc;
-using Nop.Core;
-using Nop.Core.Domain.Security;
-using Nop.Core.Infrastructure;
-using Nop.Services.Logging;
+using F1sh.Core;
+using F1sh.Core.Domain.Security;
+using F1sh.Core.Infrastructure;
+using F1sh.Services.Logging;
 
-namespace Nop.Web.Framework.Security.Honeypot
+namespace F1sh.Web.Framework.Security.Honeypot
 {
     [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class, Inherited = true, AllowMultiple = true)]
     public class HoneypotValidatorAttribute : FilterAttribute, IAuthorizationFilter

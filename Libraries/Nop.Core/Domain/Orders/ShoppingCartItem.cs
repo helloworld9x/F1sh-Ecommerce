@@ -1,8 +1,8 @@
 using System;
-using Nop.Core.Domain.Catalog;
-using Nop.Core.Domain.Customers;
+using F1sh.Core.Domain.Catalog;
+using F1sh.Core.Domain.Customers;
 
-namespace Nop.Core.Domain.Orders
+namespace F1sh.Core.Domain.Orders
 {
     /// <summary>
     /// Represents a shopping cart item

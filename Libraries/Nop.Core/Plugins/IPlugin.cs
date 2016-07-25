@@ -1,4 +1,4 @@
-﻿namespace Nop.Core.Plugins
+﻿namespace F1sh.Core.Plugins
 {
     /// <summary>
     /// Interface denoting plug-in attributes that are displayed throughout 

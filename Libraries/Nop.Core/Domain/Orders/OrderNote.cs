@@ -1,6 +1,6 @@
 using System;
 
-namespace Nop.Core.Domain.Orders
+namespace F1sh.Core.Domain.Orders
 {
     /// <summary>
     /// Represents an order note

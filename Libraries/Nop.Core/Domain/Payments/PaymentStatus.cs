@@ -1,5 +1,5 @@
 
-namespace Nop.Core.Domain.Payments
+namespace F1sh.Core.Domain.Payments
 {
     /// <summary>
     /// Represents a payment status enumeration

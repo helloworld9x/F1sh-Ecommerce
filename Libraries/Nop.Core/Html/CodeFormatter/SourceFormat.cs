@@ -26,7 +26,7 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Nop.Core.Html.CodeFormatter
+namespace F1sh.Core.Html.CodeFormatter
 {
 	/// <summary>
 	///	Provides a base implementation for all code formatters.

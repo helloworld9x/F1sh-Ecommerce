@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Web.Hosting;
 
-namespace Nop.Core.Data
+namespace F1sh.Core.Data
 {
     /// <summary>
     /// Manager of data settings (connection string)

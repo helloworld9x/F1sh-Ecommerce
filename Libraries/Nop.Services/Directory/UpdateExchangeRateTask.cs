@@ -1,8 +1,8 @@
 ﻿using System;
-using Nop.Core.Domain.Directory;
-using Nop.Services.Tasks;
+using F1sh.Core.Domain.Directory;
+using F1sh.Services.Tasks;
 
-namespace Nop.Services.Directory
+namespace F1sh.Services.Directory
 {
     /// <summary>
     /// Represents a task for updating exchange rates

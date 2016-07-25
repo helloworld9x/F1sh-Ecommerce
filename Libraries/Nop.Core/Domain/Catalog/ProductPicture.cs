@@ -1,7 +1,7 @@
 
-using Nop.Core.Domain.Media;
+using F1sh.Core.Domain.Media;
 
-namespace Nop.Core.Domain.Catalog
+namespace F1sh.Core.Domain.Catalog
 {
     /// <summary>
     /// Represents a product picture mapping

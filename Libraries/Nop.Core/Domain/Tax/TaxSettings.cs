@@ -1,7 +1,7 @@
 ﻿
-using Nop.Core.Configuration;
+using F1sh.Core.Configuration;
 
-namespace Nop.Core.Domain.Tax
+namespace F1sh.Core.Domain.Tax
 {
     public class TaxSettings : ISettings
     {

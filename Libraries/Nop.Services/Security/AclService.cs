@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Nop.Core;
-using Nop.Core.Caching;
-using Nop.Core.Data;
-using Nop.Core.Domain.Catalog;
-using Nop.Core.Domain.Customers;
-using Nop.Core.Domain.Security;
-using Nop.Services.Events;
+using F1sh.Core;
+using F1sh.Core.Caching;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Catalog;
+using F1sh.Core.Domain.Customers;
+using F1sh.Core.Domain.Security;
+using F1sh.Services.Events;
 
-namespace Nop.Services.Security
+namespace F1sh.Services.Security
 {
     /// <summary>
     /// ACL service
@@ -25,11 +25,11 @@ namespace Nop.Services.Security
         /// {0} : entity ID
         /// {1} : entity name
         /// </remarks>
-        private const string ACLRECORD_BY_ENTITYID_NAME_KEY = "Nop.aclrecord.entityid-name-{0}-{1}";
+        private const string ACLRECORD_BY_ENTITYID_NAME_KEY = "F1sh.aclrecord.entityid-name-{0}-{1}";
         /// <summary>
         /// Key pattern to clear cache
         /// </summary>
-        private const string ACLRECORD_PATTERN_KEY = "Nop.aclrecord.";
+        private const string ACLRECORD_PATTERN_KEY = "F1sh.aclrecord.";
 
         #endregion
 

@@ -1,16 +1,16 @@
-﻿using Nop.Core;
-using Nop.Core.Infrastructure;
-using Nop.Services.Localization;
-using Nop.Web.Framework.Mvc;
+﻿using F1sh.Core;
+using F1sh.Core.Infrastructure;
+using F1sh.Services.Localization;
+using F1sh.Web.Framework.Mvc;
 
-namespace Nop.Web.Framework
+namespace F1sh.Web.Framework
 {
-    public class NopResourceDisplayName : System.ComponentModel.DisplayNameAttribute, IModelAttribute
+    public class F1ShResourceDisplayName : System.ComponentModel.DisplayNameAttribute, IModelAttribute
     {
         private string _resourceValue = string.Empty;
         //private bool _resourceValueRetrived;
 
-        public NopResourceDisplayName(string resourceKey)
+        public F1ShResourceDisplayName(string resourceKey)
             : base(resourceKey)
         {
             ResourceKey = resourceKey;
@@ -37,7 +37,7 @@ namespace Nop.Web.Framework
 
         public string Name
         {
-            get { return "NopResourceDisplayName"; }
+            get { return "F1shResourceDisplayName"; }
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System.Net;
-using Nop.Core;
-using Nop.Services.Tasks;
+using F1sh.Core;
+using F1sh.Services.Tasks;
 
-namespace Nop.Services.Common
+namespace F1sh.Services.Common
 {
     /// <summary>
     /// Represents a task for keeping the site alive

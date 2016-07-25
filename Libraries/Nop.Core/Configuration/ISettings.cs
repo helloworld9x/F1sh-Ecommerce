@@ -1,5 +1,5 @@
 ﻿
-namespace Nop.Core.Configuration
+namespace F1sh.Core.Configuration
 {
     /// <summary>
     /// Setting interface

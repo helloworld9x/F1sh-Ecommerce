@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
 
-namespace Nop.Web.Framework.Mvc
+namespace F1sh.Web.Framework.Mvc
 {
     /// <summary>
-    /// Base nopCommerce model
+    /// Base F1shCommerce model
     /// </summary>
-    [ModelBinder(typeof(NopModelBinder))]
-    public partial class BaseNopModel
+    [ModelBinder(typeof(F1shModelBinder))]
+    public partial class BaseF1shModel
     {
-        public BaseNopModel()
+        public BaseF1shModel()
         {
             this.CustomProperties = new Dictionary<string, object>();
             PostInitialize();
@@ -35,9 +35,9 @@ namespace Nop.Web.Framework.Mvc
     }
 
     /// <summary>
-    /// Base nopCommerce entity model
+    /// Base F1shCommerce entity model
     /// </summary>
-    public partial class BaseNopEntityModel : BaseNopModel
+    public partial class BaseF1shEntityModel : BaseF1shModel
     {
         public virtual int Id { get; set; }
     }

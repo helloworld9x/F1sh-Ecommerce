@@ -1,9 +1,9 @@
 //Contributor:  Nicholas Mayne
 
 using System.Web.Routing;
-using Nop.Core.Plugins;
+using F1sh.Core.Plugins;
 
-namespace Nop.Services.Authentication.External
+namespace F1sh.Services.Authentication.External
 {
     /// <summary>
     /// Provides an interface for creating external authentication methods

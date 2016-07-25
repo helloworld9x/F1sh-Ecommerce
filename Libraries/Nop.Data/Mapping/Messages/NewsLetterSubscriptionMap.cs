@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Messages;
+using F1sh.Core.Domain.Messages;
 
-namespace Nop.Data.Mapping.Messages
+namespace F1sh.Data.Mapping.Messages
 {
-    public partial class NewsLetterSubscriptionMap : NopEntityTypeConfiguration<NewsLetterSubscription>
+    public partial class NewsLetterSubscriptionMap : F1shEntityTypeConfiguration<NewsLetterSubscription>
     {
         public NewsLetterSubscriptionMap()
         {

@@ -1,7 +1,7 @@
 ﻿
 using System.Data.Common;
 
-namespace Nop.Core.Data
+namespace F1sh.Core.Data
 {
     /// <summary>
     /// Data provider interface

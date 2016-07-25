@@ -1,7 +1,7 @@
 
-using Nop.Core.Domain.Localization;
+using F1sh.Core.Domain.Localization;
 
-namespace Nop.Core.Domain.Orders
+namespace F1sh.Core.Domain.Orders
 {
     /// <summary>
     /// Represents a checkout attribute value

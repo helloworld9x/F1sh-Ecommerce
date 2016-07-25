@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Messages;
+using F1sh.Core.Domain.Messages;
 
-namespace Nop.Data.Mapping.Messages
+namespace F1sh.Data.Mapping.Messages
 {
-    public partial class QueuedEmailMap : NopEntityTypeConfiguration<QueuedEmail>
+    public partial class QueuedEmailMap : F1shEntityTypeConfiguration<QueuedEmail>
     {
         public QueuedEmailMap()
         {

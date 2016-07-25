@@ -5,10 +5,10 @@ using System.IO;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
-namespace Nop.Core.Infrastructure
+namespace F1sh.Core.Infrastructure
 {
     /// <summary>
-    /// A class that finds types needed by Nop by looping assemblies in the 
+    /// A class that finds types needed by F1sh by looping assemblies in the 
     /// currently executing AppDomain. Only assemblies whose names matches
     /// certain patterns are investigated and an optional list of assemblies
     /// referenced by <see cref="AssemblyNames"/> are always investigated.
@@ -33,7 +33,7 @@ namespace Nop.Core.Infrastructure
             get { return AppDomain.CurrentDomain; }
         }
 
-        /// <summary>Gets or sets wether Nop should iterate assemblies in the app domain when loading Nop types. Loading patterns are applied when loading these assemblies.</summary>
+        /// <summary>Gets or sets wether F1sh should iterate assemblies in the app domain when loading F1sh types. Loading patterns are applied when loading these assemblies.</summary>
         public bool LoadAppDomainAssemblies
         {
             get { return loadAppDomainAssemblies; }
@@ -55,7 +55,7 @@ namespace Nop.Core.Infrastructure
         }
 
         /// <summary>Gets or sets the pattern for dll that will be investigated. For ease of use this defaults to match all but to increase performance you might want to configure a pattern that includes assemblies and your own.</summary>
-        /// <remarks>If you change this so that Nop assemblies arn't investigated (e.g. by not including something like "^Nop|..." you may break core functionality.</remarks>
+        /// <remarks>If you change this so that F1sh assemblies arn't investigated (e.g. by not including something like "^F1sh|..." you may break core functionality.</remarks>
         public string AssemblyRestrictToLoadingPattern
         {
             get { return assemblyRestrictToLoadingPattern; }
@@ -141,7 +141,7 @@ namespace Nop.Core.Infrastructure
         }
 
         /// <summary>Gets the assemblies related to the current implementation.</summary>
-        /// <returns>A list of assemblies that should be loaded by the Nop factory.</returns>
+        /// <returns>A list of assemblies that should be loaded by the F1sh factory.</returns>
         public virtual IList<Assembly> GetAssemblies()
         {
             var addedAssemblyNames = new List<string>();
@@ -203,7 +203,7 @@ namespace Nop.Core.Infrastructure
         /// The name of the assembly to check.
         /// </param>
         /// <returns>
-        /// True if the assembly should be loaded into Nop.
+        /// True if the assembly should be loaded into F1sh.
         /// </returns>
         public virtual bool Matches(string assemblyFullName)
         {

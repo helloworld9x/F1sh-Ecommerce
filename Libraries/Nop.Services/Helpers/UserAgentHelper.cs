@@ -2,19 +2,19 @@ using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Web;
-using Nop.Core;
-using Nop.Core.Configuration;
-using Nop.Core.Infrastructure;
+using F1sh.Core;
+using F1sh.Core.Configuration;
+using F1sh.Core.Infrastructure;
 using UserAgentStringLibrary;
 
-namespace Nop.Services.Helpers
+namespace F1sh.Services.Helpers
 {
     /// <summary>
     /// User agent helper
     /// </summary>
     public partial class UserAgentHelper : IUserAgentHelper
     {
-        private readonly NopConfig _config;
+        private readonly F1shConfig _config;
         private readonly IWebHelper _webHelper;
         private readonly HttpContextBase _httpContext;
 
@@ -24,7 +24,7 @@ namespace Nop.Services.Helpers
         /// <param name="config">Config</param>
         /// <param name="webHelper">Web helper</param>
         /// <param name="httpContext">HTTP context</param>
-        public UserAgentHelper(NopConfig config, IWebHelper webHelper, HttpContextBase httpContext)
+        public UserAgentHelper(F1shConfig config, IWebHelper webHelper, HttpContextBase httpContext)
         {
             this._config = config;
             this._webHelper = webHelper;
@@ -57,7 +57,7 @@ namespace Nop.Services.Helpers
                 return false;
 
             //we put required logic in try-catch block
-            //more info: http://www.nopcommerce.com/boards/t/17711/unhandled-exception-request-is-not-available-in-this-context.aspx
+            //more info: http://www.F1shcommerce.com/boards/t/17711/unhandled-exception-request-is-not-available-in-this-context.aspx
             bool result = false;
             try
             {

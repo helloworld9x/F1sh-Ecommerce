@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace Nop.Core
+namespace F1sh.Core
 {
     /// <summary>
     /// Xml helper class

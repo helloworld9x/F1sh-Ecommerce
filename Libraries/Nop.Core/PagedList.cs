@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Nop.Core
+namespace F1sh.Core
 {
     /// <summary>
     /// Paged list

@@ -1,7 +1,7 @@
 ﻿using Autofac;
-using Nop.Core.Configuration;
+using F1sh.Core.Configuration;
 
-namespace Nop.Core.Infrastructure.DependencyManagement
+namespace F1sh.Core.Infrastructure.DependencyManagement
 {
     /// <summary>
     /// Dependency registrar interface
@@ -14,7 +14,7 @@ namespace Nop.Core.Infrastructure.DependencyManagement
         /// <param name="builder">Container builder</param>
         /// <param name="typeFinder">Type finder</param>
         /// <param name="config">Config</param>
-        void Register(ContainerBuilder builder, ITypeFinder typeFinder, NopConfig config);
+        void Register(ContainerBuilder builder, ITypeFinder typeFinder, F1shConfig config);
 
         /// <summary>
         /// Order of this dependency registrar implementation

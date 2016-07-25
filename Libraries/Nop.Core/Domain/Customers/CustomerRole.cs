@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Nop.Core.Domain.Security;
+using F1sh.Core.Domain.Security;
 
-namespace Nop.Core.Domain.Customers
+namespace F1sh.Core.Domain.Customers
 {
     /// <summary>
     /// Represents a customer role

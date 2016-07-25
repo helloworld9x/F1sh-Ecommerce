@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Nop.Core.Data
+namespace F1sh.Core.Data
 {
     /// <summary>
     /// Data settings helper

@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Directory;
+using F1sh.Core.Domain.Directory;
 
-namespace Nop.Data.Mapping.Directory
+namespace F1sh.Data.Mapping.Directory
 {
-    public partial class MeasureWeightMap : NopEntityTypeConfiguration<MeasureWeight>
+    public partial class MeasureWeightMap : F1shEntityTypeConfiguration<MeasureWeight>
     {
         public MeasureWeightMap()
         {

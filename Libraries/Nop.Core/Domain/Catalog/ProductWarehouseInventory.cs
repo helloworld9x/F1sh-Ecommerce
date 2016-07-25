@@ -1,6 +1,6 @@
-using Nop.Core.Domain.Shipping;
+using F1sh.Core.Domain.Shipping;
 
-namespace Nop.Core.Domain.Catalog
+namespace F1sh.Core.Domain.Catalog
 {
     /// <summary>
     /// Represents a record to manage product inventory per warehouse

@@ -1,6 +1,6 @@
-using Nop.Core.Domain.Localization;
+using F1sh.Core.Domain.Localization;
 
-namespace Nop.Core.Domain.Common
+namespace F1sh.Core.Domain.Common
 {
     /// <summary>
     /// Represents an address attribute value

@@ -1,5 +1,5 @@
 
-namespace Nop.Core.Domain.Orders
+namespace F1sh.Core.Domain.Orders
 {
     /// <summary>
     /// Represents a shoping cart type

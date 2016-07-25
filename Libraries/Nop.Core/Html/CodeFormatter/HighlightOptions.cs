@@ -1,4 +1,4 @@
-namespace Nop.Core.Html.CodeFormatter
+namespace F1sh.Core.Html.CodeFormatter
 {
     /// <summary>
     /// Handles all of the options for changing the rendered code.

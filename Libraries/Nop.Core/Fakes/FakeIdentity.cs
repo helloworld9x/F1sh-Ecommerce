@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Security.Principal;
 
-namespace Nop.Core.Fakes
+namespace F1sh.Core.Fakes
 {
     public class FakeIdentity : IIdentity
     {

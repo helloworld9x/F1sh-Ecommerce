@@ -1,4 +1,4 @@
-namespace Nop.Core.Domain.Stores
+namespace F1sh.Core.Domain.Stores
 {
     /// <summary>
     /// Represents an entity which supports store mapping

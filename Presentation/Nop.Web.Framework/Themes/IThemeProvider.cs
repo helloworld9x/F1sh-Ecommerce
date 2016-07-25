@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Nop.Web.Framework.Themes
+namespace F1sh.Web.Framework.Themes
 {
     public partial interface IThemeProvider
     {

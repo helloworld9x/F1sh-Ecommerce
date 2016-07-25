@@ -1,4 +1,4 @@
-﻿namespace Nop.Core.Plugins
+﻿namespace F1sh.Core.Plugins
 {
     public class OfficialFeedCategory
     {

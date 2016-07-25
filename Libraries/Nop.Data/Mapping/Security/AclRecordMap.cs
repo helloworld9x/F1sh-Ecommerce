@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Security;
+using F1sh.Core.Domain.Security;
 
-namespace Nop.Data.Mapping.Security
+namespace F1sh.Data.Mapping.Security
 {
-    public partial class AclRecordMap : NopEntityTypeConfiguration<AclRecord>
+    public partial class AclRecordMap : F1shEntityTypeConfiguration<AclRecord>
     {
         public AclRecordMap()
         {

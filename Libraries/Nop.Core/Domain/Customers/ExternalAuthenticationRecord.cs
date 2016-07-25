@@ -1,4 +1,4 @@
-namespace Nop.Core.Domain.Customers
+namespace F1sh.Core.Domain.Customers
 {
     /// <summary>
     /// Represents an external authentication record

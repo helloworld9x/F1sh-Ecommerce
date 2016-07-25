@@ -24,7 +24,7 @@ using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Nop.Core.Html.CodeFormatter
+namespace F1sh.Core.Html.CodeFormatter
 {
 	/// <summary>
 	/// Provides a base class for formatting most programming languages.

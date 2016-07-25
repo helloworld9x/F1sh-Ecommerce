@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.WebPages;
 
-namespace Nop.Web.Framework.UI
+namespace F1sh.Web.Framework.UI
 {
     public static class DataListExtensions
     {

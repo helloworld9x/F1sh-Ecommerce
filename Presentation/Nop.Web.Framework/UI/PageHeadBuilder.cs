@@ -6,10 +6,10 @@ using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
-using Nop.Core.Domain.Seo;
-using Nop.Services.Seo;
+using F1sh.Core.Domain.Seo;
+using F1sh.Services.Seo;
 
-namespace Nop.Web.Framework.UI
+namespace F1sh.Web.Framework.UI
 {
     public partial class PageHeadBuilder : IPageHeadBuilder
     {

@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Customers;
+using F1sh.Core.Domain.Customers;
 
-namespace Nop.Data.Mapping.Customers
+namespace F1sh.Data.Mapping.Customers
 {
-    public partial class CustomerAttributeValueMap : NopEntityTypeConfiguration<CustomerAttributeValue>
+    public partial class CustomerAttributeValueMap : F1shEntityTypeConfiguration<CustomerAttributeValue>
     {
         public CustomerAttributeValueMap()
         {

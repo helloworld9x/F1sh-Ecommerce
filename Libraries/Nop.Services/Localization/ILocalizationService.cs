@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Nop.Core.Domain.Localization;
+using F1sh.Core.Domain.Localization;
 
-namespace Nop.Services.Localization
+namespace F1sh.Services.Localization
 {
     /// <summary>
     /// Localization manager interface

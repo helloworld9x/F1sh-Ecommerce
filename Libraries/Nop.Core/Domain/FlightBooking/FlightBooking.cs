@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Xml.Serialization;
 
-namespace Nop.Core.Domain.FlightBooking
+namespace F1sh.Core.Domain.FlightBooking
 {
     public class FlightBooking : BaseEntity
     {

@@ -1,7 +1,7 @@
-using Nop.Core;
-using Nop.Core.Domain.Common;
+using F1sh.Core;
+using F1sh.Core.Domain.Common;
 
-namespace Nop.Services.Common
+namespace F1sh.Services.Common
 {
     /// <summary>
     /// Search term service interafce

@@ -1,6 +1,6 @@
 using System;
 
-namespace Nop.Core.Domain.Directory
+namespace F1sh.Core.Domain.Directory
 {
     /// <summary>
     /// Represents an exchange rate

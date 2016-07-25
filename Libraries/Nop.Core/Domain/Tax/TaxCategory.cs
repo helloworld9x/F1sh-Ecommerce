@@ -1,5 +1,5 @@
 
-namespace Nop.Core.Domain.Tax
+namespace F1sh.Core.Domain.Tax
 {
     /// <summary>
     /// Represents a tax category

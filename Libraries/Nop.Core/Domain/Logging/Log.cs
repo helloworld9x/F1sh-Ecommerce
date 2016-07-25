@@ -1,7 +1,7 @@
 using System;
-using Nop.Core.Domain.Customers;
+using F1sh.Core.Domain.Customers;
 
-namespace Nop.Core.Domain.Logging
+namespace F1sh.Core.Domain.Logging
 {
     /// <summary>
     /// Represents a log record

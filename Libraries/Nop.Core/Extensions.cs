@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Nop.Core
+namespace F1sh.Core
 {
     public static class Extensions
     {

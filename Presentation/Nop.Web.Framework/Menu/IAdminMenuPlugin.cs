@@ -1,6 +1,6 @@
-﻿using Nop.Core.Plugins;
+﻿using F1sh.Core.Plugins;
 
-namespace Nop.Web.Framework.Menu
+namespace F1sh.Web.Framework.Menu
 {
     /// <summary>
     /// Interface for plugins which have some items in the admin area menu

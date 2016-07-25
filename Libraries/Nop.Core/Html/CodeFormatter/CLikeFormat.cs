@@ -20,7 +20,7 @@
  */ 
 #endregion
 
-namespace Nop.Core.Html.CodeFormatter
+namespace F1sh.Core.Html.CodeFormatter
 {
 	/// <summary>
 	/// Provides a base class for formatting languages similar to C.

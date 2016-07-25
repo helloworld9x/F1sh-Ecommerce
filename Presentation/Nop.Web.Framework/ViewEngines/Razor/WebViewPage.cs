@@ -4,16 +4,16 @@ using System;
 using System.IO;
 using System.Web.Mvc;
 using System.Web.WebPages;
-using Nop.Core;
-using Nop.Core.Data;
-using Nop.Core.Infrastructure;
-using Nop.Services.Localization;
-using Nop.Web.Framework.Localization;
-using Nop.Web.Framework.Themes;
+using F1sh.Core;
+using F1sh.Core.Data;
+using F1sh.Core.Infrastructure;
+using F1sh.Services.Localization;
+using F1sh.Web.Framework.Localization;
+using F1sh.Web.Framework.Themes;
 
 #endregion
 
-namespace Nop.Web.Framework.ViewEngines.Razor
+namespace F1sh.Web.Framework.ViewEngines.Razor
 {
     public abstract class WebViewPage<TModel> : System.Web.Mvc.WebViewPage<TModel>
     {
@@ -144,9 +144,9 @@ namespace Nop.Web.Framework.ViewEngines.Razor
         public int GetSelectedTabIndex()
         {
             //keep this method synchornized with
-            //"SetSelectedTabIndex" method of \Administration\Controllers\BaseNopController.cs
+            //"SetSelectedTabIndex" method of \Administration\Controllers\BaseF1shController.cs
             int index = 0;
-            string dataKey = "nop.selected-tab-index";
+            string dataKey = "F1sh.selected-tab-index";
             if (ViewData[dataKey] is int)
             {
                 index = (int)ViewData[dataKey];

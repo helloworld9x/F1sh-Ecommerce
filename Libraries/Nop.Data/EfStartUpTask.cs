@@ -1,8 +1,8 @@
-﻿using Nop.Core;
-using Nop.Core.Data;
-using Nop.Core.Infrastructure;
+﻿using F1sh.Core;
+using F1sh.Core.Data;
+using F1sh.Core.Infrastructure;
 
-namespace Nop.Data
+namespace F1sh.Data
 {
     public class EfStartUpTask : IStartupTask
     {
@@ -13,7 +13,7 @@ namespace Nop.Data
             {
                 var provider = EngineContext.Current.Resolve<IDataProvider>();
                 if (provider == null)
-                    throw new NopException("No IDataProvider found");
+                    throw new F1shException("No IDataProvider found");
                 provider.SetDatabaseInitializer();
             }
         }

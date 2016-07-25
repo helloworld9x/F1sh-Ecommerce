@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Orders;
+using F1sh.Core.Domain.Orders;
 
-namespace Nop.Data.Mapping.Orders
+namespace F1sh.Data.Mapping.Orders
 {
-    public partial class ReturnRequestMap : NopEntityTypeConfiguration<ReturnRequest>
+    public partial class ReturnRequestMap : F1shEntityTypeConfiguration<ReturnRequest>
     {
         public ReturnRequestMap()
         {

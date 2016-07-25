@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Localization;
+using F1sh.Core.Domain.Localization;
 
-namespace Nop.Data.Mapping.Localization
+namespace F1sh.Data.Mapping.Localization
 {
-    public partial class LocalizedPropertyMap : NopEntityTypeConfiguration<LocalizedProperty>
+    public partial class LocalizedPropertyMap : F1shEntityTypeConfiguration<LocalizedProperty>
     {
         public LocalizedPropertyMap()
         {

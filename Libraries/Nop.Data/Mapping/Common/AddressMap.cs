@@ -1,8 +1,8 @@
-﻿using Nop.Core.Domain.Common;
+﻿using F1sh.Core.Domain.Common;
 
-namespace Nop.Data.Mapping.Common
+namespace F1sh.Data.Mapping.Common
 {
-    public partial class AddressMap : NopEntityTypeConfiguration<Address>
+    public partial class AddressMap : F1shEntityTypeConfiguration<Address>
     {
         public AddressMap()
         {

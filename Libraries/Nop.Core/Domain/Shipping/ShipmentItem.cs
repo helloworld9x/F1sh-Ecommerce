@@ -1,5 +1,5 @@
 
-namespace Nop.Core.Domain.Shipping
+namespace F1sh.Core.Domain.Shipping
 {
     /// <summary>
     /// Represents a shipment item

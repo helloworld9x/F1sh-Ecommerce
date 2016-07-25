@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Discounts;
+using F1sh.Core.Domain.Discounts;
 
-namespace Nop.Data.Mapping.Discounts
+namespace F1sh.Data.Mapping.Discounts
 {
-    public  class DiscountMap : NopEntityTypeConfiguration<Discount>
+    public  class DiscountMap : F1shEntityTypeConfiguration<Discount>
     {
         public DiscountMap()
         {

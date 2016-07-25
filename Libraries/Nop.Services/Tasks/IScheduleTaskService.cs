@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Nop.Core.Domain.Tasks;
+using F1sh.Core.Domain.Tasks;
 
-namespace Nop.Services.Tasks
+namespace F1sh.Services.Tasks
 {
     /// <summary>
     /// Task service interface

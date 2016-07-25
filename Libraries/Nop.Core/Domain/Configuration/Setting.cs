@@ -1,6 +1,6 @@
-using Nop.Core.Domain.Localization;
+using F1sh.Core.Domain.Localization;
 
-namespace Nop.Core.Domain.Configuration
+namespace F1sh.Core.Domain.Configuration
 {
     /// <summary>
     /// Represents a setting

@@ -1,9 +1,9 @@
-namespace Nop.Core.Caching
+namespace F1sh.Core.Caching
 {
     /// <summary>
-    /// Represents a NopNullCache (caches nothing)
+    /// Represents a F1shNullCache (caches nothing)
     /// </summary>
-    public partial class NopNullCache : ICacheManager
+    public partial class F1shNullCache : ICacheManager
     {
         /// <summary>
         /// Gets or sets the value associated with the specified key.

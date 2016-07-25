@@ -1,4 +1,4 @@
-namespace Nop.Core.Domain.Catalog
+namespace F1sh.Core.Domain.Catalog
 {
     /// <summary>
     /// Represents a specification attribute type
@@ -12,14 +12,14 @@ namespace Nop.Core.Domain.Catalog
         /// <summary>
         /// Custom text
         /// </summary>
-        CustomText = 10,
-        /// <summary>
-        /// Custom HTML text
-        /// </summary>
-        CustomHtmlText = 20,
-        /// <summary>
-        /// Hyperlink
-        /// </summary>
-        Hyperlink = 30
+        CustomText = 10
+        ///// <summary>
+        ///// Custom HTML text
+        ///// </summary>
+        //CustomHtmlText = 20,
+        ///// <summary>
+        ///// Hyperlink
+        ///// </summary>
+        //Hyperlink = 30
     }
 }

@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Nop.Core;
-using Nop.Core.Caching;
-using Nop.Core.Data;
-using Nop.Core.Domain.Customers;
-using Nop.Core.Domain.Security;
-using Nop.Services.Localization;
+using F1sh.Core;
+using F1sh.Core.Caching;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Customers;
+using F1sh.Core.Domain.Security;
+using F1sh.Services.Localization;
 
-namespace Nop.Services.Security
+namespace F1sh.Services.Security
 {
     /// <summary>
     /// Permission service
@@ -23,11 +23,11 @@ namespace Nop.Services.Security
         /// {0} : customer role ID
         /// {1} : permission system name
         /// </remarks>
-        private const string PERMISSIONS_ALLOWED_KEY = "Nop.permission.allowed-{0}-{1}";
+        private const string PERMISSIONS_ALLOWED_KEY = "F1sh.permission.allowed-{0}-{1}";
         /// <summary>
         /// Key pattern to clear cache
         /// </summary>
-        private const string PERMISSIONS_PATTERN_KEY = "Nop.permission.";
+        private const string PERMISSIONS_PATTERN_KEY = "F1sh.permission.";
         #endregion
 
         #region Fields

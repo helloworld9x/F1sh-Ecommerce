@@ -7,11 +7,11 @@ using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using Nop.Core;
-using Nop.Core.Infrastructure;
-using Nop.Services.Localization;
+using F1sh.Core;
+using F1sh.Core.Infrastructure;
+using F1sh.Services.Localization;
 
-namespace Nop.Web.Framework.UI.Paging
+namespace F1sh.Web.Framework.UI.Paging
 {
 	/// <summary>
     /// Renders a pager component from an IPageableModel datasource.

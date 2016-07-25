@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Nop.Data")]
+[assembly: AssemblyTitle("F1sh.Data")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Nop Solutions, Ltd")]
-[assembly: AssemblyProduct("Nop.Data")]
-[assembly: AssemblyCopyright("Copyright © Nop Solutions, Ltd")]
+[assembly: AssemblyCompany("F1sh Solutions, Ltd")]
+[assembly: AssemblyProduct("F1sh.Data")]
+[assembly: AssemblyCopyright("Copyright © F1sh Solutions, Ltd")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

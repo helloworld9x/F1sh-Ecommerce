@@ -1,15 +1,15 @@
 using System;
 using System.Linq.Expressions;
 using System.Reflection;
-using Nop.Core;
-using Nop.Core.Configuration;
-using Nop.Core.Domain.Localization;
-using Nop.Core.Domain.Security;
-using Nop.Core.Infrastructure;
-using Nop.Core.Plugins;
-using Nop.Services.Configuration;
+using F1sh.Core;
+using F1sh.Core.Configuration;
+using F1sh.Core.Domain.Localization;
+using F1sh.Core.Domain.Security;
+using F1sh.Core.Infrastructure;
+using F1sh.Core.Plugins;
+using F1sh.Services.Configuration;
 
-namespace Nop.Services.Localization
+namespace F1sh.Services.Localization
 {
     public static class LocalizationExtensions
     {

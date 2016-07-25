@@ -2,12 +2,12 @@ using System;
 using System.Configuration;
 using System.Xml;
 
-namespace Nop.Core.Configuration
+namespace F1sh.Core.Configuration
 {
     /// <summary>
-    /// Represents a NopConfig
+    /// Represents a F1shConfig
     /// </summary>
-    public partial class NopConfig : IConfigurationSectionHandler
+    public partial class F1shConfig : IConfigurationSectionHandler
     {
         /// <summary>
         /// Creates a configuration section handler.
@@ -18,7 +18,7 @@ namespace Nop.Core.Configuration
         /// <returns>The created section handler object.</returns>
         public object Create(object parent, object configContext, XmlNode section)
         {
-            var config = new NopConfig();
+            var config = new F1shConfig();
 
             var startupNode = section.SelectSingleNode("Startup");
             if (startupNode != null && startupNode.Attributes != null)
@@ -48,12 +48,12 @@ namespace Nop.Core.Configuration
                     config.UserAgentStringsPath = attribute.Value;
             }
 
-            var supportPreviousNopcommerceVersionsNode = section.SelectSingleNode("SupportPreviousNopcommerceVersions");
-            if (supportPreviousNopcommerceVersionsNode != null && supportPreviousNopcommerceVersionsNode.Attributes != null)
+            var supportPreviousF1shcommerceVersionsNode = section.SelectSingleNode("SupportPreviousF1shcommerceVersions");
+            if (supportPreviousF1shcommerceVersionsNode != null && supportPreviousF1shcommerceVersionsNode.Attributes != null)
             {
-                var attribute = supportPreviousNopcommerceVersionsNode.Attributes["Enabled"];
+                var attribute = supportPreviousF1shcommerceVersionsNode.Attributes["Enabled"];
                 if (attribute != null)
-                    config.SupportPreviousNopcommerceVersions = Convert.ToBoolean(attribute.Value);
+                    config.SupportPreviousF1shcommerceVersions = Convert.ToBoolean(attribute.Value);
             }
 
             var webFarmsNode = section.SelectSingleNode("WebFarms");
@@ -128,9 +128,9 @@ namespace Nop.Core.Configuration
 
 
         /// <summary>
-        /// Indicates whether we should support previous nopCommerce versions (it can slightly improve performance)
+        /// Indicates whether we should support previous F1shCommerce versions (it can slightly improve performance)
         /// </summary>
-        public bool SupportPreviousNopcommerceVersions { get; private set; }
+        public bool SupportPreviousF1shcommerceVersions { get; private set; }
 
 
 
@@ -168,7 +168,7 @@ namespace Nop.Core.Configuration
         /// </summary>
         public bool UseFastInstallationService { get; private set; }
         /// <summary>
-        /// A list of plugins ignored during nopCommerce installation
+        /// A list of plugins ignored during F1shCommerce installation
         /// </summary>
         public string PluginsIgnoredDuringInstallation { get; private set; }
     }

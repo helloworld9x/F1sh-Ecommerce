@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Tasks;
+using F1sh.Core.Domain.Tasks;
 
-namespace Nop.Data.Mapping.Tasks
+namespace F1sh.Data.Mapping.Tasks
 {
-    public partial class ScheduleTaskMap : NopEntityTypeConfiguration<ScheduleTask>
+    public partial class ScheduleTaskMap : F1shEntityTypeConfiguration<ScheduleTask>
     {
         public ScheduleTaskMap()
         {

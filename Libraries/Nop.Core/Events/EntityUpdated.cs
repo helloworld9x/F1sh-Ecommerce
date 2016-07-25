@@ -1,5 +1,5 @@
 ﻿
-namespace Nop.Core.Events
+namespace F1sh.Core.Events
 {
     /// <summary>
     /// A container for entities that are updated.

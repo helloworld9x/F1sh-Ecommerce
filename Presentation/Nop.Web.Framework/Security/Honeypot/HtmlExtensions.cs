@@ -2,10 +2,10 @@
 using System.Text;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
-using Nop.Core.Domain.Security;
-using Nop.Core.Infrastructure;
+using F1sh.Core.Domain.Security;
+using F1sh.Core.Infrastructure;
 
-namespace Nop.Web.Framework.Security.Honeypot
+namespace F1sh.Web.Framework.Security.Honeypot
 {
     public static class HtmlExtensions
     {

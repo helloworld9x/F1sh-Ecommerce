@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 
-namespace Nop.Core.Plugins
+namespace F1sh.Core.Plugins
 {
     /// <summary>
-    /// Official feed manager (official plugins from www.nopCommerce.com site)
+    /// Official feed manager (official plugins from www.F1shCommerce.com site)
     /// </summary>
     public interface IOfficialFeedManager
     {

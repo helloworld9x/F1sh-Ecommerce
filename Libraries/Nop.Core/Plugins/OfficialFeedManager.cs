@@ -4,10 +4,10 @@ using System.Net;
 using System.Web;
 using System.Xml;
 
-namespace Nop.Core.Plugins
+namespace F1sh.Core.Plugins
 {
     /// <summary>
-    /// Official feed manager (official plugins from www.nopCommerce.com site)
+    /// Official feed manager (official plugins from www.F1shCommerce.com site)
     /// </summary>
     public partial class OfficialFeedManager : IOfficialFeedManager
     {
@@ -19,7 +19,7 @@ namespace Nop.Core.Plugins
         {
             var result = new List<OfficialFeedCategory>();
 
-            const string feedUrl = "http://www.nopcommerce.com/extensionsxml.aspx?getCategories=1";
+            const string feedUrl = "http://www.F1shcommerce.com/extensionsxml.aspx?getCategories=1";
 
             //specify timeout (5 secs)
             var request = WebRequest.Create(feedUrl);
@@ -57,7 +57,7 @@ namespace Nop.Core.Plugins
         {
             var result = new List<OfficialFeedVersion>();
 
-            const string feedUrl = "http://www.nopcommerce.com/extensionsxml.aspx?getVersions=1";
+            const string feedUrl = "http://www.F1shcommerce.com/extensionsxml.aspx?getVersions=1";
 
             //specify timeout (5 secs)
             var request = WebRequest.Create(feedUrl);
@@ -104,7 +104,7 @@ namespace Nop.Core.Plugins
             var list = new List<OfficialFeedPlugin>();
 
             //pageSize parameter is currently ignored by official site (set to 15)
-            var feedUrl = string.Format("http://www.nopcommerce.com/extensionsxml.aspx?category={0}&version={1}&price={2}&pageIndex={3}&pageSize={4}&searchTerm={5}",
+            var feedUrl = string.Format("http://www.F1shcommerce.com/extensionsxml.aspx?category={0}&version={1}&price={2}&pageIndex={3}&pageSize={4}&searchTerm={5}",
                 categoryId, versionId, price, pageIndex, pageSize, HttpUtility.UrlEncode(searchTerm));
 
             //specify timeout (5 secs)

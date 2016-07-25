@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
-using Nop.Core;
-using Nop.Core.Domain;
-using Nop.Core.Domain.Customers;
-using Nop.Services.Common;
+using F1sh.Core;
+using F1sh.Core.Domain;
+using F1sh.Core.Domain.Customers;
+using F1sh.Services.Common;
 
-namespace Nop.Web.Framework.Themes
+namespace F1sh.Web.Framework.Themes
 {
     /// <summary>
     /// Theme context

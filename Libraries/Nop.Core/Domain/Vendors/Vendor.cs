@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Nop.Core.Domain.Localization;
-using Nop.Core.Domain.Seo;
+using F1sh.Core.Domain.Localization;
+using F1sh.Core.Domain.Seo;
 
-namespace Nop.Core.Domain.Vendors
+namespace F1sh.Core.Domain.Vendors
 {
     /// <summary>
     /// Represents a vendor

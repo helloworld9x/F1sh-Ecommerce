@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
 
-namespace Nop.Web.Framework.Events
+namespace F1sh.Web.Framework.Events
 {
     /// <summary>
     /// Admin tabstrip created event

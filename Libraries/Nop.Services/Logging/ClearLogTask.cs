@@ -1,6 +1,6 @@
-﻿using Nop.Services.Tasks;
+﻿using F1sh.Services.Tasks;
 
-namespace Nop.Services.Logging
+namespace F1sh.Services.Logging
 {
     /// <summary>
     /// Represents a task to clear [Log] table

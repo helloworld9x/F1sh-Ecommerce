@@ -1,8 +1,8 @@
-﻿using Nop.Core.Domain.Tax;
+﻿using F1sh.Core.Domain.Tax;
 
-namespace Nop.Data.Mapping.Tax
+namespace F1sh.Data.Mapping.Tax
 {
-    public class TaxCategoryMap : NopEntityTypeConfiguration<TaxCategory>
+    public class TaxCategoryMap : F1shEntityTypeConfiguration<TaxCategory>
     {
         public TaxCategoryMap()
         {

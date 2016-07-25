@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Nop.Core.Domain.Catalog;
+using F1sh.Core.Domain.Catalog;
 
-namespace Nop.Core.Domain.Discounts
+namespace F1sh.Core.Domain.Discounts
 {
     /// <summary>
     /// Represents a discount

@@ -1,4 +1,4 @@
-namespace Nop.Services.Directory
+namespace F1sh.Services.Directory
 {
     /// <summary>
     /// GEO lookup service

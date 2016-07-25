@@ -1,7 +1,7 @@
-﻿using Nop.Core.Domain.Localization;
-using Nop.Core.Domain.Stores;
+﻿using F1sh.Core.Domain.Localization;
+using F1sh.Core.Domain.Stores;
 
-namespace Nop.Core.Domain.Messages
+namespace F1sh.Core.Domain.Messages
 {
     /// <summary>
     /// Represents a message template

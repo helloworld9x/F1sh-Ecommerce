@@ -2,7 +2,7 @@ using System;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace Nop.Core.Html.CodeFormatter
+namespace F1sh.Core.Html.CodeFormatter
 {
 	/// <summary>
 	/// Represents a code format helper

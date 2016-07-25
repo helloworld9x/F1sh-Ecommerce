@@ -1,12 +1,12 @@
 using System;
 using System.Linq;
-using Nop.Core.Caching;
-using Nop.Core.Data;
-using Nop.Core.Domain.Common;
-using Nop.Services.Directory;
-using Nop.Services.Events;
+using F1sh.Core.Caching;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Common;
+using F1sh.Services.Directory;
+using F1sh.Services.Events;
 
-namespace Nop.Services.Common
+namespace F1sh.Services.Common
 {
     /// <summary>
     /// Address service
@@ -20,11 +20,11 @@ namespace Nop.Services.Common
         /// <remarks>
         /// {0} : address ID
         /// </remarks>
-        private const string ADDRESSES_BY_ID_KEY = "Nop.address.id-{0}";
+        private const string ADDRESSES_BY_ID_KEY = "F1sh.address.id-{0}";
         /// <summary>
         /// Key pattern to clear cache
         /// </summary>
-        private const string ADDRESSES_PATTERN_KEY = "Nop.address.";
+        private const string ADDRESSES_PATTERN_KEY = "F1sh.address.";
 
         #endregion
 

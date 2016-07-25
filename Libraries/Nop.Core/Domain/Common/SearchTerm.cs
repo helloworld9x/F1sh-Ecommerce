@@ -1,4 +1,4 @@
-﻿namespace Nop.Core.Domain.Common
+﻿namespace F1sh.Core.Domain.Common
 {
     /// <summary>
     /// Search term record (for statistics)

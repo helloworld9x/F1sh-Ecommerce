@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Web.Mvc;
 
-namespace Nop.Web.Framework.Mvc
+namespace F1sh.Web.Framework.Mvc
 {
     public class CommaSeparatedModelBinder : DefaultModelBinder
     {

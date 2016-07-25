@@ -1,6 +1,6 @@
-using Nop.Core.Domain.Localization;
+using F1sh.Core.Domain.Localization;
 
-namespace Nop.Core.Domain.Catalog
+namespace F1sh.Core.Domain.Catalog
 {
     /// <summary>
     /// Represents a predefined (default) product attribute value
@@ -46,5 +46,23 @@ namespace Nop.Core.Domain.Catalog
         /// Gets the product attribute
         /// </summary>
         public virtual ProductAttribute ProductAttribute { get; set; }
+    }
+
+    public class PredefinedProductAttributeValueMap : GoqEntityTypeConfiguration<PredefinedProductAttributeValue>
+    {
+        public PredefinedProductAttributeValueMap()
+        {
+            ToTable("PredefinedProductAttributeValue");
+            HasKey(pav => pav.Id);
+            Property(pav => pav.Name).IsRequired().HasMaxLength(400);
+
+            Property(pav => pav.PriceAdjustment).HasPrecision(18, 4);
+            Property(pav => pav.WeightAdjustment).HasPrecision(18, 4);
+            Property(pav => pav.Cost).HasPrecision(18, 4);
+
+            HasRequired(pav => pav.ProductAttribute)
+                .WithMany()
+                .HasForeignKey(pav => pav.ProductAttributeId);
+        }
     }
 }

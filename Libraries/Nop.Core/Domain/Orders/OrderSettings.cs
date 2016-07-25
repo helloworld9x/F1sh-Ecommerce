@@ -1,6 +1,6 @@
-﻿using Nop.Core.Configuration;
+﻿using F1sh.Core.Configuration;
 
-namespace Nop.Core.Domain.Orders
+namespace F1sh.Core.Domain.Orders
 {
     public class OrderSettings : ISettings
     {

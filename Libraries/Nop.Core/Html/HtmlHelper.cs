@@ -3,7 +3,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace Nop.Core.Html
+namespace F1sh.Core.Html
 {
     /// <summary>
     /// Represents a HTML helper

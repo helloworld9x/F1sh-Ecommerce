@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Web.Mvc;
-using Nop.Core;
-using Nop.Core.Data;
-using Nop.Core.Domain.Seo;
-using Nop.Core.Infrastructure;
+using F1sh.Core;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Seo;
+using F1sh.Core.Infrastructure;
 
-namespace Nop.Web.Framework.Seo
+namespace F1sh.Web.Framework.Seo
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, Inherited = true, AllowMultiple = false)]
     public class WwwRequirementAttribute : FilterAttribute, IAuthorizationFilter
@@ -98,7 +98,7 @@ namespace Nop.Web.Framework.Seo
                 }
                 break;
                 default:
-                    throw new NopException("Not supported WwwRequirement parameter");
+                    throw new F1shException("Not supported WwwRequirement parameter");
             }
         }
     }

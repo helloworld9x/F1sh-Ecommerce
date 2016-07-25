@@ -1,6 +1,6 @@
-﻿using Nop.Core.Configuration;
+﻿using F1sh.Core.Configuration;
 
-namespace Nop.Core.Domain.Localization
+namespace F1sh.Core.Domain.Localization
 {
     public class LocalizationSettings : ISettings
     {

@@ -6,19 +6,19 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Reflection;
-using Nop.Core;
-using Nop.Data.Mapping;
+using F1sh.Core;
+using F1sh.Data.Mapping;
 
-namespace Nop.Data
+namespace F1sh.Data
 {
     /// <summary>
     /// Object context
     /// </summary>
-    public class NopObjectContext : DbContext, IDbContext
+    public class F1shObjectContext : DbContext, IDbContext
     {
         #region Ctor
 
-        public NopObjectContext(string nameOrConnectionString)
+        public F1shObjectContext(string nameOrConnectionString)
             : base(nameOrConnectionString)
         {
             //((IObjectContextAdapter) this).ObjectContext.ContextOptions.LazyLoadingEnabled = true;
@@ -37,7 +37,7 @@ namespace Nop.Data
             var typesToRegister = Assembly.GetExecutingAssembly().GetTypes()
             .Where(type => !String.IsNullOrEmpty(type.Namespace))
             .Where(type => type.BaseType != null && type.BaseType.IsGenericType &&
-                type.BaseType.GetGenericTypeDefinition() == typeof(NopEntityTypeConfiguration<>));
+                type.BaseType.GetGenericTypeDefinition() == typeof(F1shEntityTypeConfiguration<>));
             foreach (var type in typesToRegister)
             {
                 dynamic configurationInstance = Activator.CreateInstance(type);
@@ -127,7 +127,7 @@ namespace Nop.Data
 
             var result = this.Database.SqlQuery<TEntity>(commandText, parameters).ToList();
 
-            //performance hack applied as described here - http://www.nopcommerce.com/boards/t/25483/fix-very-important-speed-improvement.aspx
+            //performance hack applied as described here - http://www.F1shcommerce.com/boards/t/25483/fix-very-important-speed-improvement.aspx
             bool acd = this.Configuration.AutoDetectChangesEnabled;
             try
             {

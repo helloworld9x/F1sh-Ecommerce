@@ -1,8 +1,8 @@
 using System;
-using Nop.Core.Domain.Media;
-using Nop.Core.Domain.Orders;
+using F1sh.Core.Domain.Media;
+using F1sh.Core.Domain.Orders;
 
-namespace Nop.Services.Media
+namespace F1sh.Services.Media
 {
     /// <summary>
     /// Download service interface

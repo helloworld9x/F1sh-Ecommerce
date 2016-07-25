@@ -1,9 +1,9 @@
 ﻿using System.Collections.Specialized;
 using System.Web;
-using Nop.Core;
-using Nop.Core.Infrastructure;
+using F1sh.Core;
+using F1sh.Core.Infrastructure;
 
-namespace Nop.Web.Framework
+namespace F1sh.Web.Framework
 {
     /// <summary>
     /// Represents a RemotePost helper class

@@ -1,7 +1,7 @@
 ﻿
 using System.Collections.Generic;
 
-namespace Nop.Core
+namespace F1sh.Core
 {
     /// <summary>
     /// Paged list interface

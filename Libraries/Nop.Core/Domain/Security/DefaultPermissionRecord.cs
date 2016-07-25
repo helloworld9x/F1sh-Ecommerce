@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Nop.Core.Domain.Security
+namespace F1sh.Core.Domain.Security
 {
     /// <summary>
     /// Represents a default permission record

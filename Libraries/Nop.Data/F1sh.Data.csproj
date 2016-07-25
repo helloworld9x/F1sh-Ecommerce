@@ -8,8 +8,8 @@
     <ProjectGuid>{CCD7F2C9-6A2C-4CF0-8E89-076B8FC0F144}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Nop.Data</RootNamespace>
-    <AssemblyName>Nop.Data</AssemblyName>
+    <RootNamespace>F1sh.Data</RootNamespace>
+    <AssemblyName>F1sh.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -167,9 +167,9 @@
     <Compile Include="EfStartUpTask.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Nop.Core\Nop.Core.csproj">
+    <ProjectReference Include="..\Nop.Core\F1sh.Core.csproj">
       <Project>{6BDA8332-939F-45B7-A25E-7A797260AE59}</Project>
-      <Name>Nop.Core</Name>
+      <Name>F1sh.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,10 +1,10 @@
 using System;
 using System.Linq;
-using Nop.Core;
-using Nop.Core.Infrastructure;
-using Nop.Data;
+using F1sh.Core;
+using F1sh.Core.Infrastructure;
+using F1sh.Data;
 
-namespace Nop.Services.Common
+namespace F1sh.Services.Common
 {
     public static class GenericAttributeExtensions
     {

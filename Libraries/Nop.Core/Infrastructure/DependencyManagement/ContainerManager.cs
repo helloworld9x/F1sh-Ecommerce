@@ -6,7 +6,7 @@ using Autofac;
 using Autofac.Core.Lifetime;
 using Autofac.Integration.Mvc;
 
-namespace Nop.Core.Infrastructure.DependencyManagement
+namespace F1sh.Core.Infrastructure.DependencyManagement
 {
     /// <summary>
     /// Container manager
@@ -127,17 +127,17 @@ namespace Nop.Core.Infrastructure.DependencyManagement
                     foreach (var parameter in parameters)
                     {
                         var service = Resolve(parameter.ParameterType, scope);
-                        if (service == null) throw new NopException("Unkown dependency");
+                        if (service == null) throw new F1shException("Unkown dependency");
                         parameterInstances.Add(service);
                     }
                     return Activator.CreateInstance(type, parameterInstances.ToArray());
                 }
-                catch (NopException)
+                catch (F1shException)
                 {
 
                 }
             }
-            throw new NopException("No contructor was found that had all the dependencies satisfied.");
+            throw new F1shException("No contructor was found that had all the dependencies satisfied.");
         }
         
         /// <summary>

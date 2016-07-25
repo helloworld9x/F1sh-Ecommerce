@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using Nop.Core;
+using F1sh.Core;
 
-namespace Nop.Web.Framework.Mvc
+namespace F1sh.Web.Framework.Mvc
 {
     /// <summary>
     /// This MetadataProvider adds some functionality on top of the default DataAnnotationsModelMetadataProvider.
     /// It adds custom attributes (implementing IModelAttribute) to the AdditionalValues property of the model's metadata
     /// so that it can be retrieved later.
     /// </summary>
-    public class NopMetadataProvider : DataAnnotationsModelMetadataProvider
+    public class F1shMetadataProvider : DataAnnotationsModelMetadataProvider
     {
         protected override ModelMetadata CreateMetadata(IEnumerable<Attribute> attributes, Type containerType, Func<object> modelAccessor, Type modelType, string propertyName)
         {
@@ -20,7 +20,7 @@ namespace Nop.Web.Framework.Mvc
             foreach (var additionalValue in additionalValues)
             {
                 if (metadata.AdditionalValues.ContainsKey(additionalValue.Name))
-                    throw new NopException("There is already an attribute with the name of \"" + additionalValue.Name +
+                    throw new F1shException("There is already an attribute with the name of \"" + additionalValue.Name +
                                            "\" on this model.");
                 metadata.AdditionalValues.Add(additionalValue.Name, additionalValue);
             }

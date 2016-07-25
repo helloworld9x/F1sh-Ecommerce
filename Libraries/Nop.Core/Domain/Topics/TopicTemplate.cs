@@ -1,5 +1,5 @@
 
-namespace Nop.Core.Domain.Topics
+namespace F1sh.Core.Domain.Topics
 {
     /// <summary>
     /// Represents a topic template

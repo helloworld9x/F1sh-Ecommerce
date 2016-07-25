@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using Nop.Core;
-using Nop.Core.Data;
-using Nop.Core.Domain.Customers;
-using Nop.Core.Domain.Localization;
-using Nop.Core.Domain.Stores;
-using Nop.Core.Infrastructure;
-using Nop.Data;
-//using Nop.Services.Customers;
-using Nop.Services.Localization;
+using F1sh.Core;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Customers;
+using F1sh.Core.Domain.Localization;
+using F1sh.Core.Domain.Stores;
+using F1sh.Core.Infrastructure;
+using F1sh.Data;
+//using F1sh.Services.Customers;
+using F1sh.Services.Localization;
 
-namespace Nop.Services.Installation
+namespace F1sh.Services.Installation
 {
     public partial class SqlFileInstallationService : IInstallationService
     {
@@ -52,7 +52,7 @@ namespace Nop.Services.Installation
             var language = _languageRepository.Table.Single(l => l.Name == "English");
 
             //save resources
-            foreach (var filePath in System.IO.Directory.EnumerateFiles(_webHelper.MapPath("~/App_Data/Localization/"), "*.nopres.xml", SearchOption.TopDirectoryOnly))
+            foreach (var filePath in System.IO.Directory.EnumerateFiles(_webHelper.MapPath("~/App_Data/Localization/"), "*.F1shres.xml", SearchOption.TopDirectoryOnly))
             {
                 var localesXml = File.ReadAllText(filePath);
                 var localizationService = EngineContext.Current.Resolve<ILocalizationService>();

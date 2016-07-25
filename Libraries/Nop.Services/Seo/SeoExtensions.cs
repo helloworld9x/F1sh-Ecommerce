@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Nop.Core;
-using Nop.Core.Domain.Catalog;
-using Nop.Core.Domain.Seo;
-using Nop.Core.Infrastructure;
-using Nop.Services.Localization;
+using F1sh.Core;
+using F1sh.Core.Domain.Catalog;
+using F1sh.Core.Domain.Seo;
+using F1sh.Core.Infrastructure;
+using F1sh.Services.Localization;
 
-namespace Nop.Services.Seo
+namespace F1sh.Services.Seo
 {
     public static class SeoExtensions
     {
@@ -19,34 +19,6 @@ namespace Nop.Services.Seo
 
         #endregion
         
-        #region Product tag
-
-        /// <summary>
-        /// Gets product tag SE (search engine) name
-        /// </summary>
-        /// <param name="productTag">Product tag</param>
-        /// <returns>Product tag SE (search engine) name</returns>
-        public static string GetSeName(this ProductTag productTag)
-        {
-            var workContext = EngineContext.Current.Resolve<IWorkContext>();
-            return GetSeName(productTag, workContext.WorkingLanguage.Id);
-        }
-
-        /// <summary>
-        /// Gets product tag SE (search engine) name
-        /// </summary>
-        /// <param name="productTag">Product tag</param>
-        /// <param name="languageId">Language identifier</param>
-        /// <returns>Product tag SE (search engine) name</returns>
-        public static string GetSeName(this ProductTag productTag, int languageId)
-        {
-            if (productTag == null)
-                throw new ArgumentNullException("productTag");
-            string seName = GetSeName(productTag.GetLocalized(x => x.Name, languageId));
-            return seName;
-        }
-
-        #endregion
 
         #region General
 
@@ -211,7 +183,7 @@ namespace Nop.Services.Seo
         {
             if (String.IsNullOrEmpty(name))
                 return name;
-            string okChars = "abcdefghijklmnopqrstuvwxyz1234567890 _-";
+            string okChars = "abcdefghijklmF1shqrstuvwxyz1234567890 _-";
             name = name.Trim().ToLowerInvariant();
 
             if (convertNonWesternChars)

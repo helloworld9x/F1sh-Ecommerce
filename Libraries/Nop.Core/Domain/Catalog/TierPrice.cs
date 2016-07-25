@@ -1,6 +1,6 @@
-using Nop.Core.Domain.Customers;
+using F1sh.Core.Domain.Customers;
 
-namespace Nop.Core.Domain.Catalog
+namespace F1sh.Core.Domain.Catalog
 {
     /// <summary>
     /// Represents a tier price

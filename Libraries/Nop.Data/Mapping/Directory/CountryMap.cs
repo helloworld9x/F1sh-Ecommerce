@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Directory;
+using F1sh.Core.Domain.Directory;
 
-namespace Nop.Data.Mapping.Directory
+namespace F1sh.Data.Mapping.Directory
 {
-    public partial class CountryMap : NopEntityTypeConfiguration<Country>
+    public partial class CountryMap : F1shEntityTypeConfiguration<Country>
     {
         public CountryMap()
         {

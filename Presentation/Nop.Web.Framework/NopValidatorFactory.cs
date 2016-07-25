@@ -1,11 +1,11 @@
 ﻿using System;
 using FluentValidation;
 using FluentValidation.Attributes;
-using Nop.Core.Infrastructure;
+using F1sh.Core.Infrastructure;
 
-namespace Nop.Web.Framework
+namespace F1sh.Web.Framework
 {
-    public class NopValidatorFactory : AttributedValidatorFactory
+    public class F1shValidatorFactory : AttributedValidatorFactory
     {
         //private readonly InstanceCache _cache = new InstanceCache();
         public override IValidator GetValidator(Type type)

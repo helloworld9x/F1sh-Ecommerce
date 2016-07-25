@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Routing;
-using Nop.Core.Infrastructure;
-using Nop.Core.Plugins;
+using F1sh.Core.Infrastructure;
+using F1sh.Core.Plugins;
 
-namespace Nop.Web.Framework.Mvc.Routes
+namespace F1sh.Web.Framework.Mvc.Routes
 {
     /// <summary>
     /// Route publisher

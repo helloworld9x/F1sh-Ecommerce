@@ -2,7 +2,7 @@
 using System.Data.Entity;
 using System.Transactions;
 
-namespace Nop.Data.Initializers
+namespace F1sh.Data.Initializers
 {
     /// <summary>
     /// An implementation of IDatabaseInitializer that will recreate and optionally re-seed the

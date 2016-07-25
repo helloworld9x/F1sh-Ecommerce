@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Nop.Core.Domain.Security;
+using F1sh.Core.Domain.Security;
 
-namespace Nop.Services.Security
+namespace F1sh.Services.Security
 {
     /// <summary>
     /// Permission provider

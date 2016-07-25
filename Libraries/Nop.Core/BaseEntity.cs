@@ -1,6 +1,6 @@
 using System;
 
-namespace Nop.Core
+namespace F1sh.Core
 {
     /// <summary>
     /// Base class for entities

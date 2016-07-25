@@ -1,6 +1,6 @@
-﻿using Nop.Core.Configuration;
+﻿using F1sh.Core.Configuration;
 
-namespace Nop.Core.Domain.Vendors
+namespace F1sh.Core.Domain.Vendors
 {
     /// <summary>
     /// Vendor settings

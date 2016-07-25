@@ -4,15 +4,15 @@ using System.Linq;
 using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
-using Nop.Core.Configuration;
-using Nop.Core.Infrastructure.DependencyManagement;
+using F1sh.Core.Configuration;
+using F1sh.Core.Infrastructure.DependencyManagement;
 
-namespace Nop.Core.Infrastructure
+namespace F1sh.Core.Infrastructure
 {
     /// <summary>
     /// Engine
     /// </summary>
-    public class NopEngine : IEngine
+    public class F1shEngine : IEngine
     {
         #region Fields
 
@@ -42,7 +42,7 @@ namespace Nop.Core.Infrastructure
         /// Register dependencies
         /// </summary>
         /// <param name="config">Config</param>
-        protected virtual void RegisterDependencies(NopConfig config)
+        protected virtual void RegisterDependencies(F1shConfig config)
         {
             var builder = new ContainerBuilder();
             var container = builder.Build();
@@ -54,7 +54,7 @@ namespace Nop.Core.Infrastructure
             //dependencies
             var typeFinder = new WebAppTypeFinder();
             builder = new ContainerBuilder();
-            builder.RegisterInstance(config).As<NopConfig>().SingleInstance();
+            builder.RegisterInstance(config).As<F1shConfig>().SingleInstance();
             builder.RegisterInstance(this).As<IEngine>().SingleInstance();
             builder.RegisterInstance(typeFinder).As<ITypeFinder>().SingleInstance();
             builder.Update(container);
@@ -80,10 +80,10 @@ namespace Nop.Core.Infrastructure
         #region Methods
         
         /// <summary>
-        /// Initialize components and plugins in the nop environment.
+        /// Initialize components and plugins in the F1sh environment.
         /// </summary>
         /// <param name="config">Config</param>
-        public void Initialize(NopConfig config)
+        public void Initialize(F1shConfig config)
         {
             //register dependencies
             RegisterDependencies(config);

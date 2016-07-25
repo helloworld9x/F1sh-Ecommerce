@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Web.Mvc;
-using Nop.Core;
-using Nop.Core.Domain.Customers;
-using Nop.Core.Infrastructure;
-using Nop.Services.Common;
-using Nop.Services.Localization;
-using Nop.Services.Logging;
-using Nop.Services.Stores;
-using Nop.Web.Framework.Localization;
-using Nop.Web.Framework.UI;
+using F1sh.Core;
+using F1sh.Core.Domain.Customers;
+using F1sh.Core.Infrastructure;
+using F1sh.Services.Common;
+using F1sh.Services.Localization;
+using F1sh.Services.Logging;
+using F1sh.Services.Stores;
+using F1sh.Web.Framework.Localization;
+using F1sh.Web.Framework.UI;
 
-namespace Nop.Web.Framework.Controllers
+namespace F1sh.Web.Framework.Controllers
 {
     /// <summary>
     /// Base controller
@@ -142,7 +142,7 @@ namespace Nop.Web.Framework.Controllers
         /// <param name="persistForTheNextRequest">A value indicating whether a message should be persisted for the next request</param>
         protected virtual void AddNotification(NotifyType type, string message, bool persistForTheNextRequest)
         {
-            string dataKey = string.Format("nop.notifications.{0}", type);
+            string dataKey = string.Format("F1sh.notifications.{0}", type);
             if (persistForTheNextRequest)
             {
                 if (TempData[dataKey] == null)

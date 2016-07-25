@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Nop.Core.Infrastructure
+namespace F1sh.Core.Infrastructure
 {
     /// <summary>
     /// A statically compiled "singleton" used to store objects throughout the 

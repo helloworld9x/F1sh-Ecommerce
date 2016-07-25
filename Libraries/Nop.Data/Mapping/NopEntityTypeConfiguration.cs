@@ -1,10 +1,10 @@
 using System.Data.Entity.ModelConfiguration;
 
-namespace Nop.Data.Mapping
+namespace F1sh.Data.Mapping
 {
-    public abstract class NopEntityTypeConfiguration<T> : EntityTypeConfiguration<T> where T : class
+    public abstract class F1shEntityTypeConfiguration<T> : EntityTypeConfiguration<T> where T : class
     {
-        protected NopEntityTypeConfiguration()
+        protected F1shEntityTypeConfiguration()
         {
             PostInitialize();
         }

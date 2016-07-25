@@ -1,7 +1,7 @@
-using Nop.Core;
-using Nop.Core.Domain.Seo;
+using F1sh.Core;
+using F1sh.Core.Domain.Seo;
 
-namespace Nop.Services.Seo
+namespace F1sh.Services.Seo
 {
     /// <summary>
     /// Provides information about URL records

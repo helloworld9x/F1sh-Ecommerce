@@ -1,4 +1,4 @@
-namespace Nop.Core.Domain.Localization
+namespace F1sh.Core.Domain.Localization
 {
     /// <summary>
     /// Represents a locale string resource

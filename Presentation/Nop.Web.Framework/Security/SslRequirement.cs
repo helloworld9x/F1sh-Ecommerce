@@ -1,4 +1,4 @@
-﻿namespace Nop.Web.Framework.Security
+﻿namespace F1sh.Web.Framework.Security
 {
     public enum SslRequirement
     {

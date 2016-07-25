@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Nop.Core;
-using Nop.Core.Caching;
-using Nop.Core.Data;
-using Nop.Core.Domain.Catalog;
-using Nop.Core.Domain.Stores;
-using Nop.Services.Events;
+using F1sh.Core;
+using F1sh.Core.Caching;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Catalog;
+using F1sh.Core.Domain.Stores;
+using F1sh.Services.Events;
 
-namespace Nop.Services.Stores
+namespace F1sh.Services.Stores
 {
     /// <summary>
     /// Store mapping service
@@ -24,11 +24,11 @@ namespace Nop.Services.Stores
         /// {0} : entity ID
         /// {1} : entity name
         /// </remarks>
-        private const string STOREMAPPING_BY_ENTITYID_NAME_KEY = "Nop.storemapping.entityid-name-{0}-{1}";
+        private const string STOREMAPPING_BY_ENTITYID_NAME_KEY = "F1sh.storemapping.entityid-name-{0}-{1}";
         /// <summary>
         /// Key pattern to clear cache
         /// </summary>
-        private const string STOREMAPPING_PATTERN_KEY = "Nop.storemapping.";
+        private const string STOREMAPPING_PATTERN_KEY = "F1sh.storemapping.";
 
         #endregion
 

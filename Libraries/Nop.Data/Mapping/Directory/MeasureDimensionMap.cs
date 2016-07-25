@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Directory;
+using F1sh.Core.Domain.Directory;
 
-namespace Nop.Data.Mapping.Directory
+namespace F1sh.Data.Mapping.Directory
 {
-    public partial class MeasureDimensionMap : NopEntityTypeConfiguration<MeasureDimension>
+    public partial class MeasureDimensionMap : F1shEntityTypeConfiguration<MeasureDimension>
     {
         public MeasureDimensionMap()
         {

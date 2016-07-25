@@ -1,12 +1,12 @@
 using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using Nop.Core;
-using Nop.Core.Domain.Customers;
-using Nop.Services.Common;
-using Nop.Services.Configuration;
+using F1sh.Core;
+using F1sh.Core.Domain.Customers;
+using F1sh.Services.Common;
+using F1sh.Services.Configuration;
 
-namespace Nop.Services.Helpers
+namespace F1sh.Services.Helpers
 {
     /// <summary>
     /// Represents a datetime helper

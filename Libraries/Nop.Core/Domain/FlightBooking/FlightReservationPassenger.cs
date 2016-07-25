@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Xml.Serialization;
 
-namespace Nop.Core.Domain.FlightBooking
+namespace F1sh.Core.Domain.FlightBooking
 {
     public class FlightReservationPassenger : BaseEntity
     {

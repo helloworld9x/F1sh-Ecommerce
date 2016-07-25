@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
-using Nop.Core.Domain.Discounts;
-using Nop.Core.Domain.Localization;
-using Nop.Core.Domain.Security;
-using Nop.Core.Domain.Seo;
-using Nop.Core.Domain.Stores;
+using F1sh.Core.Domain.Discounts;
+using F1sh.Core.Domain.Localization;
+using F1sh.Core.Domain.Security;
+using F1sh.Core.Domain.Seo;
+using F1sh.Core.Domain.Stores;
 
-namespace Nop.Core.Domain.Catalog
+namespace F1sh.Core.Domain.Catalog
 {
     /// <summary>
     /// Represents a product
@@ -18,10 +18,8 @@ namespace Nop.Core.Domain.Catalog
         private ICollection<ProductPicture> _productPictures;
         private ICollection<ProductReview> _productReviews;
         private ICollection<ProductSpecificationAttribute> _productSpecificationAttributes;
-        private ICollection<ProductTag> _productTags;
         private ICollection<ProductAttributeMapping> _productAttributeMappings;
         private ICollection<ProductAttributeCombination> _productAttributeCombinations;
-        private ICollection<TierPrice> _tierPrices;
         private ICollection<Discount> _appliedDiscounts;
         private ICollection<ProductWarehouseInventory> _productWarehouseInventory;
 
@@ -503,51 +501,6 @@ namespace Nop.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the backorder mode
-        /// </summary>
-        public BackorderMode BackorderMode
-        {
-            get
-            {
-                return (BackorderMode)BackorderModeId;
-            }
-            set
-            {
-                BackorderModeId = (int)value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the download activation type
-        /// </summary>
-        public DownloadActivationType DownloadActivationType
-        {
-            get
-            {
-                return (DownloadActivationType)DownloadActivationTypeId;
-            }
-            set
-            {
-                DownloadActivationTypeId = (int)value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the gift card type
-        /// </summary>
-        public GiftCardType GiftCardType
-        {
-            get
-            {
-                return (GiftCardType)GiftCardTypeId;
-            }
-            set
-            {
-                GiftCardTypeId = (int)value;
-            }
-        }
-
-        /// <summary>
         /// Gets or sets the low stock activity
         /// </summary>
         public LowStockActivity LowStockActivity
@@ -591,26 +544,6 @@ namespace Nop.Core.Domain.Catalog
                 RecurringCyclePeriodId = (int)value;
             }
         }
-
-        /// <summary>
-        /// Gets or sets the period for rental products
-        /// </summary>
-        public RentalPricePeriod RentalPricePeriod
-        {
-            get
-            {
-                return (RentalPricePeriod)RentalPricePeriodId;
-            }
-            set
-            {
-                RentalPricePeriodId = (int)value;
-            }
-        }
-
-
-
-
-
 
         /// <summary>
         /// Gets or sets the collection of ProductCategory
@@ -658,15 +591,6 @@ namespace Nop.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the product tags
-        /// </summary>
-        public virtual ICollection<ProductTag> ProductTags
-        {
-            get { return _productTags ?? (_productTags = new List<ProductTag>()); }
-            protected set { _productTags = value; }
-        }
-
-        /// <summary>
         /// Gets or sets the product attribute mappings
         /// </summary>
         public virtual ICollection<ProductAttributeMapping> ProductAttributeMappings
@@ -684,14 +608,6 @@ namespace Nop.Core.Domain.Catalog
             protected set { _productAttributeCombinations = value; }
         }
 
-        /// <summary>
-        /// Gets or sets the tier prices
-        /// </summary>
-        public virtual ICollection<TierPrice> TierPrices
-        {
-            get { return _tierPrices ?? (_tierPrices = new List<TierPrice>()); }
-            protected set { _tierPrices = value; }
-        }
 
         /// <summary>
         /// Gets or sets the collection of applied discounts
@@ -701,7 +617,7 @@ namespace Nop.Core.Domain.Catalog
             get { return _appliedDiscounts ?? (_appliedDiscounts = new List<Discount>()); }
             protected set { _appliedDiscounts = value; }
         }
-        
+
         /// <summary>
         /// Gets or sets the collection of "ProductWarehouseInventory" records. We use it only when "UseMultipleWarehouses" is set to "true" and ManageInventoryMethod" to "ManageStock"
         /// </summary>
@@ -711,4 +627,39 @@ namespace Nop.Core.Domain.Catalog
             protected set { _productWarehouseInventory = value; }
         }
     }
+    public class ProductMap : GoqEntityTypeConfiguration<Product>
+    {
+        public ProductMap()
+        {
+            ToTable("Product");
+            HasKey(p => p.Id);
+            Property(p => p.Name).IsRequired().HasMaxLength(400);
+            Property(p => p.MetaKeywords).HasMaxLength(400);
+            Property(p => p.MetaTitle).HasMaxLength(400);
+            Property(p => p.Sku).HasMaxLength(400);
+            Property(p => p.ManufacturerPartNumber).HasMaxLength(400);
+            Property(p => p.Gtin).HasMaxLength(400);
+            Property(p => p.AdditionalShippingCharge).HasPrecision(18, 4);
+            Property(p => p.Price).HasPrecision(18, 4);
+            Property(p => p.OldPrice).HasPrecision(18, 4);
+            Property(p => p.ProductCost).HasPrecision(18, 4);
+            Property(p => p.SpecialPrice).HasPrecision(18, 4);
+            Property(p => p.MinimumCustomerEnteredPrice).HasPrecision(18, 4);
+            Property(p => p.MaximumCustomerEnteredPrice).HasPrecision(18, 4);
+            Property(p => p.Weight).HasPrecision(18, 4);
+            Property(p => p.Length).HasPrecision(18, 4);
+            Property(p => p.Width).HasPrecision(18, 4);
+            Property(p => p.Height).HasPrecision(18, 4);
+            Property(p => p.RequiredProductIds).HasMaxLength(1000);
+            Property(p => p.AllowedQuantities).HasMaxLength(1000);
+            Property(p => p.BasepriceAmount).HasPrecision(18, 4);
+            Property(p => p.BasepriceBaseAmount).HasPrecision(18, 4);
+
+            Ignore(p => p.ProductType);
+            Ignore(p => p.LowStockActivity);
+            Ignore(p => p.ManageInventoryMethod);
+            Ignore(p => p.RecurringCyclePeriod);
+        }
+    }
+
 }

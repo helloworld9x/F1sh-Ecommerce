@@ -6,7 +6,7 @@ using System.Security.Principal;
 using System.Web;
 using System.Web.SessionState;
 
-namespace Nop.Core.Fakes
+namespace F1sh.Core.Fakes
 {
     public class FakeHttpContext : HttpContextBase
     {

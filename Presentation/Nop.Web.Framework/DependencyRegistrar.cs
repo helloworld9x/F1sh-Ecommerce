@@ -7,33 +7,33 @@ using Autofac;
 using Autofac.Builder;
 using Autofac.Core;
 using Autofac.Integration.Mvc;
-using Nop.Core;
-using Nop.Core.Caching;
-using Nop.Core.Configuration;
-using Nop.Core.Data;
-using Nop.Core.Fakes;
-using Nop.Core.Infrastructure;
-using Nop.Core.Infrastructure.DependencyManagement;
-using Nop.Core.Plugins;
-using Nop.Data;
-using Nop.Services.Authentication;
-using Nop.Services.Authentication.External;
-using Nop.Services.Configuration;
-using Nop.Services.Events;
-using Nop.Services.Helpers;
-using Nop.Services.Infrastructure;
-using Nop.Services.Installation;
-using Nop.Services.Localization;
-using Nop.Services.Media;
-using Nop.Services.Security;
-using Nop.Services.Seo;
-using Nop.Services.Stores;
-using Nop.Services.Tasks;
-using Nop.Web.Framework.Mvc.Routes;
-using Nop.Web.Framework.Themes;
-using Nop.Web.Framework.UI;
+using F1sh.Core;
+using F1sh.Core.Caching;
+using F1sh.Core.Configuration;
+using F1sh.Core.Data;
+using F1sh.Core.Fakes;
+using F1sh.Core.Infrastructure;
+using F1sh.Core.Infrastructure.DependencyManagement;
+using F1sh.Core.Plugins;
+using F1sh.Data;
+using F1sh.Services.Authentication;
+using F1sh.Services.Authentication.External;
+using F1sh.Services.Configuration;
+using F1sh.Services.Events;
+using F1sh.Services.Helpers;
+using F1sh.Services.Infrastructure;
+using F1sh.Services.Installation;
+using F1sh.Services.Localization;
+using F1sh.Services.Media;
+using F1sh.Services.Security;
+using F1sh.Services.Seo;
+using F1sh.Services.Stores;
+using F1sh.Services.Tasks;
+using F1sh.Web.Framework.Mvc.Routes;
+using F1sh.Web.Framework.Themes;
+using F1sh.Web.Framework.UI;
 
-namespace Nop.Web.Framework
+namespace F1sh.Web.Framework
 {
     /// <summary>
     /// Dependency registrar
@@ -46,7 +46,7 @@ namespace Nop.Web.Framework
         /// <param name="builder">Container builder</param>
         /// <param name="typeFinder">Type finder</param>
         /// <param name="config">Config</param>
-        public virtual void Register(ContainerBuilder builder, ITypeFinder typeFinder, NopConfig config)
+        public virtual void Register(ContainerBuilder builder, ITypeFinder typeFinder, F1shConfig config)
         {
             //HTTP context and other related stuff
             builder.Register(c => 
@@ -93,11 +93,11 @@ namespace Nop.Web.Framework
                 var dataProvider = efDataProviderManager.LoadDataProvider();
                 dataProvider.InitConnectionFactory();
 
-                builder.Register<IDbContext>(c => new NopObjectContext(dataProviderSettings.DataConnectionString)).InstancePerLifetimeScope();
+                builder.Register<IDbContext>(c => new F1shObjectContext(dataProviderSettings.DataConnectionString)).InstancePerLifetimeScope();
             }
             else
             {
-                builder.Register<IDbContext>(c => new NopObjectContext(dataSettingsManager.LoadSettings().DataConnectionString)).InstancePerLifetimeScope();
+                builder.Register<IDbContext>(c => new F1shObjectContext(dataSettingsManager.LoadSettings().DataConnectionString)).InstancePerLifetimeScope();
             }
 
 
@@ -110,13 +110,13 @@ namespace Nop.Web.Framework
             //cache managers
             if (config.RedisCachingEnabled)
             {
-                builder.RegisterType<RedisCacheManager>().As<ICacheManager>().Named<ICacheManager>("nop_cache_static").InstancePerLifetimeScope();
+                builder.RegisterType<RedisCacheManager>().As<ICacheManager>().Named<ICacheManager>("F1sh_cache_static").InstancePerLifetimeScope();
             }
             else
             {
-                builder.RegisterType<MemoryCacheManager>().As<ICacheManager>().Named<ICacheManager>("nop_cache_static").SingleInstance();
+                builder.RegisterType<MemoryCacheManager>().As<ICacheManager>().Named<ICacheManager>("F1sh_cache_static").SingleInstance();
             }
-            builder.RegisterType<PerRequestCacheManager>().As<ICacheManager>().Named<ICacheManager>("nop_cache_per_request").InstancePerLifetimeScope();
+            builder.RegisterType<PerRequestCacheManager>().As<ICacheManager>().Named<ICacheManager>("F1sh_cache_per_request").InstancePerLifetimeScope();
 
             if (config.RunOnAzureWebsites)
             {
@@ -151,7 +151,7 @@ namespace Nop.Web.Framework
             //builder.RegisterType<TopicTemplateService>().As<ITopicTemplateService>().InstancePerLifetimeScope();
             //use static cache (between HTTP requests)
             //builder.RegisterType<ProductTagService>().As<IProductTagService>()
-            //    .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("nop_cache_static"))
+            //    .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("F1sh_cache_static"))
             //    .InstancePerLifetimeScope();
 
             //builder.RegisterType<AddressAttributeFormatter>().As<IAddressAttributeFormatter>().InstancePerLifetimeScope();
@@ -174,15 +174,15 @@ namespace Nop.Web.Framework
 
             ////use static cache (between HTTP requests)
             //builder.RegisterType<PermissionService>().As<IPermissionService>()
-            //    .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("nop_cache_static"))
+            //    .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("F1sh_cache_static"))
             //    .InstancePerLifetimeScope();
             ////use static cache (between HTTP requests)
             //builder.RegisterType<AclService>().As<IAclService>()
-            //    .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("nop_cache_static"))
+            //    .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("F1sh_cache_static"))
             //    .InstancePerLifetimeScope();
             ////use static cache (between HTTP requests)
             //builder.RegisterType<PriceCalculationService>().As<IPriceCalculationService>()
-            //    .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("nop_cache_static"))
+            //    .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("F1sh_cache_static"))
             //    .InstancePerLifetimeScope();
 
             //builder.RegisterType<GeoLookupService>().As<IGeoLookupService>().InstancePerLifetimeScope();
@@ -194,7 +194,7 @@ namespace Nop.Web.Framework
             builder.RegisterType<StoreService>().As<IStoreService>().InstancePerLifetimeScope();
             //use static cache (between HTTP requests)
             builder.RegisterType<StoreMappingService>().As<IStoreMappingService>()
-                .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("nop_cache_static"))
+                .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("F1sh_cache_static"))
                 .InstancePerLifetimeScope();
 
             //builder.RegisterType<DiscountService>().As<IDiscountService>().InstancePerLifetimeScope();
@@ -202,24 +202,24 @@ namespace Nop.Web.Framework
 
             //use static cache (between HTTP requests)
             builder.RegisterType<SettingService>().As<ISettingService>()
-                .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("nop_cache_static"))
+                .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("F1sh_cache_static"))
                 .InstancePerLifetimeScope();
             builder.RegisterSource(new SettingsSource());
 
             //use static cache (between HTTP requests)
             builder.RegisterType<LocalizationService>().As<ILocalizationService>()
-                .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("nop_cache_static"))
+                .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("F1sh_cache_static"))
                 .InstancePerLifetimeScope();
 
             //use static cache (between HTTP requests)
             builder.RegisterType<LocalizedEntityService>().As<ILocalizedEntityService>()
-                .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("nop_cache_static"))
+                .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("F1sh_cache_static"))
                 .InstancePerLifetimeScope();
             builder.RegisterType<LanguageService>().As<ILanguageService>().InstancePerLifetimeScope();
 
-            builder.RegisterType<DownloadService>().As<IDownloadService>().InstancePerLifetimeScope();
+            //builder.RegisterType<DownloadService>().As<IDownloadService>().InstancePerLifetimeScope();
             //picture service
-            var useAzureBlobStorage = !String.IsNullOrEmpty(config.AzureBlobStorageConnectionString);
+            var useAzureBlobStorage = !string.IsNullOrEmpty(config.AzureBlobStorageConnectionString);
             if (useAzureBlobStorage)
             {
                 //Windows Azure BLOB
@@ -261,7 +261,7 @@ namespace Nop.Web.Framework
 
             //use static cache (between HTTP requests)
             builder.RegisterType<UrlRecordService>().As<IUrlRecordService>()
-                .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("nop_cache_static"))
+                .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("F1sh_cache_static"))
                 .InstancePerLifetimeScope();
 
             //builder.RegisterType<ShipmentService>().As<IShipmentService>().InstancePerLifetimeScope();
@@ -274,7 +274,7 @@ namespace Nop.Web.Framework
 
             ////use static cache (between HTTP requests)
             //builder.RegisterType<CustomerActivityService>().As<ICustomerActivityService>()
-            //    .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("nop_cache_static"))
+            //    .WithParameter(ResolvedParameter.ForNamed<ICacheManager>("F1sh_cache_static"))
             //    .InstancePerLifetimeScope();
 
             bool databaseInstalled = DataSettingsHelper.DatabaseIsInstalled();

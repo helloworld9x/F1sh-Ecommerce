@@ -1,7 +1,7 @@
 //Contributor:  Nicholas Mayne
 
 
-namespace Nop.Services.Authentication.External
+namespace F1sh.Services.Authentication.External
 {
     /// <summary>
     /// External provider authorizer

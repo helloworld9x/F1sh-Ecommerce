@@ -1,6 +1,6 @@
-using Nop.Core;
+using F1sh.Core;
 
-namespace Nop.Services.Common
+namespace F1sh.Services.Common
 {
     /// <summary>
     ///  Maintenance service interface

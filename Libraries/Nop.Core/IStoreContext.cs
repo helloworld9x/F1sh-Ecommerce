@@ -1,6 +1,6 @@
-﻿using Nop.Core.Domain.Stores;
+﻿using F1sh.Core.Domain.Stores;
 
-namespace Nop.Core
+namespace F1sh.Core
 {
     /// <summary>
     /// Store context

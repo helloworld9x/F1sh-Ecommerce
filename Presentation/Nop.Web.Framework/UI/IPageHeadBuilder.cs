@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace Nop.Web.Framework.UI
+namespace F1sh.Web.Framework.UI
 {
     public partial interface IPageHeadBuilder
     {

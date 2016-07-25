@@ -1,7 +1,7 @@
-﻿using Nop.Core;
-using Nop.Core.Events;
+﻿using F1sh.Core;
+using F1sh.Core.Events;
 
-namespace Nop.Services.Events
+namespace F1sh.Services.Events
 {
     public static class EventPublisherExtensions
     {

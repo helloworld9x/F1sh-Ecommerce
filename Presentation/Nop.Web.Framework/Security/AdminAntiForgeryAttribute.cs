@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Web.Mvc;
-using Nop.Core.Data;
-using Nop.Core.Domain.Security;
-using Nop.Core.Infrastructure;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Security;
+using F1sh.Core.Infrastructure;
 
-namespace Nop.Web.Framework.Security
+namespace F1sh.Web.Framework.Security
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, Inherited = true, AllowMultiple = false)]
     public class AdminAntiForgeryAttribute : FilterAttribute, IAuthorizationFilter

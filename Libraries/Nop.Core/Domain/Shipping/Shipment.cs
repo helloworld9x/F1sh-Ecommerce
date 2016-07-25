@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Nop.Core.Domain.Orders;
+using F1sh.Core.Domain.Orders;
 
-namespace Nop.Core.Domain.Shipping
+namespace F1sh.Core.Domain.Shipping
 {
     /// <summary>
     /// Represents a shipment
@@ -23,7 +23,7 @@ namespace Nop.Core.Domain.Shipping
 
         /// <summary>
         /// Gets or sets the total weight of this shipment
-        /// It's nullable for compatibility with the previous version of nopCommerce where was no such property
+        /// It's nullable for compatibility with the previous version of F1shCommerce where was no such property
         /// </summary>
         public decimal? TotalWeight { get; set; }
 

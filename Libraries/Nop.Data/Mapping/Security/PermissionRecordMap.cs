@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Security;
+using F1sh.Core.Domain.Security;
 
-namespace Nop.Data.Mapping.Security
+namespace F1sh.Data.Mapping.Security
 {
-    public partial class PermissionRecordMap : NopEntityTypeConfiguration<PermissionRecord>
+    public partial class PermissionRecordMap : F1shEntityTypeConfiguration<PermissionRecord>
     {
         public PermissionRecordMap()
         {

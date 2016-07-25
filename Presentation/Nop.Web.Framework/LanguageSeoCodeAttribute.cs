@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Web;
 using System.Web.Mvc;
-using Nop.Core;
-using Nop.Core.Data;
-using Nop.Core.Domain.Localization;
-using Nop.Core.Infrastructure;
-using Nop.Web.Framework.Localization;
+using F1sh.Core;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Localization;
+using F1sh.Core.Infrastructure;
+using F1sh.Web.Framework.Localization;
 
-namespace Nop.Web.Framework
+namespace F1sh.Web.Framework
 {
     /// <summary>
     /// Attribute which ensures that store URL contains a language SEO code if "SEO friendly URLs with multiple languages" setting is enabled

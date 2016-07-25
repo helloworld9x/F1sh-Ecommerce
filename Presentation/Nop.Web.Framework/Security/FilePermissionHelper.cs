@@ -2,9 +2,9 @@
 using System.IO;
 using System.Security.AccessControl;
 using System.Security.Principal;
-using Nop.Core;
+using F1sh.Core;
 
-namespace Nop.Web.Framework.Security
+namespace F1sh.Web.Framework.Security
 {
     /// <summary>
     /// File permission helper

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Nop.Core.Data
+namespace F1sh.Core.Data
 {
     /// <summary>
     /// Data settings (connection string information)

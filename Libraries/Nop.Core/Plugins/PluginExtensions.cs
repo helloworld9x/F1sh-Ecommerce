@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace Nop.Core.Plugins
+namespace F1sh.Core.Plugins
 {
     public static class PluginExtensions
     {

@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Nop.Core.Caching;
-using Nop.Core.Data;
-using Nop.Core.Domain.Localization;
-using Nop.Services.Configuration;
-using Nop.Services.Events;
-using Nop.Services.Stores;
+using F1sh.Core.Caching;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Localization;
+using F1sh.Services.Configuration;
+using F1sh.Services.Events;
+using F1sh.Services.Stores;
 
-namespace Nop.Services.Localization
+namespace F1sh.Services.Localization
 {
     /// <summary>
     /// Language service
@@ -23,18 +23,18 @@ namespace Nop.Services.Localization
         /// <remarks>
         /// {0} : language ID
         /// </remarks>
-        private const string LANGUAGES_BY_ID_KEY = "Nop.language.id-{0}";
+        private const string LANGUAGES_BY_ID_KEY = "F1sh.language.id-{0}";
         /// <summary>
         /// Key for caching
         /// </summary>
         /// <remarks>
         /// {0} : show hidden records?
         /// </remarks>
-        private const string LANGUAGES_ALL_KEY = "Nop.language.all-{0}";
+        private const string LANGUAGES_ALL_KEY = "F1sh.language.all-{0}";
         /// <summary>
         /// Key pattern to clear cache
         /// </summary>
-        private const string LANGUAGES_PATTERN_KEY = "Nop.language.";
+        private const string LANGUAGES_PATTERN_KEY = "F1sh.language.";
 
         #endregion
 

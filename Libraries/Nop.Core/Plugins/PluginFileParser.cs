@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace Nop.Core.Plugins
+namespace F1sh.Core.Plugins
 {
     /// <summary>
     /// Plugin files parser
@@ -133,7 +133,7 @@ namespace Nop.Core.Plugins
                 }
             }
 
-            //nopCommerce 2.00 didn't have 'SupportedVersions' parameter
+            //F1shCommerce 2.00 didn't have 'SupportedVersions' parameter
             //so let's set it to "2.00"
             if (descriptor.SupportedVersions.Count == 0)
                 descriptor.SupportedVersions.Add("2.00");

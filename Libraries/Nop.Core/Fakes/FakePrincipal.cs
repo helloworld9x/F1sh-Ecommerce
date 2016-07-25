@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Security.Principal;
 
-namespace Nop.Core.Fakes
+namespace F1sh.Core.Fakes
 {
     public class FakePrincipal : IPrincipal
     {

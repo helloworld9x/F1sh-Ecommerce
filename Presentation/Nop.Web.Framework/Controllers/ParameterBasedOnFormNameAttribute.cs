@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Mvc;
 
-namespace Nop.Web.Framework.Controllers
+namespace F1sh.Web.Framework.Controllers
 {
     /// <summary>
     /// If form name exists, then specified "actionParameterName" will be set to "true"

@@ -22,7 +22,7 @@
  */ 
 #endregion
 
-namespace Nop.Core.Html.CodeFormatter
+namespace F1sh.Core.Html.CodeFormatter
 {
 	/// <summary>
 	/// Generates color-coded T-SQL source code.

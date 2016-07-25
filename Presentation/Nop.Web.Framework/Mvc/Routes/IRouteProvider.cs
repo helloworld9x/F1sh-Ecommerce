@@ -1,6 +1,6 @@
 ﻿using System.Web.Routing;
 
-namespace Nop.Web.Framework.Mvc.Routes
+namespace F1sh.Web.Framework.Mvc.Routes
 {
     public interface IRouteProvider
     {

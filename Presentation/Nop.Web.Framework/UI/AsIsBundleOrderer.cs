@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Optimization;
 
-namespace Nop.Web.Framework.UI
+namespace F1sh.Web.Framework.UI
 {
     public partial class AsIsBundleOrderer : IBundleOrderer
     {

@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Nop.Core.Domain.Catalog;
+using F1sh.Core.Domain.Catalog;
 
-namespace Nop.Core.Domain.Orders
+namespace F1sh.Core.Domain.Orders
 {
     /// <summary>
     /// Represents a recurring payment
@@ -110,7 +110,7 @@ namespace Nop.Core.Domain.Orders
                 //                result = latestPayment.CreatedOnUtc.AddYears(this.CycleLength);
                 //                break;
                 //            default:
-                //                throw new NopException("Not supported cycle period");
+                //                throw new F1shException("Not supported cycle period");
                 //        }
                 //    }
                 //    else
@@ -138,7 +138,7 @@ namespace Nop.Core.Domain.Orders
                                 result = this.StartDateUtc.AddYears(this.CycleLength * historyCollection.Count);
                                 break;
                             default:
-                                throw new NopException("Not supported cycle period");
+                                throw new F1shException("Not supported cycle period");
                         }
                     }
                     else

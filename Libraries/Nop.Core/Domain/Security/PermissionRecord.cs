@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Nop.Core.Domain.Customers;
+using F1sh.Core.Domain.Customers;
 
-namespace Nop.Core.Domain.Security
+namespace F1sh.Core.Domain.Security
 {
     /// <summary>
     /// Represents a permission record

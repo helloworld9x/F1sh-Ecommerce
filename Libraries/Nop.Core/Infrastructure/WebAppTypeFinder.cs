@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Web;
 using System.Web.Hosting;
 
-namespace Nop.Core.Infrastructure
+namespace F1sh.Core.Infrastructure
 {
     /// <summary>
     /// Provides information about types in the current web application. 

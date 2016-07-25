@@ -13,7 +13,7 @@
 // 
 #pragma warning disable 1591
 
-namespace Nop.Services.EuropaCheckVatService {
+namespace F1sh.Services.EuropaCheckVatService {
     using System;
     using System.Web.Services;
     using System.Diagnostics;
@@ -37,7 +37,7 @@ namespace Nop.Services.EuropaCheckVatService {
         
         /// <remarks/>
         public checkVatService() {
-            this.Url = global::Nop.Services.Properties.Settings.Default.Nop_Services_EuropaCheckVatService_checkVatService;
+            this.Url = global::F1sh.Services.Properties.Settings.Default.Nop_Services_EuropaCheckVatService_checkVatService;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;

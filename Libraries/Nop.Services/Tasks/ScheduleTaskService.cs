@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Nop.Core.Data;
-using Nop.Core.Domain.Tasks;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Tasks;
 
-namespace Nop.Services.Tasks
+namespace F1sh.Services.Tasks
 {
     /// <summary>
     /// Task service

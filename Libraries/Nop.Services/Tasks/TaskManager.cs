@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using Nop.Core.Infrastructure;
+using F1sh.Core.Infrastructure;
 
-namespace Nop.Services.Tasks
+namespace F1sh.Services.Tasks
 {
     /// <summary>
     /// Represents task manager

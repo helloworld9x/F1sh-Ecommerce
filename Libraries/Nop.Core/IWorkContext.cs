@@ -1,10 +1,10 @@
-﻿using Nop.Core.Domain.Customers;
-using Nop.Core.Domain.Directory;
-using Nop.Core.Domain.Localization;
-using Nop.Core.Domain.Tax;
-using Nop.Core.Domain.Vendors;
+﻿using F1sh.Core.Domain.Customers;
+using F1sh.Core.Domain.Directory;
+using F1sh.Core.Domain.Localization;
+using F1sh.Core.Domain.Tax;
+using F1sh.Core.Domain.Vendors;
 
-namespace Nop.Core
+namespace F1sh.Core
 {
     /// <summary>
     /// Work context

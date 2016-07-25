@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
 
-namespace Nop.Web.Framework.Controllers
+namespace F1sh.Web.Framework.Controllers
 {
     /// <summary>
     /// Base controller for payment plugins

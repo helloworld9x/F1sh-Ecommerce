@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Nop.Core.Infrastructure;
+using F1sh.Core.Infrastructure;
 
-namespace Nop.Services.Events
+namespace F1sh.Services.Events
 {
     /// <summary>
     /// Event subscription service

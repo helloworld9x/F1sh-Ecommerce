@@ -3,7 +3,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Nop.Data 
+namespace F1sh.Data 
 {
     /// <summary>
     /// Queryable extensions

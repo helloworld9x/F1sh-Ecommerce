@@ -1,16 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Nop.Core;
-using Nop.Core.Caching;
-using Nop.Core.Data;
-using Nop.Core.Domain.Catalog;
-using Nop.Core.Domain.Directory;
-using Nop.Core.Domain.Stores;
-using Nop.Services.Events;
-using Nop.Services.Localization;
+using F1sh.Core;
+using F1sh.Core.Caching;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Catalog;
+using F1sh.Core.Domain.Directory;
+using F1sh.Core.Domain.Stores;
+using F1sh.Services.Events;
+using F1sh.Services.Localization;
 
-namespace Nop.Services.Directory
+namespace F1sh.Services.Directory
 {
     /// <summary>
     /// Country service
@@ -26,11 +26,11 @@ namespace Nop.Services.Directory
         /// {0} : language ID
         /// {1} : show hidden records?
         /// </remarks>
-        private const string COUNTRIES_ALL_KEY = "Nop.country.all-{0}-{1}";
+        private const string COUNTRIES_ALL_KEY = "F1sh.country.all-{0}-{1}";
         /// <summary>
         /// Key pattern to clear cache
         /// </summary>
-        private const string COUNTRIES_PATTERN_KEY = "Nop.country.";
+        private const string COUNTRIES_PATTERN_KEY = "F1sh.country.";
 
         #endregion
         

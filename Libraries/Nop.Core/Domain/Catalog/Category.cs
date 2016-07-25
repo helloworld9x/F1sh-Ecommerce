@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
-using Nop.Core.Domain.Discounts;
-using Nop.Core.Domain.Localization;
-using Nop.Core.Domain.Security;
-using Nop.Core.Domain.Seo;
-using Nop.Core.Domain.Stores;
+using F1sh.Core.Domain.Discounts;
+using F1sh.Core.Domain.Localization;
+using F1sh.Core.Domain.Security;
+using F1sh.Core.Domain.Seo;
+using F1sh.Core.Domain.Stores;
 
-namespace Nop.Core.Domain.Catalog
+namespace F1sh.Core.Domain.Catalog
 {
     /// <summary>
     /// Represents a category
@@ -24,21 +24,6 @@ namespace Nop.Core.Domain.Catalog
         /// Gets or sets the description
         /// </summary>
         public string Description { get; set; }
-
-        /// <summary>
-        /// Gets or sets the meta keywords
-        /// </summary>
-        public string MetaKeywords { get; set; }
-
-        /// <summary>
-        /// Gets or sets the meta description
-        /// </summary>
-        public string MetaDescription { get; set; }
-
-        /// <summary>
-        /// Gets or sets the meta title
-        /// </summary>
-        public string MetaTitle { get; set; }
 
         /// <summary>
         /// Gets or sets the parent category identifier
@@ -127,8 +112,6 @@ namespace Nop.Core.Domain.Catalog
             ToTable("Category");
             HasKey(c => c.Id);
             Property(c => c.Name).IsRequired().HasMaxLength(400);
-            Property(c => c.MetaKeywords).HasMaxLength(400);
-            Property(c => c.MetaTitle).HasMaxLength(400);
             Property(c => c.PriceRanges).HasMaxLength(400);
             Property(c => c.PageSizeOptions).HasMaxLength(200);
         }

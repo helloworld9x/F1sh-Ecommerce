@@ -1,8 +1,8 @@
-﻿using Nop.Core.Domain.Shipping;
+﻿using F1sh.Core.Domain.Shipping;
 
-namespace Nop.Data.Mapping.Shipping
+namespace F1sh.Data.Mapping.Shipping
 {
-    public class WarehouseMap : NopEntityTypeConfiguration<Warehouse>
+    public class WarehouseMap : F1shEntityTypeConfiguration<Warehouse>
     {
         public WarehouseMap()
         {

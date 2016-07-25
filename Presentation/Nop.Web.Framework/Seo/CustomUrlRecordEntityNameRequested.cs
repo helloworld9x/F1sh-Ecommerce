@@ -1,8 +1,8 @@
 ﻿
 using System.Web.Routing;
-using Nop.Services.Seo;
+using F1sh.Services.Seo;
 
-namespace Nop.Web.Framework.Seo
+namespace F1sh.Web.Framework.Seo
 {
     /// <summary>
     /// Event to handle unknow URL record entity names

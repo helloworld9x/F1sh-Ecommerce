@@ -5,12 +5,12 @@ using System.IO;
 using System.Linq;
 using System.Web.Routing;
 using System.Xml;
-using Nop.Core;
-using Nop.Core.Infrastructure;
-using Nop.Services.Localization;
-using Nop.Services.Security;
+using F1sh.Core;
+using F1sh.Core.Infrastructure;
+using F1sh.Services.Localization;
+using F1sh.Services.Security;
 
-namespace Nop.Web.Framework.Menu
+namespace F1sh.Web.Framework.Menu
 {
     public class XmlSiteMap
     {
@@ -75,9 +75,9 @@ namespace Nop.Web.Framework.Menu
             siteMapNode.SystemName = GetStringValueFromAttribute(xmlNode, "SystemName");
 
             //title
-            var nopResource = GetStringValueFromAttribute(xmlNode, "nopResource");
+            var F1shResource = GetStringValueFromAttribute(xmlNode, "F1shResource");
             var localizationService = EngineContext.Current.Resolve<ILocalizationService>();
-            siteMapNode.Title = localizationService.GetResource(nopResource);
+            siteMapNode.Title = localizationService.GetResource(F1shResource);
 
             //routes, url
             string controllerName = GetStringValueFromAttribute(xmlNode, "controller");
@@ -88,7 +88,7 @@ namespace Nop.Web.Framework.Menu
                 siteMapNode.ControllerName = controllerName;
                 siteMapNode.ActionName = actionName;
 
-                //apply admin area as described here - http://www.nopcommerce.com/boards/t/20478/broken-menus-in-admin-area-whilst-trying-to-make-a-plugin-admin-page.aspx
+                //apply admin area as described here - http://www.F1shcommerce.com/boards/t/20478/broken-menus-in-admin-area-whilst-trying-to-make-a-plugin-admin-page.aspx
                 siteMapNode.RouteValues = new RouteValueDictionary { {"area", "Admin"} };
             }
             else if (!string.IsNullOrEmpty(url))

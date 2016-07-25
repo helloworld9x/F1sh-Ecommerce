@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Nop.Core.Domain.Common;
+using F1sh.Core.Domain.Common;
 
-namespace Nop.Services.Common
+namespace F1sh.Services.Common
 {
     /// <summary>
     /// Address attribute parser interface

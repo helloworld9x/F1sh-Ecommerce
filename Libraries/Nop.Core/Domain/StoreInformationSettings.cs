@@ -1,14 +1,14 @@
-﻿using Nop.Core.Configuration;
+﻿using F1sh.Core.Configuration;
 
-namespace Nop.Core.Domain
+namespace F1sh.Core.Domain
 {
     public class StoreInformationSettings : ISettings
     {
         /// <summary>
-        /// Gets or sets a value indicating whether "powered by nopCommerce" text should be displayed.
-        /// Please find more info at http://www.nopcommerce.com/copyrightremoval.aspx
+        /// Gets or sets a value indicating whether "powered by F1shCommerce" text should be displayed.
+        /// Please find more info at http://www.F1shcommerce.com/copyrightremoval.aspx
         /// </summary>
-        public bool HidePoweredByNopCommerce { get; set; }
+        public bool HidePoweredByF1shCommerce { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether store is closed

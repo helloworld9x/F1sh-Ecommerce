@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Nop.Core.Domain.Stores;
+using F1sh.Core.Domain.Stores;
 
-namespace Nop.Core.Domain.Localization
+namespace F1sh.Core.Domain.Localization
 {
     /// <summary>
     /// Represents a language

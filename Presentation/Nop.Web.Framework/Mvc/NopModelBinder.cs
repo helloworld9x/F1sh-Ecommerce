@@ -1,15 +1,15 @@
 ﻿using System.Web.Mvc;
 
-namespace Nop.Web.Framework.Mvc
+namespace F1sh.Web.Framework.Mvc
 {
-    public class NopModelBinder : DefaultModelBinder
+    public class F1shModelBinder : DefaultModelBinder
     {
         public override object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
         {
             var model = base.BindModel(controllerContext, bindingContext);
-            if (model is BaseNopModel)
+            if (model is BaseF1shModel)
             {
-                ((BaseNopModel)model).BindModel(controllerContext, bindingContext);
+                ((BaseF1shModel)model).BindModel(controllerContext, bindingContext);
             }
             return model;
         }

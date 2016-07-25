@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Nop.Core;
-using Nop.Core.Data;
-using Nop.Core.Domain.Common;
-using Nop.Core.Domain.Customers;
-using Nop.Core.Domain.Logging;
-using Nop.Data;
+using F1sh.Core;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Common;
+using F1sh.Core.Domain.Customers;
+using F1sh.Core.Domain.Logging;
+using F1sh.Data;
 
-namespace Nop.Services.Logging
+namespace F1sh.Services.Logging
 {
     /// <summary>
     /// Default logger

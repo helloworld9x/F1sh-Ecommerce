@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using Nop.Core;
-using Nop.Core.Domain.Customers;
-using Nop.Core.Domain.Security;
+using F1sh.Core;
+using F1sh.Core.Domain.Customers;
+using F1sh.Core.Domain.Security;
 
-namespace Nop.Services.Security
+namespace F1sh.Services.Security
 {
     /// <summary>
     /// ACL service inerface

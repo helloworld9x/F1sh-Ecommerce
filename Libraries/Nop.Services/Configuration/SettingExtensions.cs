@@ -1,9 +1,9 @@
 using System;
 using System.Linq.Expressions;
 using System.Reflection;
-using Nop.Core.Configuration;
+using F1sh.Core.Configuration;
 
-namespace Nop.Services.Configuration
+namespace F1sh.Services.Configuration
 {
     public static class SettingExtensions
     {

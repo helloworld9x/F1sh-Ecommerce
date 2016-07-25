@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Web;
 using System.Web.Mvc;
-using Nop.Core;
-using Nop.Core.Data;
-using Nop.Core.Domain;
-using Nop.Core.Infrastructure;
-using Nop.Services.Security;
+using F1sh.Core;
+using F1sh.Core.Data;
+using F1sh.Core.Domain;
+using F1sh.Core.Infrastructure;
+using F1sh.Services.Security;
 
-namespace Nop.Web.Framework
+namespace F1sh.Web.Framework
 {
     /// <summary>
     /// Store closed attribute
@@ -59,7 +59,7 @@ namespace Nop.Web.Framework
                 return;
 
             //topics accessible when a store is closed
-            if (controllerName.Equals("Nop.Web.Controllers.TopicController", StringComparison.InvariantCultureIgnoreCase) &&
+            if (controllerName.Equals("F1sh.Web.Controllers.TopicController", StringComparison.InvariantCultureIgnoreCase) &&
                 actionName.Equals("TopicDetails", StringComparison.InvariantCultureIgnoreCase))
             {
                 //    var topicService = EngineContext.Current.Resolve<ITopicService>();

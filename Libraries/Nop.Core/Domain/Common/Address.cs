@@ -1,7 +1,7 @@
 ﻿using System;
-using Nop.Core.Domain.Directory;
+using F1sh.Core.Domain.Directory;
 
-namespace Nop.Core.Domain.Common
+namespace F1sh.Core.Domain.Common
 {
     public  class Address : BaseEntity, ICloneable
     {

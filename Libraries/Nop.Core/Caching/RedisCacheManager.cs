@@ -1,11 +1,11 @@
 using System;
 using System.Text;
 using Newtonsoft.Json;
-using Nop.Core.Configuration;
-using Nop.Core.Infrastructure;
+using F1sh.Core.Configuration;
+using F1sh.Core.Infrastructure;
 using StackExchange.Redis;
 
-namespace Nop.Core.Caching
+namespace F1sh.Core.Caching
 {
     /// <summary>
     /// Represents a manager for caching in Redis store (http://redis.io/).
@@ -23,7 +23,7 @@ namespace Nop.Core.Caching
 
         #region Ctor
 
-        public RedisCacheManager(NopConfig config)
+        public RedisCacheManager(F1shConfig config)
         {
             if (String.IsNullOrEmpty(config.RedisCachingConnectionString))
                 throw  new Exception("Redis connection string is empty");

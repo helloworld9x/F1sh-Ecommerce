@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Nop.Core.Domain.Directory;
-using Nop.Core.Domain.Localization;
+using F1sh.Core.Domain.Directory;
+using F1sh.Core.Domain.Localization;
 
-namespace Nop.Core.Domain.Shipping
+namespace F1sh.Core.Domain.Shipping
 {
     /// <summary>
     /// Represents a shipping method (used for offline shipping rate computation methods)

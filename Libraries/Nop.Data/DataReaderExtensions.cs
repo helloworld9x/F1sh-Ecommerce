@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
 
-namespace Nop.Data
+namespace F1sh.Data
 {
     public static class DataReaderExtensions
     {

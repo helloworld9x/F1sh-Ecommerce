@@ -1,5 +1,5 @@
 ﻿
-namespace Nop.Core.Domain.Customers 
+namespace F1sh.Core.Domain.Customers 
 { 
     public enum PasswordFormat
     {

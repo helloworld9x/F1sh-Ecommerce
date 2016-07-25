@@ -1,10 +1,10 @@
 ﻿using System.Web;
 using System.Web.Routing;
-using Nop.Core.Data;
-using Nop.Core.Domain.Localization;
-using Nop.Core.Infrastructure;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Localization;
+using F1sh.Core.Infrastructure;
 
-namespace Nop.Web.Framework.Localization
+namespace F1sh.Web.Framework.Localization
 {
     /// <summary>
     /// Provides properties and methods for defining a localized route, and for getting information about the localized route.

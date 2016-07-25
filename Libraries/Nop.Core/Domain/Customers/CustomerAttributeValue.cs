@@ -1,7 +1,7 @@
 
-using Nop.Core.Domain.Localization;
+using F1sh.Core.Domain.Localization;
 
-namespace Nop.Core.Domain.Customers
+namespace F1sh.Core.Domain.Customers
 {
     /// <summary>
     /// Represents a customer attribute value

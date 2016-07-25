@@ -20,7 +20,7 @@
  */ 
 #endregion
 
-namespace Nop.Core.Html.CodeFormatter
+namespace F1sh.Core.Html.CodeFormatter
 {
     /// <summary>
 	/// Generates color-coded HTML 4.01 from JavaSctript source code.

@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
-using Nop.Core.Infrastructure;
+using F1sh.Core.Infrastructure;
 
-namespace Nop.Web.Framework.Security.Captcha
+namespace F1sh.Web.Framework.Security.Captcha
 {
     public class CaptchaValidatorAttribute : ActionFilterAttribute
     {

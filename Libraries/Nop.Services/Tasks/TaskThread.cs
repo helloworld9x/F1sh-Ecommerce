@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
 
-namespace Nop.Services.Tasks
+namespace F1sh.Services.Tasks
 {
     /// <summary>
     /// Represents task thread

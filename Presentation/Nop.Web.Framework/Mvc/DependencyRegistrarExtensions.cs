@@ -1,10 +1,10 @@
 ﻿using System;
 using Autofac;
-using Nop.Core.Data;
-using Nop.Core.Infrastructure.DependencyManagement;
-using Nop.Data;
+using F1sh.Core.Data;
+using F1sh.Core.Infrastructure.DependencyManagement;
+using F1sh.Data;
 
-namespace Nop.Web.Framework.Mvc
+namespace F1sh.Web.Framework.Mvc
 {
     /// <summary>
     /// Extensions for DependencyRegistrar

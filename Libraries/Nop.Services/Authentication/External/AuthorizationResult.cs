@@ -2,7 +2,7 @@
 
 using System.Collections.Generic;
 
-namespace Nop.Services.Authentication.External
+namespace F1sh.Services.Authentication.External
 {
     /// <summary>
     /// Authorization result

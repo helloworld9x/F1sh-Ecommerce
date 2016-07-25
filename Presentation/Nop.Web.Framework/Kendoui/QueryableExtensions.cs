@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Nop.Web.Framework.Kendoui
+namespace F1sh.Web.Framework.Kendoui
 {
     public static class QueryableExtensions
     {

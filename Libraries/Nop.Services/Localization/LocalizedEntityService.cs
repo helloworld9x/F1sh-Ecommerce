@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using Nop.Core;
-using Nop.Core.Caching;
-using Nop.Core.Data;
-using Nop.Core.Domain.Localization;
+using F1sh.Core;
+using F1sh.Core.Caching;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Localization;
 
-namespace Nop.Services.Localization
+namespace F1sh.Services.Localization
 {
     /// <summary>
     /// Provides information about localizable entities
@@ -26,15 +26,15 @@ namespace Nop.Services.Localization
         /// {2} : locale key group
         /// {3} : locale key
         /// </remarks>
-        private const string LOCALIZEDPROPERTY_KEY = "Nop.localizedproperty.value-{0}-{1}-{2}-{3}";
+        private const string LOCALIZEDPROPERTY_KEY = "F1sh.localizedproperty.value-{0}-{1}-{2}-{3}";
         /// <summary>
         /// Key for caching
         /// </summary>
-        private const string LOCALIZEDPROPERTY_ALL_KEY = "Nop.localizedproperty.all";
+        private const string LOCALIZEDPROPERTY_ALL_KEY = "F1sh.localizedproperty.all";
         /// <summary>
         /// Key pattern to clear cache
         /// </summary>
-        private const string LOCALIZEDPROPERTY_PATTERN_KEY = "Nop.localizedproperty.";
+        private const string LOCALIZEDPROPERTY_PATTERN_KEY = "F1sh.localizedproperty.";
 
         #endregion
 

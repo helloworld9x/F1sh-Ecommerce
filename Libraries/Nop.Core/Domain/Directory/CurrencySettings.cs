@@ -1,7 +1,7 @@
 ﻿
-using Nop.Core.Configuration;
+using F1sh.Core.Configuration;
 
-namespace Nop.Core.Domain.Directory
+namespace F1sh.Core.Domain.Directory
 {
     public class CurrencySettings : ISettings
     {

@@ -1,7 +1,7 @@
 using System.IO;
 using System.Web.Mvc;
 
-namespace Nop.Services.Seo
+namespace F1sh.Services.Seo
 {
     /// <summary>
     /// Represents a sitemap generator

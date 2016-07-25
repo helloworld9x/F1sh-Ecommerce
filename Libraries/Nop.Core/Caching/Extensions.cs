@@ -1,6 +1,6 @@
 using System;
 
-namespace Nop.Core.Caching
+namespace F1sh.Core.Caching
 {
     /// <summary>
     /// Extensions

@@ -2,9 +2,9 @@
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
-using Nop.Core.Domain.Security;
+using F1sh.Core.Domain.Security;
 
-namespace Nop.Services.Security
+namespace F1sh.Services.Security
 {
     public class EncryptionService : IEncryptionService
     {

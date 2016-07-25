@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Nop.Core.Domain.Stores;
+using F1sh.Core.Domain.Stores;
 
-namespace Nop.Services.Stores
+namespace F1sh.Services.Stores
 {
     /// <summary>
     /// Store service interface

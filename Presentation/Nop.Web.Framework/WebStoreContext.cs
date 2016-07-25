@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
-using Nop.Core;
-using Nop.Core.Domain.Stores;
-using Nop.Services.Stores;
+using F1sh.Core;
+using F1sh.Core.Domain.Stores;
+using F1sh.Services.Stores;
 
-namespace Nop.Web.Framework
+namespace F1sh.Web.Framework
 {
     /// <summary>
     /// Store context for web application

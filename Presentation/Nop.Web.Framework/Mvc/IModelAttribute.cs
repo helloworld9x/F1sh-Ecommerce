@@ -1,4 +1,4 @@
-﻿namespace Nop.Web.Framework.Mvc
+﻿namespace F1sh.Web.Framework.Mvc
 {
     public interface IModelAttribute
     {

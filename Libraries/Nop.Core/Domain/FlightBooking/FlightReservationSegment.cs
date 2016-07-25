@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Nop.Core.Domain.FlightBooking
+namespace F1sh.Core.Domain.FlightBooking
 {
     public class FlightReservationSegment : BaseEntity
     {

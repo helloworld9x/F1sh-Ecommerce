@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Topics;
+using F1sh.Core.Domain.Topics;
 
-namespace Nop.Data.Mapping.Topics
+namespace F1sh.Data.Mapping.Topics
 {
-    public partial class TopicTemplateMap : NopEntityTypeConfiguration<TopicTemplate>
+    public partial class TopicTemplateMap : F1shEntityTypeConfiguration<TopicTemplate>
     {
         public TopicTemplateMap()
         {

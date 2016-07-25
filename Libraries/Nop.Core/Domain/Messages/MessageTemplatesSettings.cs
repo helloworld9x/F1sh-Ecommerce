@@ -1,6 +1,6 @@
-﻿using Nop.Core.Configuration;
+﻿using F1sh.Core.Configuration;
 
-namespace Nop.Core.Domain.Messages
+namespace F1sh.Core.Domain.Messages
 {
     public class MessageTemplatesSettings : ISettings
     {

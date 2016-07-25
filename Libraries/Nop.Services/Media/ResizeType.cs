@@ -1,4 +1,4 @@
-namespace Nop.Services.Media
+namespace F1sh.Services.Media
 {
     /// <summary>
     /// Resize types

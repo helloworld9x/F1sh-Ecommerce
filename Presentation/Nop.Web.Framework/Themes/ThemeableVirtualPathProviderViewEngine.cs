@@ -6,9 +6,9 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.WebPages;
-using Nop.Core.Infrastructure;
+using F1sh.Core.Infrastructure;
 
-namespace Nop.Web.Framework.Themes
+namespace F1sh.Web.Framework.Themes
 {
     /// <summary>
     /// Themable view engine
@@ -135,7 +135,7 @@ namespace Nop.Web.Framework.Themes
 
             string areaName = GetAreaName(controllerContext.RouteData);
 
-            //little hack to get nop's admin area to be in /Administration/ instead of /Nop/Admin/ or Areas/Admin/
+            //little hack to get F1sh's admin area to be in /Administration/ instead of /F1sh/Admin/ or Areas/Admin/
             if (!string.IsNullOrEmpty(areaName) && areaName.Equals("admin", StringComparison.InvariantCultureIgnoreCase))
             {
                 var newLocations = areaLocations.ToList();

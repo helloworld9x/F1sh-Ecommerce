@@ -1,6 +1,6 @@
 using System.Data.Entity.ModelConfiguration;
 
-namespace Nop.Core.Domain
+namespace F1sh.Core.Domain
 {
     public abstract class GoqEntityTypeConfiguration<T> : EntityTypeConfiguration<T> where T : class
     {

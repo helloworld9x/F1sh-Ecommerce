@@ -2,7 +2,7 @@
 
 using System;
 
-namespace Nop.Services.Infrastructure
+namespace F1sh.Services.Infrastructure
 {
     /// <summary>
     /// Azure websites machine name provider

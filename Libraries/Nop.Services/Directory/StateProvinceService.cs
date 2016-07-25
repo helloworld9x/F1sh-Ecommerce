@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Nop.Core.Caching;
-using Nop.Core.Data;
-using Nop.Core.Domain.Directory;
-using Nop.Services.Events;
-using Nop.Services.Localization;
+using F1sh.Core.Caching;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Directory;
+using F1sh.Services.Events;
+using F1sh.Services.Localization;
 
-namespace Nop.Services.Directory
+namespace F1sh.Services.Directory
 {
     /// <summary>
     /// State province service
@@ -24,11 +24,11 @@ namespace Nop.Services.Directory
         /// {1} : language ID
         /// {2} : show hidden records?
         /// </remarks>
-        private const string STATEPROVINCES_ALL_KEY = "Nop.stateprovince.all-{0}-{1}-{2}";
+        private const string STATEPROVINCES_ALL_KEY = "F1sh.stateprovince.all-{0}-{1}-{2}";
         /// <summary>
         /// Key pattern to clear cache
         /// </summary>
-        private const string STATEPROVINCES_PATTERN_KEY = "Nop.stateprovince.";
+        private const string STATEPROVINCES_PATTERN_KEY = "F1sh.stateprovince.";
 
         #endregion
 

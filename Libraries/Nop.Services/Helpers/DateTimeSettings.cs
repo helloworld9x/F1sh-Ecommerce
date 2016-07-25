@@ -1,7 +1,7 @@
 ﻿
-using Nop.Core.Configuration;
+using F1sh.Core.Configuration;
 
-namespace Nop.Services.Helpers
+namespace F1sh.Services.Helpers
 {
     public class DateTimeSettings : ISettings
     {

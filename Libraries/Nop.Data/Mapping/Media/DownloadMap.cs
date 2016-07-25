@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Media;
+using F1sh.Core.Domain.Media;
 
-namespace Nop.Data.Mapping.Media
+namespace F1sh.Data.Mapping.Media
 {
-    public partial class DownloadMap : NopEntityTypeConfiguration<Download>
+    public partial class DownloadMap : F1shEntityTypeConfiguration<Download>
     {
         public DownloadMap()
         {

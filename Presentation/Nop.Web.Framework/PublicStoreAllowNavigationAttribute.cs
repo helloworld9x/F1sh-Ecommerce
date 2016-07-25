@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Web;
 using System.Web.Mvc;
-using Nop.Core.Data;
-using Nop.Core.Infrastructure;
-using Nop.Services.Security;
+using F1sh.Core.Data;
+using F1sh.Core.Infrastructure;
+using F1sh.Services.Security;
 
-namespace Nop.Web.Framework
+namespace F1sh.Web.Framework
 {
     public class PublicStoreAllowNavigationAttribute : ActionFilterAttribute
     {

@@ -6,7 +6,7 @@ using System.IO;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace Nop.Core.Domain.Shipping
+namespace F1sh.Core.Domain.Shipping
 {
     /// <summary>
     /// Represents a shipping option

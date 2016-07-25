@@ -8,10 +8,10 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Web;
-using Nop.Core.ComponentModel;
-using Nop.Core.Domain.Shipping;
+using F1sh.Core.ComponentModel;
+using F1sh.Core.Domain.Shipping;
 
-namespace Nop.Core
+namespace F1sh.Core
 {
     /// <summary>
     /// Represents a common helper
@@ -29,7 +29,7 @@ namespace Nop.Core
             output = EnsureMaximumLength(output, 255);
 
             if(!IsValidEmail(output)) {
-                throw new NopException("Email is not valid.");
+                throw new F1shException("Email is not valid.");
             }
 
             return output;
@@ -224,15 +224,15 @@ namespace Nop.Core
             Type instanceType = instance.GetType();
             PropertyInfo pi = instanceType.GetProperty(propertyName);
             if (pi == null)
-                throw new NopException("No property '{0}' found on the instance of type '{1}'.", propertyName, instanceType);
+                throw new F1shException("No property '{0}' found on the instance of type '{1}'.", propertyName, instanceType);
             if (!pi.CanWrite)
-                throw new NopException("The property '{0}' on the instance of type '{1}' does not have a setter.", propertyName, instanceType);
+                throw new F1shException("The property '{0}' on the instance of type '{1}' does not have a setter.", propertyName, instanceType);
             if (value != null && !value.GetType().IsAssignableFrom(pi.PropertyType))
                 value = To(value, pi.PropertyType);
             pi.SetValue(instance, value, new object[0]);
         }
 
-        public static TypeConverter GetNopCustomTypeConverter(Type type)
+        public static TypeConverter GetF1shCustomTypeConverter(Type type)
         {
             //we can't use the following code in order to register our custom type descriptors
             //TypeDescriptor.AddAttributes(typeof(List<int>), new TypeConverterAttribute(typeof(GenericListTypeConverter<int>)));
@@ -276,8 +276,8 @@ namespace Nop.Core
             {
                 var sourceType = value.GetType();
 
-                TypeConverter destinationConverter = GetNopCustomTypeConverter(destinationType);
-                TypeConverter sourceConverter = GetNopCustomTypeConverter(sourceType);
+                TypeConverter destinationConverter = GetF1shCustomTypeConverter(destinationType);
+                TypeConverter sourceConverter = GetF1shCustomTypeConverter(sourceType);
                 if (destinationConverter != null && destinationConverter.CanConvertFrom(value.GetType()))
                     return destinationConverter.ConvertFrom(null, culture, value);
                 if (sourceConverter != null && sourceConverter.CanConvertTo(destinationType))

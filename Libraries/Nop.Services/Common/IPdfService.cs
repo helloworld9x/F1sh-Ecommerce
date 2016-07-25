@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.IO;
-using Nop.Core.Domain.Catalog;
-using Nop.Core.Domain.Orders;
-using Nop.Core.Domain.Shipping;
+using F1sh.Core.Domain.Catalog;
+using F1sh.Core.Domain.Orders;
+using F1sh.Core.Domain.Shipping;
 
-namespace Nop.Services.Common
+namespace F1sh.Services.Common
 {
     /// <summary>
     /// Customer service interface

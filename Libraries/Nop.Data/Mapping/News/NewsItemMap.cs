@@ -1,8 +1,8 @@
-using Nop.Core.Domain.News;
+using F1sh.Core.Domain.News;
 
-namespace Nop.Data.Mapping.News
+namespace F1sh.Data.Mapping.News
 {
-    public partial class NewsItemMap : NopEntityTypeConfiguration<NewsItem>
+    public partial class NewsItemMap : F1shEntityTypeConfiguration<NewsItem>
     {
         public NewsItemMap()
         {

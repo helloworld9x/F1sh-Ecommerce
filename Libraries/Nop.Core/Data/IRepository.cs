@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Nop.Core.Data
+namespace F1sh.Core.Data
 {
     /// <summary>
     /// Repository

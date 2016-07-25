@@ -2,10 +2,10 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Data.SqlClient;
-using Nop.Core.Data;
-using Nop.Data.Initializers;
+using F1sh.Core.Data;
+using F1sh.Data.Initializers;
 
-namespace Nop.Data
+namespace F1sh.Data
 {
     public class SqlCeDataProvider : IDataProvider
     {
@@ -34,7 +34,7 @@ namespace Nop.Data
         /// </summary>
         public virtual void SetDatabaseInitializer()
         {
-            var initializer = new CreateCeDatabaseIfNotExists<NopObjectContext>();
+            var initializer = new CreateCeDatabaseIfNotExists<F1shObjectContext>();
             Database.SetInitializer(initializer);
         }
 

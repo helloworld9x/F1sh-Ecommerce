@@ -1,6 +1,6 @@
-using Nop.Core.Domain.Affiliates;
+using F1sh.Core.Domain.Affiliates;
 
-namespace Nop.Data.Mapping.Affiliates
+namespace F1sh.Data.Mapping.Affiliates
 {
    
 }

@@ -1,4 +1,4 @@
-﻿namespace Nop.Core.Infrastructure
+﻿namespace F1sh.Core.Infrastructure
 {
     /// <summary>
     /// Interface which should be implemented by tasks run on startup

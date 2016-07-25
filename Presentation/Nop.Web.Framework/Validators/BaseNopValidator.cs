@@ -1,10 +1,10 @@
 using FluentValidation;
 
-namespace Nop.Web.Framework.Validators
+namespace F1sh.Web.Framework.Validators
 {
-    public abstract class BaseNopValidator<T> : AbstractValidator<T> where T : class
+    public abstract class BaseF1shValidator<T> : AbstractValidator<T> where T : class
     {
-        protected BaseNopValidator()
+        protected BaseF1shValidator()
         {
             PostInitialize();
         }

@@ -2,10 +2,10 @@
 using System.IO;
 using System.Linq;
 using System.Web;
-using Nop.Core.Domain.Catalog;
-using Nop.Core.Domain.Media;
+using F1sh.Core.Domain.Catalog;
+using F1sh.Core.Domain.Media;
 
-namespace Nop.Services.Media
+namespace F1sh.Services.Media
 {
     /// <summary>
     /// Extensions

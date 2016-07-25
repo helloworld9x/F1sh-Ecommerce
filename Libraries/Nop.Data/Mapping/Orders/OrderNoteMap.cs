@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Orders;
+using F1sh.Core.Domain.Orders;
 
-namespace Nop.Data.Mapping.Orders
+namespace F1sh.Data.Mapping.Orders
 {
-    public partial class OrderNoteMap : NopEntityTypeConfiguration<OrderNote>
+    public partial class OrderNoteMap : F1shEntityTypeConfiguration<OrderNote>
     {
         public OrderNoteMap()
         {

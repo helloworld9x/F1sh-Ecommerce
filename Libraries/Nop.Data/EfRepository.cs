@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Validation;
 using System.Linq;
-using Nop.Core;
-using Nop.Core.Data;
+using F1sh.Core;
+using F1sh.Core.Data;
 
-namespace Nop.Data
+namespace F1sh.Data
 {
     /// <summary>
     /// Entity Framework repository
     /// </summary>
-    public partial class EfRepository<T> : IRepository<T> where T : BaseEntity
+    public class EfRepository<T> : IRepository<T> where T : BaseEntity
     {
         #region Fields
 

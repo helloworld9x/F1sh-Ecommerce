@@ -1,4 +1,4 @@
-﻿namespace Nop.Services.Tasks
+﻿namespace F1sh.Services.Tasks
 {
     /// <summary>
     /// Interface that should be implemented by each task

@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Orders;
+using F1sh.Core.Domain.Orders;
 
-namespace Nop.Data.Mapping.Orders
+namespace F1sh.Data.Mapping.Orders
 {
-    public partial class RecurringPaymentMap : NopEntityTypeConfiguration<RecurringPayment>
+    public partial class RecurringPaymentMap : F1shEntityTypeConfiguration<RecurringPayment>
     {
         public RecurringPaymentMap()
         {

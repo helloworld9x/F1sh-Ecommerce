@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 
-namespace Nop.Core.ComponentModel
+namespace F1sh.Core.ComponentModel
 {
     /// <summary>
     /// Generic List type converted

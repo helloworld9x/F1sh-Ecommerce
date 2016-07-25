@@ -1,13 +1,14 @@
 using System.Collections.Generic;
-using Nop.Core.Domain.Localization;
+using F1sh.Core.Domain.Localization;
 
-namespace Nop.Core.Domain.Catalog
+namespace F1sh.Core.Domain.Catalog
 {
     /// <summary>
     /// Represents a specification attribute
     /// </summary>
     public class SpecificationAttribute : BaseEntity, ILocalizedEntity
     {
+
         private ICollection<SpecificationAttributeOption> _specificationAttributeOptions;
 
         /// <summary>
@@ -27,6 +28,15 @@ namespace Nop.Core.Domain.Catalog
         {
             get { return _specificationAttributeOptions ?? (_specificationAttributeOptions = new List<SpecificationAttributeOption>()); }
             protected set { _specificationAttributeOptions = value; }
+        }
+    }
+    public class SpecificationAttributeMap : GoqEntityTypeConfiguration<SpecificationAttribute>
+    {
+        public SpecificationAttributeMap()
+        {
+            ToTable("SpecificationAttribute");
+            HasKey(sa => sa.Id);
+            Property(sa => sa.Name).IsRequired();
         }
     }
 }

@@ -1,9 +1,9 @@
 //Contributor:  Nicholas Mayne
 
 using System.Collections.Generic;
-using Nop.Core.Domain.Customers;
+using F1sh.Core.Domain.Customers;
 
-namespace Nop.Services.Authentication.External
+namespace F1sh.Services.Authentication.External
 {
     /// <summary>
     /// Open authentication service

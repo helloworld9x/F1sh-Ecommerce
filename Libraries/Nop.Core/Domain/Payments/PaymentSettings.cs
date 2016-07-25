@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Nop.Core.Configuration;
+using F1sh.Core.Configuration;
 
-namespace Nop.Core.Domain.Payments
+namespace F1sh.Core.Domain.Payments
 {
     public class PaymentSettings : ISettings
     {

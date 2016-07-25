@@ -8,14 +8,14 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
 using System.Web.WebPages;
-using Nop.Core;
-using Nop.Core.Infrastructure;
-using Nop.Services.Localization;
-using Nop.Services.Stores;
-using Nop.Web.Framework.Localization;
-using Nop.Web.Framework.Mvc;
+using F1sh.Core;
+using F1sh.Core.Infrastructure;
+using F1sh.Services.Localization;
+using F1sh.Services.Stores;
+using F1sh.Web.Framework.Localization;
+using F1sh.Web.Framework.Mvc;
 
-namespace Nop.Web.Framework
+namespace F1sh.Web.Framework
 {
     public static class HtmlExtensions
     {
@@ -118,13 +118,13 @@ namespace Nop.Web.Framework
             });
         }
 
-        public static MvcHtmlString DeleteConfirmation<T>(this HtmlHelper<T> helper, string buttonsSelector) where T : BaseNopEntityModel
+        public static MvcHtmlString DeleteConfirmation<T>(this HtmlHelper<T> helper, string buttonsSelector) where T : BaseF1shEntityModel
         {
             return DeleteConfirmation(helper, "", buttonsSelector);
         }
 
         public static MvcHtmlString DeleteConfirmation<T>(this HtmlHelper<T> helper, string actionName,
-            string buttonsSelector) where T : BaseNopEntityModel
+            string buttonsSelector) where T : BaseF1shEntityModel
         {
             if (String.IsNullOrEmpty(actionName))
                 actionName = "Delete";
@@ -165,15 +165,15 @@ namespace Nop.Web.Framework
             return MvcHtmlString.Create(window.ToString());
         }
 
-        public static MvcHtmlString NopLabelFor<TModel, TValue>(this HtmlHelper<TModel> helper, Expression<Func<TModel, TValue>> expression, bool displayHint = true)
+        public static MvcHtmlString F1shLabelFor<TModel, TValue>(this HtmlHelper<TModel> helper, Expression<Func<TModel, TValue>> expression, bool displayHint = true)
         {
             var result = new StringBuilder();
             var metadata = ModelMetadata.FromLambdaExpression(expression, helper.ViewData);
             var hintResource = string.Empty;
             object value;
-            if (metadata.AdditionalValues.TryGetValue("NopResourceDisplayName", out value))
+            if (metadata.AdditionalValues.TryGetValue("F1shResourceDisplayName", out value))
             {
-                var resourceDisplayName = value as NopResourceDisplayName;
+                var resourceDisplayName = value as F1ShResourceDisplayName;
                 if (resourceDisplayName != null && displayHint)
                 {
                     var langId = EngineContext.Current.Resolve<IWorkContext>().WorkingLanguage.Id;

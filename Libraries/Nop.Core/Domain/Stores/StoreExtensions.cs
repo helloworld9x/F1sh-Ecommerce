@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Nop.Core.Domain.Stores
+namespace F1sh.Core.Domain.Stores
 {
     public static class StoreExtensions
     {

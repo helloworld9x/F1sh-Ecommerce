@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Nop.Core.Domain.Messages
+namespace F1sh.Core.Domain.Messages
 {
     /// <summary>
     /// Represents NewsLetterSubscription entity

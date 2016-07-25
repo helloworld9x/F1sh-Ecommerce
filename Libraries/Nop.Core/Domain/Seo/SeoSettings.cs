@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Nop.Core.Configuration;
+using F1sh.Core.Configuration;
 
-namespace Nop.Core.Domain.Seo
+namespace F1sh.Core.Domain.Seo
 {
     /// <summary>
     /// SEO settings

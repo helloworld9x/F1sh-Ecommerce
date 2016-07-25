@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Nop.Core.Domain.Directory;
+using F1sh.Core.Domain.Directory;
 
-namespace Nop.Services.Directory
+namespace F1sh.Services.Directory
 {
     /// <summary>
     /// Currency service

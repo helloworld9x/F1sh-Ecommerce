@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Nop.Web.Framework.Kendoui
+namespace F1sh.Web.Framework.Kendoui
 {
     /// <summary>
     /// Represents a filter expression of Kendo DataSource.

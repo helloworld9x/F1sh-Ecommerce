@@ -1,4 +1,4 @@
-﻿namespace Nop.Core.Domain.Seo
+﻿namespace F1sh.Core.Domain.Seo
 {
     /// <summary>
     /// Represents a page title SEO adjustment

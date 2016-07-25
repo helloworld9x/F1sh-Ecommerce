@@ -1,4 +1,4 @@
-namespace Nop.Core.Domain.Discounts
+namespace F1sh.Core.Domain.Discounts
 {
     /// <summary>
     /// Represents a discount limitation type

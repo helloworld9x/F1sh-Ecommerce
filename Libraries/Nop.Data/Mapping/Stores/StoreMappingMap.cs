@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Stores;
+using F1sh.Core.Domain.Stores;
 
-namespace Nop.Data.Mapping.Stores
+namespace F1sh.Data.Mapping.Stores
 {
-    public partial class StoreMappingMap : NopEntityTypeConfiguration<StoreMapping>
+    public partial class StoreMappingMap : F1shEntityTypeConfiguration<StoreMapping>
     {
         public StoreMappingMap()
         {

@@ -1,7 +1,7 @@
 
-using Nop.Core.Domain.Localization;
+using F1sh.Core.Domain.Localization;
 
-namespace Nop.Core.Domain.Directory
+namespace F1sh.Core.Domain.Directory
 {
     /// <summary>
     /// Represents a state/province

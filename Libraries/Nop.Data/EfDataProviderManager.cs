@@ -1,8 +1,8 @@
 ﻿using System;
-using Nop.Core;
-using Nop.Core.Data;
+using F1sh.Core;
+using F1sh.Core.Data;
 
-namespace Nop.Data
+namespace F1sh.Data
 {
     public partial class EfDataProviderManager : BaseDataProviderManager
     {
@@ -15,7 +15,7 @@ namespace Nop.Data
 
             var providerName = Settings.DataProvider;
             if (String.IsNullOrWhiteSpace(providerName))
-                throw new NopException("Data Settings doesn't contain a providerName");
+                throw new F1shException("Data Settings doesn't contain a providerName");
 
             switch (providerName.ToLowerInvariant())
             {
@@ -24,7 +24,7 @@ namespace Nop.Data
                 case "sqlce":
                     return new SqlCeDataProvider();
                 default:
-                    throw new NopException(string.Format("Not supported dataprovider name: {0}", providerName));
+                    throw new F1shException(string.Format("Not supported dataprovider name: {0}", providerName));
             }
         }
 

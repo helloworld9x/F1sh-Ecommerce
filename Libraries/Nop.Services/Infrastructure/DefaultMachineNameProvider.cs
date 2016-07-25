@@ -1,5 +1,5 @@
 ﻿//Contribution: Orchard project (http://www.orchardproject.net/)
-namespace Nop.Services.Infrastructure
+namespace F1sh.Services.Infrastructure
 {
     /// <summary>
     /// Default machine name provider

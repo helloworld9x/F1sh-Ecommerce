@@ -1,6 +1,6 @@
-using Nop.Core.Domain.Customers;
+using F1sh.Core.Domain.Customers;
 
-namespace Nop.Services.Authentication
+namespace F1sh.Services.Authentication
 {
     /// <summary>
     /// Authentication service interface

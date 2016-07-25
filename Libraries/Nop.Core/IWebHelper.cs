@@ -1,6 +1,6 @@
 using System.Web;
 
-namespace Nop.Core
+namespace F1sh.Core
 {
     /// <summary>
     /// Represents a common helper

@@ -3,7 +3,7 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
 
-namespace Nop.Services.Authentication.External
+namespace F1sh.Services.Authentication.External
 {
     /// <summary>
     /// Authorize state

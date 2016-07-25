@@ -1,6 +1,6 @@
-﻿using Nop.Core.Configuration;
+﻿using F1sh.Core.Configuration;
 
-namespace Nop.Web.Framework.Security.Captcha
+namespace F1sh.Web.Framework.Security.Captcha
 {
     /// <summary>
     /// CAPTCHA settings

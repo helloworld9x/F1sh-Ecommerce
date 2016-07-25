@@ -8,18 +8,18 @@ using System.Web.Configuration;
 using ImageResizer;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
-using Nop.Core;
-using Nop.Core.Configuration;
-using Nop.Core.Data;
-using Nop.Core.Domain.Catalog;
-using Nop.Core.Domain.Media;
-using Nop.Data;
-using Nop.Services.Configuration;
-using Nop.Services.Events;
-using Nop.Services.Logging;
-using Nop.Services.Seo;
+using F1sh.Core;
+using F1sh.Core.Configuration;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Catalog;
+using F1sh.Core.Domain.Media;
+using F1sh.Data;
+using F1sh.Services.Configuration;
+using F1sh.Services.Events;
+using F1sh.Services.Logging;
+using F1sh.Services.Seo;
 
-namespace Nop.Services.Media
+namespace F1sh.Services.Media
 {
     /// <summary>
     /// Picture service for Windows Azure
@@ -32,7 +32,7 @@ namespace Nop.Services.Media
         private static CloudBlobClient blobClient = null;
         private static CloudBlobContainer container_thumb = null;
 
-        private readonly NopConfig _config;
+        private readonly F1shConfig _config;
         #endregion
 
         #region Ctor
@@ -45,7 +45,7 @@ namespace Nop.Services.Media
             IDbContext dbContext,
             IEventPublisher eventPublisher,
             MediaSettings mediaSettings,
-            NopConfig config)
+            F1shConfig config)
             : base(pictureRepository,
                 productPictureRepository,
                 settingService,

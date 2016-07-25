@@ -1,8 +1,8 @@
 using System;
 using System.Linq;
-using Nop.Core.Domain.Common;
+using F1sh.Core.Domain.Common;
 
-namespace Nop.Core.Domain.Customers
+namespace F1sh.Core.Domain.Customers
 {
     public static class CustomerExtensions
     {

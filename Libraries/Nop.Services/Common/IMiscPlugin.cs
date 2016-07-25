@@ -1,7 +1,7 @@
 using System.Web.Routing;
-using Nop.Core.Plugins;
+using F1sh.Core.Plugins;
 
-namespace Nop.Services.Common
+namespace F1sh.Services.Common
 {
     /// <summary>
     /// Misc plugin interface. 

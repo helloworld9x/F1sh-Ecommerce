@@ -3,12 +3,12 @@ using System.IO;
 using System.Text;
 using System.Web.Mvc;
 using System.Xml;
-using Nop.Core;
-using Nop.Core.Domain.Common;
-using Nop.Core.Domain.News;
-using Nop.Core.Domain.Security;
+using F1sh.Core;
+using F1sh.Core.Domain.Common;
+using F1sh.Core.Domain.News;
+using F1sh.Core.Domain.Security;
 
-namespace Nop.Services.Seo
+namespace F1sh.Services.Seo
 {
     /// <summary>
     /// Represents a sitemap generator

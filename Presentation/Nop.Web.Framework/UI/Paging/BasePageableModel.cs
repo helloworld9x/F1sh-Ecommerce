@@ -1,9 +1,9 @@
 //Contributor : MVCContrib
 
 using System;
-using Nop.Core;
+using F1sh.Core;
 
-namespace Nop.Web.Framework.UI.Paging
+namespace F1sh.Web.Framework.UI.Paging
 {
     public abstract class BasePageableModel : IPageableModel
     {

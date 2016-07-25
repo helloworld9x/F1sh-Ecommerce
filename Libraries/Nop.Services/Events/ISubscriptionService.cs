@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Nop.Services.Events
+namespace F1sh.Services.Events
 {
     /// <summary>
     /// Event subscription service

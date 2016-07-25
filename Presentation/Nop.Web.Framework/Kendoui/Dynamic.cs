@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading;
 
 //namespace System.Linq.Dynamic
-namespace Nop.Web.Framework.Kendoui
+namespace F1sh.Web.Framework.Kendoui
 {
     public static class DynamicQueryable
     {

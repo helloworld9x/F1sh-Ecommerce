@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Configuration;
+using F1sh.Core.Domain.Configuration;
 
-namespace Nop.Data.Mapping.Configuration
+namespace F1sh.Data.Mapping.Configuration
 {
-    public partial class SettingMap : NopEntityTypeConfiguration<Setting>
+    public partial class SettingMap : F1shEntityTypeConfiguration<Setting>
     {
         public SettingMap()
         {

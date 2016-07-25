@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Web;
 using System.Web.Routing;
-using Nop.Core;
-using Nop.Core.Data;
-using Nop.Core.Infrastructure;
-using Nop.Services.Events;
-using Nop.Services.Seo;
-using Nop.Web.Framework.Localization;
+using F1sh.Core;
+using F1sh.Core.Data;
+using F1sh.Core.Infrastructure;
+using F1sh.Services.Events;
+using F1sh.Services.Seo;
+using F1sh.Web.Framework.Localization;
 
-namespace Nop.Web.Framework.Seo
+namespace F1sh.Web.Framework.Seo
 {
     /// <summary>
     /// Provides properties and methods for defining a SEO friendly route, and for getting information about the route.

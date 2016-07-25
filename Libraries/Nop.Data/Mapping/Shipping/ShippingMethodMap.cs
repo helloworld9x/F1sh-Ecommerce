@@ -1,8 +1,8 @@
-﻿using Nop.Core.Domain.Shipping;
+﻿using F1sh.Core.Domain.Shipping;
 
-namespace Nop.Data.Mapping.Shipping
+namespace F1sh.Data.Mapping.Shipping
 {
-    public class ShippingMethodMap : NopEntityTypeConfiguration<ShippingMethod>
+    public class ShippingMethodMap : F1shEntityTypeConfiguration<ShippingMethod>
     {
         public ShippingMethodMap()
         {

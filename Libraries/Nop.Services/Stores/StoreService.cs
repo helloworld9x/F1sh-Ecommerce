@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Nop.Core.Caching;
-using Nop.Core.Data;
-using Nop.Core.Domain.Stores;
-using Nop.Services.Events;
+using F1sh.Core.Caching;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Stores;
+using F1sh.Services.Events;
 
-namespace Nop.Services.Stores
+namespace F1sh.Services.Stores
 {
     /// <summary>
     /// Store service
@@ -18,18 +18,18 @@ namespace Nop.Services.Stores
         /// <summary>
         /// Key for caching
         /// </summary>
-        private const string STORES_ALL_KEY = "Nop.stores.all";
+        private const string STORES_ALL_KEY = "F1sh.stores.all";
         /// <summary>
         /// Key for caching
         /// </summary>
         /// <remarks>
         /// {0} : store ID
         /// </remarks>
-        private const string STORES_BY_ID_KEY = "Nop.stores.id-{0}";
+        private const string STORES_BY_ID_KEY = "F1sh.stores.id-{0}";
         /// <summary>
         /// Key pattern to clear cache
         /// </summary>
-        private const string STORES_PATTERN_KEY = "Nop.stores.";
+        private const string STORES_PATTERN_KEY = "F1sh.stores.";
 
         #endregion
         

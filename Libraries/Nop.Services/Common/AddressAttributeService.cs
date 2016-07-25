@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Nop.Core.Caching;
-using Nop.Core.Data;
-using Nop.Core.Domain.Common;
-using Nop.Services.Events;
+using F1sh.Core.Caching;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Common;
+using F1sh.Services.Events;
 
-namespace Nop.Services.Common
+namespace F1sh.Services.Common
 {
     /// <summary>
     /// Address attribute service
@@ -18,36 +18,36 @@ namespace Nop.Services.Common
         /// <summary>
         /// Key for caching
         /// </summary>
-        private const string ADDRESSATTRIBUTES_ALL_KEY = "Nop.addressattribute.all";
+        private const string ADDRESSATTRIBUTES_ALL_KEY = "F1sh.addressattribute.all";
         /// <summary>
         /// Key for caching
         /// </summary>
         /// <remarks>
         /// {0} : address attribute ID
         /// </remarks>
-        private const string ADDRESSATTRIBUTES_BY_ID_KEY = "Nop.addressattribute.id-{0}";
+        private const string ADDRESSATTRIBUTES_BY_ID_KEY = "F1sh.addressattribute.id-{0}";
         /// <summary>
         /// Key for caching
         /// </summary>
         /// <remarks>
         /// {0} : address attribute ID
         /// </remarks>
-        private const string ADDRESSATTRIBUTEVALUES_ALL_KEY = "Nop.addressattributevalue.all-{0}";
+        private const string ADDRESSATTRIBUTEVALUES_ALL_KEY = "F1sh.addressattributevalue.all-{0}";
         /// <summary>
         /// Key for caching
         /// </summary>
         /// <remarks>
         /// {0} : address attribute value ID
         /// </remarks>
-        private const string ADDRESSATTRIBUTEVALUES_BY_ID_KEY = "Nop.addressattributevalue.id-{0}";
+        private const string ADDRESSATTRIBUTEVALUES_BY_ID_KEY = "F1sh.addressattributevalue.id-{0}";
         /// <summary>
         /// Key pattern to clear cache
         /// </summary>
-        private const string ADDRESSATTRIBUTES_PATTERN_KEY = "Nop.addressattribute.";
+        private const string ADDRESSATTRIBUTES_PATTERN_KEY = "F1sh.addressattribute.";
         /// <summary>
         /// Key pattern to clear cache
         /// </summary>
-        private const string ADDRESSATTRIBUTEVALUES_PATTERN_KEY = "Nop.addressattributevalue.";
+        private const string ADDRESSATTRIBUTEVALUES_PATTERN_KEY = "F1sh.addressattributevalue.";
         #endregion
         
         #region Fields

@@ -5,16 +5,16 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml;
-using Nop.Core;
-using Nop.Core.Caching;
-using Nop.Core.Data;
-using Nop.Core.Domain.Common;
-using Nop.Core.Domain.Localization;
-using Nop.Data;
-using Nop.Services.Events;
-using Nop.Services.Logging;
+using F1sh.Core;
+using F1sh.Core.Caching;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Common;
+using F1sh.Core.Domain.Localization;
+using F1sh.Data;
+using F1sh.Services.Events;
+using F1sh.Services.Logging;
 
-namespace Nop.Services.Localization
+namespace F1sh.Services.Localization
 {
     /// <summary>
     /// Provides information about localization
@@ -29,7 +29,7 @@ namespace Nop.Services.Localization
         /// <remarks>
         /// {0} : language ID
         /// </remarks>
-        private const string LOCALSTRINGRESOURCES_ALL_KEY = "Nop.lsr.all-{0}";
+        private const string LOCALSTRINGRESOURCES_ALL_KEY = "F1sh.lsr.all-{0}";
         /// <summary>
         /// Key for caching
         /// </summary>
@@ -37,11 +37,11 @@ namespace Nop.Services.Localization
         /// {0} : language ID
         /// {1} : resource key
         /// </remarks>
-        private const string LOCALSTRINGRESOURCES_BY_RESOURCENAME_KEY = "Nop.lsr.{0}-{1}";
+        private const string LOCALSTRINGRESOURCES_BY_RESOURCENAME_KEY = "F1sh.lsr.{0}-{1}";
         /// <summary>
         /// Key pattern to clear cache
         /// </summary>
-        private const string LOCALSTRINGRESOURCES_PATTERN_KEY = "Nop.lsr.";
+        private const string LOCALSTRINGRESOURCES_PATTERN_KEY = "F1sh.lsr.";
 
         #endregion
 

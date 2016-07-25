@@ -1,5 +1,5 @@
 ﻿
-namespace Nop.Services.Events
+namespace F1sh.Services.Events
 {
     /// <summary>
     /// Evnt publisher

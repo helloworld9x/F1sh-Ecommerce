@@ -1,7 +1,7 @@
 ﻿
-using Nop.Core.Configuration;
+using F1sh.Core.Configuration;
 
-namespace Nop.Core.Domain.News
+namespace F1sh.Core.Domain.News
 {
     public class NewsSettings : ISettings
     {

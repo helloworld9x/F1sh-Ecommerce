@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace Nop.Web.Framework.Validators
+namespace F1sh.Web.Framework.Validators
 {
     public static class MyValidatorExtensions
     {

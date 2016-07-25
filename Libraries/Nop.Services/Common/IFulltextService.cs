@@ -1,5 +1,5 @@
 
-namespace Nop.Services.Common
+namespace F1sh.Services.Common
 {
     /// <summary>
     /// Full-Text service interface

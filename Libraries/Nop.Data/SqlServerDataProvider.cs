@@ -7,10 +7,10 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Text;
 using System.Web.Hosting;
-using Nop.Core.Data;
-using Nop.Data.Initializers;
+using F1sh.Core.Data;
+using F1sh.Data.Initializers;
 
-namespace Nop.Data
+namespace F1sh.Data
 {
     public class SqlServerDataProvider : IDataProvider
     {
@@ -94,7 +94,7 @@ namespace Nop.Data
         /// </summary>
         public virtual void SetDatabaseInitializer()
         {
-            //pass some table names to ensure that we have nopCommerce 2.X installed
+            //pass some table names to ensure that we have F1shCommerce 2.X installed
             var tablesToValidate = new[] { "Customer", "Discount", "Order", "Product", "ShoppingCartItem" };
 
             //custom commands (stored proedures, indexes)
@@ -105,7 +105,7 @@ namespace Nop.Data
             //use webHelper.MapPath instead of HostingEnvironment.MapPath which is not available in unit tests
             customCommands.AddRange(ParseCommands(HostingEnvironment.MapPath("~/App_Data/Install/SqlServer.StoredProcedures.sql"), false));
 
-            var initializer = new CreateTablesIfNotExist<NopObjectContext>(tablesToValidate, customCommands.ToArray());
+            var initializer = new CreateTablesIfNotExist<F1shObjectContext>(tablesToValidate, customCommands.ToArray());
             Database.SetInitializer(initializer);
         }
 

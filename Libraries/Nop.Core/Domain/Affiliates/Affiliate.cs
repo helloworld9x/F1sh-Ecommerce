@@ -1,6 +1,6 @@
-using Nop.Core.Domain.Common;
+using F1sh.Core.Domain.Common;
 
-namespace Nop.Core.Domain.Affiliates
+namespace F1sh.Core.Domain.Affiliates
 {
     /// <summary>
     /// Represents an affiliate

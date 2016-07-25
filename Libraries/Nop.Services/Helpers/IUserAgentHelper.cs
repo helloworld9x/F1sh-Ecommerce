@@ -1,5 +1,5 @@
 
-namespace Nop.Services.Helpers
+namespace F1sh.Services.Helpers
 {
     /// <summary>
     /// User agent helper interface

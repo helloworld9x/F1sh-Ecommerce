@@ -1,6 +1,6 @@
 ﻿using System.Xml;
 
-namespace Nop.Web.Framework.Themes
+namespace F1sh.Web.Framework.Themes
 {
     public class ThemeConfiguration
     {

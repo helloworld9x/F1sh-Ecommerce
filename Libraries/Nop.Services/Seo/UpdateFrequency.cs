@@ -1,5 +1,5 @@
 
-namespace Nop.Services.Seo
+namespace F1sh.Services.Seo
 {
     /// <summary>
     /// Represents a sitemap update frequency

@@ -1,9 +1,9 @@
-using Nop.Core.Domain.Localization;
-using Nop.Core.Domain.Security;
-using Nop.Core.Domain.Seo;
-using Nop.Core.Domain.Stores;
+using F1sh.Core.Domain.Localization;
+using F1sh.Core.Domain.Security;
+using F1sh.Core.Domain.Seo;
+using F1sh.Core.Domain.Stores;
 
-namespace Nop.Core.Domain.Topics
+namespace F1sh.Core.Domain.Topics
 {
     /// <summary>
     /// Represents a topic

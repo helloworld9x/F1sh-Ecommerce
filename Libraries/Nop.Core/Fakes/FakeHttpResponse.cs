@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using System.Web;
 
-namespace Nop.Core.Fakes
+namespace F1sh.Core.Fakes
 {
     public class FakeHttpResponse : HttpResponseBase
     {

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Nop.Core;
-using Nop.Core.Domain.Stores;
+using F1sh.Core;
+using F1sh.Core.Domain.Stores;
 
-namespace Nop.Services.Stores
+namespace F1sh.Services.Stores
 {
     /// <summary>
     /// Store mapping service interface

@@ -1,6 +1,6 @@
-using Nop.Core.Domain.Localization;
+using F1sh.Core.Domain.Localization;
 
-namespace Nop.Core.Domain.Shipping
+namespace F1sh.Core.Domain.Shipping
 {
     /// <summary>
     /// Represents a delivery date 

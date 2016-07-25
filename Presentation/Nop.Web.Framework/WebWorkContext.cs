@@ -1,22 +1,22 @@
 ﻿//using System;
 //using System.Linq;
 //using System.Web;
-//using Nop.Core;
-//using Nop.Core.Domain.Customers;
-//using Nop.Core.Domain.Directory;
-//using Nop.Core.Domain.Localization;
-//using Nop.Core.Domain.Tax;
-//using Nop.Core.Domain.Vendors;
-//using Nop.Core.Fakes;
-//using Nop.Services.Authentication;
-//using Nop.Services.Common;
-//using Nop.Services.Directory;
-//using Nop.Services.Helpers;
-//using Nop.Services.Localization;
-//using Nop.Services.Stores;
-//using Nop.Web.Framework.Localization;
+//using F1sh.Core;
+//using F1sh.Core.Domain.Customers;
+//using F1sh.Core.Domain.Directory;
+//using F1sh.Core.Domain.Localization;
+//using F1sh.Core.Domain.Tax;
+//using F1sh.Core.Domain.Vendors;
+//using F1sh.Core.Fakes;
+//using F1sh.Services.Authentication;
+//using F1sh.Services.Common;
+//using F1sh.Services.Directory;
+//using F1sh.Services.Helpers;
+//using F1sh.Services.Localization;
+//using F1sh.Services.Stores;
+//using F1sh.Web.Framework.Localization;
 
-//namespace Nop.Web.Framework
+//namespace F1sh.Web.Framework
 //{
 //    /// <summary>
 //    /// Work context for web application
@@ -25,7 +25,7 @@
 //    {
 //        #region Const
 
-//        private const string CustomerCookieName = "Nop.customer";
+//        private const string CustomerCookieName = "F1sh.customer";
 
 //        #endregion
 

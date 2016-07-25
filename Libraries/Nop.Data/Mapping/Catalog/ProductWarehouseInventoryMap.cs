@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Catalog;
+using F1sh.Core.Domain.Catalog;
 
-namespace Nop.Data.Mapping.Catalog
+namespace F1sh.Data.Mapping.Catalog
 {
-    public partial class ProductWarehouseInventoryMap : NopEntityTypeConfiguration<ProductWarehouseInventory>
+    public partial class ProductWarehouseInventoryMap : F1shEntityTypeConfiguration<ProductWarehouseInventory>
     {
         public ProductWarehouseInventoryMap()
         {

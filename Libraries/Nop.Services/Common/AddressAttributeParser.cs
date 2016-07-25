@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Xml;
-using Nop.Core.Domain.Common;
-using Nop.Services.Localization;
+using F1sh.Core.Domain.Common;
+using F1sh.Services.Localization;
 
-namespace Nop.Services.Common
+namespace F1sh.Services.Common
 {
     /// <summary>
     /// Address attribute parser

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace Nop.Core.Caching
+namespace F1sh.Core.Caching
 {
     /// <summary>
     /// Represents a manager for caching during an HTTP request (short term caching)
@@ -23,7 +23,7 @@ namespace Nop.Core.Caching
         }
         
         /// <summary>
-        /// Creates a new instance of the NopRequestCache class
+        /// Creates a new instance of the F1shRequestCache class
         /// </summary>
         protected virtual IDictionary GetItems()
         {

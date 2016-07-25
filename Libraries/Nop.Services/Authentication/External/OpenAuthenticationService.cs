@@ -3,11 +3,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Nop.Core.Data;
-using Nop.Core.Domain.Customers;
-using Nop.Core.Plugins;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Customers;
+using F1sh.Core.Plugins;
 
-namespace Nop.Services.Authentication.External
+namespace F1sh.Services.Authentication.External
 {
     /// <summary>
     /// Open authentication service

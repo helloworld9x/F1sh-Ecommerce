@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Nop.Core;
-using Nop.Core.Caching;
-using Nop.Core.Data;
-using Nop.Core.Domain.Common;
-using Nop.Data;
-using Nop.Services.Events;
+using F1sh.Core;
+using F1sh.Core.Caching;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Common;
+using F1sh.Data;
+using F1sh.Services.Events;
 
-namespace Nop.Services.Common
+namespace F1sh.Services.Common
 {
     /// <summary>
     /// Generic attribute service
@@ -24,11 +24,11 @@ namespace Nop.Services.Common
         /// {0} : entity ID
         /// {1} : key group
         /// </remarks>
-        private const string GENERICATTRIBUTE_KEY = "Nop.genericattribute.{0}-{1}";
+        private const string GENERICATTRIBUTE_KEY = "F1sh.genericattribute.{0}-{1}";
         /// <summary>
         /// Key pattern to clear cache
         /// </summary>
-        private const string GENERICATTRIBUTE_PATTERN_KEY = "Nop.genericattribute.";
+        private const string GENERICATTRIBUTE_PATTERN_KEY = "F1sh.genericattribute.";
         #endregion
 
         #region Fields

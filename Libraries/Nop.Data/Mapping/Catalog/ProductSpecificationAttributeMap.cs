@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Catalog;
+using F1sh.Core.Domain.Catalog;
 
-namespace Nop.Data.Mapping.Catalog
+namespace F1sh.Data.Mapping.Catalog
 {
-    public partial class ProductSpecificationAttributeMap : NopEntityTypeConfiguration<ProductSpecificationAttribute>
+    public partial class ProductSpecificationAttributeMap : F1shEntityTypeConfiguration<ProductSpecificationAttribute>
     {
         public ProductSpecificationAttributeMap()
         {

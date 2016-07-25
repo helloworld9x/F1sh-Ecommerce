@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Data.Entity.Core.Objects;
-using Nop.Core;
+using F1sh.Core;
 
-namespace Nop.Data
+namespace F1sh.Data
 {
     public static class Extensions
     {

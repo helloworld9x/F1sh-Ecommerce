@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Logging;
+using F1sh.Core.Domain.Logging;
 
-namespace Nop.Data.Mapping.Logging
+namespace F1sh.Data.Mapping.Logging
 {
-    public partial class LogMap : NopEntityTypeConfiguration<Log>
+    public partial class LogMap : F1shEntityTypeConfiguration<Log>
     {
         public LogMap()
         {

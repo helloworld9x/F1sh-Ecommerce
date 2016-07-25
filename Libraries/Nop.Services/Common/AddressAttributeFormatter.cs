@@ -1,12 +1,12 @@
 using System;
 using System.Text;
 using System.Web;
-using Nop.Core;
-using Nop.Core.Domain.Catalog;
-using Nop.Core.Html;
-using Nop.Services.Localization;
+using F1sh.Core;
+using F1sh.Core.Domain.Catalog;
+using F1sh.Core.Html;
+using F1sh.Services.Localization;
 
-namespace Nop.Services.Common
+namespace F1sh.Services.Common
 {
     /// <summary>
     /// Address attribute helper

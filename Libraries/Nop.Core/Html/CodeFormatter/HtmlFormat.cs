@@ -24,7 +24,7 @@ using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Nop.Core.Html.CodeFormatter
+namespace F1sh.Core.Html.CodeFormatter
 {
 	/// <summary>
 	/// Generates color-coded HTML 4.01 from HTML/XML/ASPX source code.

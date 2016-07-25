@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
-using Nop.Core.Infrastructure;
-using Nop.Core.Plugins;
-using Nop.Services.Logging;
+using F1sh.Core.Infrastructure;
+using F1sh.Core.Plugins;
+using F1sh.Services.Logging;
 
-namespace Nop.Services.Events
+namespace F1sh.Services.Events
 {
     /// <summary>
     /// Evnt publisher

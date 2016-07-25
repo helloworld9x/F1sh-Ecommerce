@@ -1,10 +1,10 @@
 using System;
 using System.Linq;
-using Nop.Core.Data;
-using Nop.Core.Domain.Common;
-using Nop.Data;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Common;
+using F1sh.Data;
 
-namespace Nop.Services.Common
+namespace F1sh.Services.Common
 {
     /// <summary>
     /// Full-Text service

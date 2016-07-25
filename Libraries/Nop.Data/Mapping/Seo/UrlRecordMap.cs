@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Seo;
+using F1sh.Core.Domain.Seo;
 
-namespace Nop.Data.Mapping.Seo
+namespace F1sh.Data.Mapping.Seo
 {
-    public partial class UrlRecordMap : NopEntityTypeConfiguration<UrlRecord>
+    public partial class UrlRecordMap : F1shEntityTypeConfiguration<UrlRecord>
     {
         public UrlRecordMap()
         {

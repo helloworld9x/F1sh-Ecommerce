@@ -1,13 +1,13 @@
 ﻿using System;
-using Nop.Core.Configuration;
-using Nop.Core.Infrastructure.DependencyManagement;
+using F1sh.Core.Configuration;
+using F1sh.Core.Infrastructure.DependencyManagement;
 
-namespace Nop.Core.Infrastructure
+namespace F1sh.Core.Infrastructure
 {
     /// <summary>
     /// Classes implementing this interface can serve as a portal for the 
-    /// various services composing the Nop engine. Edit functionality, modules
-    /// and implementations access most Nop functionality through this 
+    /// various services composing the F1sh engine. Edit functionality, modules
+    /// and implementations access most F1sh functionality through this 
     /// interface.
     /// </summary>
     public interface IEngine
@@ -18,10 +18,10 @@ namespace Nop.Core.Infrastructure
         ContainerManager ContainerManager { get; }
         
         /// <summary>
-        /// Initialize components and plugins in the nop environment.
+        /// Initialize components and plugins in the F1sh environment.
         /// </summary>
         /// <param name="config">Config</param>
-        void Initialize(NopConfig config);
+        void Initialize(F1shConfig config);
 
         /// <summary>
         /// Resolve dependency

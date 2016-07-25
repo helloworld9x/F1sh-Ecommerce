@@ -1,8 +1,8 @@
-using Nop.Core.Domain.Vendors;
+using F1sh.Core.Domain.Vendors;
 
-namespace Nop.Data.Mapping.Vendors
+namespace F1sh.Data.Mapping.Vendors
 {
-    public partial class VendorNoteMap : NopEntityTypeConfiguration<VendorNote>
+    public partial class VendorNoteMap : F1shEntityTypeConfiguration<VendorNote>
     {
         public VendorNoteMap()
         {

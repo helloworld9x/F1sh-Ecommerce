@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using Nop.Core.Infrastructure;
+using F1sh.Core.Infrastructure;
 
-namespace Nop.Core.Plugins
+namespace F1sh.Core.Plugins
 {
     public class PluginDescriptor : IComparable<PluginDescriptor>
     {
@@ -64,7 +64,7 @@ namespace Nop.Core.Plugins
         public virtual string Version { get; set; }
 
         /// <summary>
-        /// Gets or sets the supported versions of nopCommerce
+        /// Gets or sets the supported versions of F1shCommerce
         /// </summary>
         public virtual IList<string> SupportedVersions { get; set; }
 

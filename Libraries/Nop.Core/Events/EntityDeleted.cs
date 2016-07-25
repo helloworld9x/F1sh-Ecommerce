@@ -1,5 +1,5 @@
 ﻿
-namespace Nop.Core.Events
+namespace F1sh.Core.Events
 {
     /// <summary>
     /// A container for passing entities that have been deleted. This is not used for entities that are deleted logicaly via a bit column.

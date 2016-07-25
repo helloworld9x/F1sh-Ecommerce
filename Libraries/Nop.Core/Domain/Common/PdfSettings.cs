@@ -1,7 +1,7 @@
 ﻿
-using Nop.Core.Configuration;
+using F1sh.Core.Configuration;
 
-namespace Nop.Core.Domain.Common
+namespace F1sh.Core.Domain.Common
 {
     public class PdfSettings : ISettings
     {

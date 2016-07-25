@@ -1,7 +1,7 @@
-using Nop.Core.Domain.Catalog;
-using Nop.Core.Domain.Common;
+using F1sh.Core.Domain.Catalog;
+using F1sh.Core.Domain.Common;
 
-namespace Nop.Services.Common
+namespace F1sh.Services.Common
 {
     /// <summary>
     /// Extensions

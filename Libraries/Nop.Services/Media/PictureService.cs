@@ -4,17 +4,17 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using ImageResizer;
-using Nop.Core;
-using Nop.Core.Data;
-using Nop.Core.Domain.Catalog;
-using Nop.Core.Domain.Media;
-using Nop.Data;
-using Nop.Services.Configuration;
-using Nop.Services.Events;
-using Nop.Services.Logging;
-using Nop.Services.Seo;
+using F1sh.Core;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Catalog;
+using F1sh.Core.Domain.Media;
+using F1sh.Data;
+using F1sh.Services.Configuration;
+using F1sh.Services.Events;
+using F1sh.Services.Logging;
+using F1sh.Services.Seo;
 
-namespace Nop.Services.Media
+namespace F1sh.Services.Media
 {
     /// <summary>
     /// Picture service

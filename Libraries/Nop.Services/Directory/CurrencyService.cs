@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Nop.Core;
-using Nop.Core.Caching;
-using Nop.Core.Data;
-using Nop.Core.Domain.Directory;
-using Nop.Core.Plugins;
-using Nop.Services.Events;
-using Nop.Services.Stores;
+using F1sh.Core;
+using F1sh.Core.Caching;
+using F1sh.Core.Data;
+using F1sh.Core.Domain.Directory;
+using F1sh.Core.Plugins;
+using F1sh.Services.Events;
+using F1sh.Services.Stores;
 
-namespace Nop.Services.Directory
+namespace F1sh.Services.Directory
 {
     /// <summary>
     /// Currency service
@@ -23,18 +23,18 @@ namespace Nop.Services.Directory
         /// <remarks>
         /// {0} : currency ID
         /// </remarks>
-        private const string CURRENCIES_BY_ID_KEY = "Nop.currency.id-{0}";
+        private const string CURRENCIES_BY_ID_KEY = "F1sh.currency.id-{0}";
         /// <summary>
         /// Key for caching
         /// </summary>
         /// <remarks>
         /// {0} : show hidden records?
         /// </remarks>
-        private const string CURRENCIES_ALL_KEY = "Nop.currency.all-{0}";
+        private const string CURRENCIES_ALL_KEY = "F1sh.currency.all-{0}";
         /// <summary>
         /// Key pattern to clear cache
         /// </summary>
-        private const string CURRENCIES_PATTERN_KEY = "Nop.currency.";
+        private const string CURRENCIES_PATTERN_KEY = "F1sh.currency.";
 
         #endregion
 
@@ -258,7 +258,7 @@ namespace Nop.Services.Directory
             {
                 decimal exchangeRate = sourceCurrencyCode.Rate;
                 if (exchangeRate == decimal.Zero)
-                    throw new NopException(string.Format("Exchange rate not found for currency [{0}]", sourceCurrencyCode.Name));
+                    throw new F1shException(string.Format("Exchange rate not found for currency [{0}]", sourceCurrencyCode.Name));
                 result = result / exchangeRate;
             }
             return result;
@@ -284,7 +284,7 @@ namespace Nop.Services.Directory
             {
                 decimal exchangeRate = targetCurrencyCode.Rate;
                 if (exchangeRate == decimal.Zero)
-                    throw new NopException(string.Format("Exchange rate not found for currency [{0}]", targetCurrencyCode.Name));
+                    throw new F1shException(string.Format("Exchange rate not found for currency [{0}]", targetCurrencyCode.Name));
                 result = result * exchangeRate;
             }
             return result;
@@ -310,7 +310,7 @@ namespace Nop.Services.Directory
             {
                 decimal exchangeRate = sourceCurrencyCode.Rate;
                 if (exchangeRate == decimal.Zero)
-                    throw new NopException(string.Format("Exchange rate not found for currency [{0}]", sourceCurrencyCode.Name));
+                    throw new F1shException(string.Format("Exchange rate not found for currency [{0}]", sourceCurrencyCode.Name));
                 result = result / exchangeRate;
             }
             return result;

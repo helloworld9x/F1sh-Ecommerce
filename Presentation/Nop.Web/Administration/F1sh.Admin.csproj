@@ -200,19 +200,19 @@
     <Content Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Libraries\Nop.Core\Nop.Core.csproj">
+    <ProjectReference Include="..\..\..\Libraries\Nop.Core\F1sh.Core.csproj">
       <Project>{6BDA8332-939F-45B7-A25E-7A797260AE59}</Project>
-      <Name>Nop.Core</Name>
+      <Name>F1sh.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Libraries\Nop.Data\Nop.Data.csproj">
+    <ProjectReference Include="..\..\..\Libraries\Nop.Data\F1sh.Data.csproj">
       <Project>{ccd7f2c9-6a2c-4cf0-8e89-076b8fc0f144}</Project>
-      <Name>Nop.Data</Name>
+      <Name>F1sh.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Libraries\Nop.Services\Nop.Services.csproj">
+    <ProjectReference Include="..\..\..\Libraries\Nop.Services\F1sh.Services.csproj">
       <Project>{210541AD-F659-47DA-8763-16F36C5CD2F4}</Project>
-      <Name>Nop.Services</Name>
+      <Name>F1sh.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Nop.Web.Framework\Nop.Web.Framework.csproj">
+    <ProjectReference Include="..\..\Nop.Web.Framework\F1sh.Web.Framework.csproj">
       <Project>{75FD4163-333C-4DD5-854D-2EF294E45D94}</Project>
       <Name>Nop.Web.Framework</Name>
     </ProjectReference>

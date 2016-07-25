@@ -1,5 +1,5 @@
 
-namespace Nop.Services.Installation
+namespace F1sh.Services.Installation
 {
     public partial interface IInstallationService
     {

@@ -1,7 +1,7 @@
 ﻿
-namespace Nop.Core
+namespace F1sh.Core
 {
-    public static class NopVersion
+    public static class F1shVersion
     {
         /// <summary>
         /// Gets or sets the store version

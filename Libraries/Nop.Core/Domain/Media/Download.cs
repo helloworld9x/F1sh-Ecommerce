@@ -1,6 +1,6 @@
 using System;
 
-namespace Nop.Core.Domain.Media
+namespace F1sh.Core.Domain.Media
 {
     /// <summary>
     /// Represents a download

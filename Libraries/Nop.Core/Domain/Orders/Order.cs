@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
-using Nop.Core.Domain.Common;
-using Nop.Core.Domain.Customers;
-using Nop.Core.Domain.Discounts;
-using Nop.Core.Domain.Payments;
-using Nop.Core.Domain.Shipping;
-using Nop.Core.Domain.Tax;
+using F1sh.Core.Domain.Common;
+using F1sh.Core.Domain.Customers;
+using F1sh.Core.Domain.Discounts;
+using F1sh.Core.Domain.Payments;
+using F1sh.Core.Domain.Shipping;
+using F1sh.Core.Domain.Tax;
 
-namespace Nop.Core.Domain.Orders
+namespace F1sh.Core.Domain.Orders
 {
     /// <summary>
     /// Represents an order
@@ -18,7 +18,6 @@ namespace Nop.Core.Domain.Orders
     {
 
         private ICollection<DiscountUsageHistory> _discountUsageHistory;
-        private ICollection<GiftCardUsageHistory> _giftCardUsageHistory;
         private ICollection<OrderNote> _orderNotes;
         private ICollection<OrderItem> _orderItems;
         private ICollection<Shipment> _shipments;
@@ -31,13 +30,13 @@ namespace Nop.Core.Domain.Orders
             if (String.IsNullOrEmpty(taxRatesStr))
                 return taxRatesDictionary;
 
-            string[] lines = taxRatesStr.Split(new [] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] lines = taxRatesStr.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
             foreach (string line in lines)
             {
                 if (String.IsNullOrEmpty(line.Trim()))
                     continue;
 
-                string[] taxes = line.Split(new [] { ':' });
+                string[] taxes = line.Split(new[] { ':' });
                 if (taxes.Length == 2)
                 {
                     try
@@ -203,7 +202,7 @@ namespace Nop.Core.Domain.Orders
         /// Gets or sets the value indicating whether reward points were earned (gained) for placing this order
         /// </summary>
         public bool RewardPointsWereAdded { get; set; }
-        
+
         /// <summary>
         /// Gets or sets the checkout attribute description
         /// </summary>
@@ -303,7 +302,7 @@ namespace Nop.Core.Domain.Orders
         /// Gets or sets the paid date and time
         /// </summary>
         public DateTime? PaidDateUtc { get; set; }
-        
+
         /// <summary>
         /// Gets or sets the shipping method
         /// </summary>
@@ -347,11 +346,6 @@ namespace Nop.Core.Domain.Orders
         /// Gets or sets the shipping address
         /// </summary>
         public virtual Address ShippingAddress { get; set; }
-        
-        /// <summary>
-        /// Gets or sets the reward points history record (spent by a customer when placing this order)
-        /// </summary>
-        public virtual RewardPointsHistory RedeemedRewardPointsEntry { get; set; }
 
         /// <summary>
         /// Gets or sets discount usage history
@@ -360,15 +354,6 @@ namespace Nop.Core.Domain.Orders
         {
             get { return _discountUsageHistory ?? (_discountUsageHistory = new List<DiscountUsageHistory>()); }
             protected set { _discountUsageHistory = value; }
-        }
-
-        /// <summary>
-        /// Gets or sets gift card usage history (gift card that were used with this order)
-        /// </summary>
-        public virtual ICollection<GiftCardUsageHistory> GiftCardUsageHistory
-        {
-            get { return _giftCardUsageHistory ?? (_giftCardUsageHistory = new List<GiftCardUsageHistory>()); }
-            protected set { _giftCardUsageHistory = value; }
         }
 
         /// <summary>
@@ -472,7 +457,7 @@ namespace Nop.Core.Domain.Orders
                 return ParseTaxRates(this.TaxRates);
             }
         }
-        
+
         #endregion
     }
 }

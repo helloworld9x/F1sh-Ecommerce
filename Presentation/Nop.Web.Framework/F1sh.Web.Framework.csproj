@@ -8,8 +8,8 @@
     <ProjectGuid>{75FD4163-333C-4DD5-854D-2EF294E45D94}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Nop.Web.Framework</RootNamespace>
-    <AssemblyName>Nop.Web.Framework</AssemblyName>
+    <RootNamespace>F1sh.Web.Framework</RootNamespace>
+    <AssemblyName>F1sh.Web.Framework</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -212,17 +212,17 @@
     <Compile Include="WebWorkContext.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Libraries\Nop.Core\Nop.Core.csproj">
+    <ProjectReference Include="..\..\Libraries\Nop.Core\F1sh.Core.csproj">
       <Project>{6BDA8332-939F-45B7-A25E-7A797260AE59}</Project>
-      <Name>Nop.Core</Name>
+      <Name>F1sh.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Libraries\Nop.Data\Nop.Data.csproj">
+    <ProjectReference Include="..\..\Libraries\Nop.Data\F1sh.Data.csproj">
       <Project>{CCD7F2C9-6A2C-4CF0-8E89-076B8FC0F144}</Project>
-      <Name>Nop.Data</Name>
+      <Name>F1sh.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Libraries\Nop.Services\Nop.Services.csproj">
+    <ProjectReference Include="..\..\Libraries\Nop.Services\F1sh.Services.csproj">
       <Project>{210541ad-f659-47da-8763-16f36c5cd2f4}</Project>
-      <Name>Nop.Services</Name>
+      <Name>F1sh.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

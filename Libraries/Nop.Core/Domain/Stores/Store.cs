@@ -1,6 +1,6 @@
-using Nop.Core.Domain.Localization;
+using F1sh.Core.Domain.Localization;
 
-namespace Nop.Core.Domain.Stores
+namespace F1sh.Core.Domain.Stores
 {
     /// <summary>
     /// Represents a store

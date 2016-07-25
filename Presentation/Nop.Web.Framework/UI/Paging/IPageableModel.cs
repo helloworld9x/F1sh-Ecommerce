@@ -1,6 +1,6 @@
 //Contributor : MVCContrib
 
-namespace Nop.Web.Framework.UI.Paging
+namespace F1sh.Web.Framework.UI.Paging
 {
 	/// <summary>
 	/// A collection of objects that has been split into pages.

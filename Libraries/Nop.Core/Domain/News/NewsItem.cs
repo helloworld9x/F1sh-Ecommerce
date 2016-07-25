@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using Nop.Core.Domain.Localization;
-using Nop.Core.Domain.Seo;
-using Nop.Core.Domain.Stores;
+using F1sh.Core.Domain.Localization;
+using F1sh.Core.Domain.Seo;
+using F1sh.Core.Domain.Stores;
 
-namespace Nop.Core.Domain.News
+namespace F1sh.Core.Domain.News
 {
     /// <summary>
     /// Represents a news item

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using Nop.Core.Infrastructure;
-using Nop.Services.Security;
+using F1sh.Core.Infrastructure;
+using F1sh.Services.Security;
 
-namespace Nop.Web.Framework.Controllers
+namespace F1sh.Web.Framework.Controllers
 {
     [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class, Inherited=true, AllowMultiple=true)]
     public class AdminAuthorizeAttribute : FilterAttribute, IAuthorizationFilter

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Nop.Core.Domain.Messages
+namespace F1sh.Core.Domain.Messages
 {
     public class EmailSubscribedEvent
     {

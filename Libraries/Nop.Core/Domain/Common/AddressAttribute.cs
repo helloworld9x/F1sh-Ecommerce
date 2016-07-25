@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Nop.Core.Domain.Catalog;
-using Nop.Core.Domain.Localization;
+using F1sh.Core.Domain.Catalog;
+using F1sh.Core.Domain.Localization;
 
-namespace Nop.Core.Domain.Common
+namespace F1sh.Core.Domain.Common
 {
     /// <summary>
     /// Represents an address attribute

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
-using Nop.Core;
+using F1sh.Core;
 
-namespace Nop.Data
+namespace F1sh.Data
 {
     public interface IDbContext
     {

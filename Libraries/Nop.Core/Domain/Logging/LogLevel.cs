@@ -1,4 +1,4 @@
-namespace Nop.Core.Domain.Logging
+namespace F1sh.Core.Domain.Logging
 {
     /// <summary>
     /// Represents a log level

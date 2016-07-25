@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace Nop.Core.Html
+namespace F1sh.Core.Html
 {
     /// <summary>
     /// Represents a ResolveLinks helper

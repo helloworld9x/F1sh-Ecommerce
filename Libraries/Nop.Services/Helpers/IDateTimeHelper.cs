@@ -1,8 +1,8 @@
 using System;
 using System.Collections.ObjectModel;
-using Nop.Core.Domain.Customers;
+using F1sh.Core.Domain.Customers;
 
-namespace Nop.Services.Helpers
+namespace F1sh.Services.Helpers
 {
     /// <summary>
     /// Represents a datetime helper

@@ -1,8 +1,8 @@
 using System;
-using Nop.Core.Domain.Customers;
-using Nop.Core.Domain.Logging;
+using F1sh.Core.Domain.Customers;
+using F1sh.Core.Domain.Logging;
 
-namespace Nop.Services.Logging
+namespace F1sh.Services.Logging
 {
     public static class LoggingExtensions
     {

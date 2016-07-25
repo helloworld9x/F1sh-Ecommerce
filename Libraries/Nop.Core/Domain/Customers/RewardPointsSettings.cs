@@ -1,7 +1,7 @@
-﻿using Nop.Core.Configuration;
-using Nop.Core.Domain.Orders;
+﻿using F1sh.Core.Configuration;
+using F1sh.Core.Domain.Orders;
 
-namespace Nop.Core.Domain.Customers
+namespace F1sh.Core.Domain.Customers
 {
     public class RewardPointsSettings : ISettings
     {

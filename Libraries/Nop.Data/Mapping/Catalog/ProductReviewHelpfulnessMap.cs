@@ -1,8 +1,8 @@
-//using Nop.Core.Domain.Catalog;
+//using F1sh.Core.Domain.Catalog;
 
-//namespace Nop.Data.Mapping.Catalog
+//namespace F1sh.Data.Mapping.Catalog
 //{
-//    public partial class ProductReviewHelpfulnessMap : NopEntityTypeConfiguration<ProductReviewHelpfulness>
+//    public partial class ProductReviewHelpfulnessMap : F1shEntityTypeConfiguration<ProductReviewHelpfulness>
 //    {
 //        public ProductReviewHelpfulnessMap()
 //        {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Nop.Core.Domain.Tasks
+namespace F1sh.Core.Domain.Tasks
 {
     /// <summary>
     /// Schedule task

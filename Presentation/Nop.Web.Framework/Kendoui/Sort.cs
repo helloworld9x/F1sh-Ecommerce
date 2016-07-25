@@ -1,4 +1,4 @@
-﻿namespace Nop.Web.Framework.Kendoui
+﻿namespace F1sh.Web.Framework.Kendoui
 {
     /// <summary>
     /// Represents a sort expression of Kendo DataSource.

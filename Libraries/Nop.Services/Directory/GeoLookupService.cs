@@ -4,10 +4,10 @@ using System;
 using MaxMind.GeoIP2;
 using MaxMind.GeoIP2.Exceptions;
 using MaxMind.GeoIP2.Responses;
-using Nop.Core;
-using Nop.Services.Logging;
+using F1sh.Core;
+using F1sh.Services.Logging;
 
-namespace Nop.Services.Directory
+namespace F1sh.Services.Directory
 {
     /// <summary>
     /// GEO lookup service

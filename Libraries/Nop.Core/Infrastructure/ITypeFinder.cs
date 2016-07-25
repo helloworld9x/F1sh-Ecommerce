@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Nop.Core.Infrastructure
+namespace F1sh.Core.Infrastructure
 {
     /// <summary>
     /// Classes implementing this interface provide information about types 
-    /// to various services in the Nop engine.
+    /// to various services in the F1sh engine.
     /// </summary>
     public interface ITypeFinder
     {
